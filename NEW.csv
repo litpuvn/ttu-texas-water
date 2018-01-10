@@ -1,0 +1,276 @@
+latitude,longitude,altitude,geometry,aquifer,aquifer_type,county,entity,status,well_number
+30.33965,-98.12815,,Point,Trinity,Unconfined,Travis,Travis County,Active,5747312
+30.341390000000004,-98.12805999999999,,Point,Trinity,Unconfined,Travis,Travis County,Active,5747310
+32.53881,-96.95539000000001,,Point,Woodbine,Confined,Ellis,Prairielands GCD,Active,3325803
+29.83683,-98.88683,,Point,Trinity,Unconfined,Kendall,Cow Creek GCD,Active,6809303
+26.88627,-98.65451,,Point,Gulf Coast,Unconfined,Jim Hogg,Brush Country GCD,Active,8703901
+26.49,-98.14805,,Point,Gulf Coast,Unconfined,Hidalgo,Texas Water Development Board,Active,8739308
+32.49667,-96.95451,,Point,Trinity,Confined,Ellis,Prairielands GCD,Active,3333203
+27.216759999999997,-98.16951999999999,,Point,Gulf Coast,Unconfined,Brooks,Texas Water Development Board,Active,8455216
+32.466429999999995,-96.82988,,Point,Woodbine,Confined,Ellis,Prairielands GCD,Active,3334209
+32.46648,-96.82977,,Point,Trinity,Confined,Ellis,Prairielands GCD,Active,3334207
+30.96528,-97.78833,,Point,Trinity,Unconfined,Bell,Clearwater UWCD,Active,5802302
+30.967579999999998,-97.80464,,Point,Trinity,Unconfined,Bell,Clearwater UWCD,Active,5802202
+31.07977,-97.43641,,Point,Trinity,Confined,Bell,Clearwater UWCD,Active,4061509
+29.85864,-98.62508000000001,,Point,Trinity,Unconfined,Kendall,Cow Creek GCD,Active,6811302
+30.15888,-98.18444000000001,,Point,Trinity,Unconfined,Hays,Hays Trinity GCD,Active,5755803
+35.268611,-101.30194499999999,,Point,Ogallala,Unconfined,Carson,Panhandle GCD,Active,0646805
+30.009458000000002,-99.380453,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5661907
+31.853666999999998,-97.218028,,Point,Trinity,Confined,Hill,Prairielands GCD,Active,4015102
+27.538888,-97.846944,,Point,Gulf Coast,Unconfined,Kleberg,Texas Water Development Board,Active,8326701
+29.413611,-100.261111,,Point,Edwards (Balcones Fault Zone),Unconfined,Kinney,Texas Water Development Board,Active,7038902
+30.272777,-99.5,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5644901
+26.044721,-97.587777,,Point,Gulf Coast,Unconfined,Cameron,Texas Water Development Board,Active,8860415
+30.109166,-98.80111099999999,,Point,Edwards-Trinity Plateau,Unconfined,Kendall,Cow Creek GCD,Active,5758203
+31.131666,-97.37361,,Point,Trinity,Confined,Bell,Clearwater UWCD,Active,4054701
+29.681109999999997,-98.52194300000001,,Point,Trinity,Unconfined,Bexar,Trinity Glen Rose GCD,Active,6820603
+29.681109999999997,-98.52194300000001,,Point,Trinity,Unconfined,Bexar,Trinity Glen Rose GCD,Active,6820602
+29.673053999999997,-98.654166,,Point,Trinity,Unconfined,Bexar,Trinity Glen Rose GCD,Active,6819618
+31.051111,-97.32972099999999,,Point,Trinity,Confined,Bell,Clearwater UWCD,Active,4062501
+30.077499,-98.07833199999999,,Point,Trinity,Unconfined,Hays,Hays Trinity GCD,Active,5764502
+29.514444,-97.693333,,Point,Carrizo-Wilcox,Confined,Gonzales,Gonzales County UWCD,Active,6727805
+32.265277000000005,-97.772499,,Point,Trinity,Unconfined,Somervell,Prairielands GCD,Active,3242907
+35.367777000000004,-101.612222,,Point,Ogallala,Unconfined,Carson,Texas Water Development Board,Active,0644102
+34.98111,-100.74110999999999,,Point,Ogallala,Unconfined,Donley,Panhandle GCD,Active,1203112
+32.253333000000005,-97.764166,,Point,Trinity,Unconfined,Somervell,Prairielands GCD,Active,3242906
+32.286388,-97.809444,,Point,Trinity,Unconfined,Somervell,Prairielands GCD,Active,3242805
+31.865833000000002,-95.496388,,Point,Carrizo-Wilcox,Confined,Anderson,Texas Water Development Board,Active,3813106
+29.942221000000004,-99.04555500000001,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,6908513
+30.154165999999996,-98.08610999999999,,Point,Trinity,Unconfined,Hays,Hays Trinity GCD,Active,5756702
+32.239166,-97.82861,,Point,Trinity,Unconfined,Somervell,Prairielands GCD,Active,3250201
+32.514165999999996,-97.160833,,Point,Woodbine,Confined,Johnson,Prairielands GCD,Active,3231906
+32.536388,-96.813333,,Point,Woodbine,Confined,Ellis,Prairielands GCD,Active,3326822
+31.818053999999997,-97.277777,,Point,Trinity,Confined,Hill,Prairielands GCD,Active,4014602
+30.066388,-97.94444399999999,,Point,Edwards (Balcones Fault Zone),Unconfined,Hays,Barton Springs/Edwards Aquifer CD,Active,5857502
+30.885555,-97.710277,,Point,Edwards (Balcones Fault Zone),Unconfined,Williamson,Clearwater UWCD,Active,5803702
+30.884999,-97.710277,,Point,Trinity,Confined,Williamson,Clearwater UWCD,Active,5803701
+31.043609999999997,-103.32111,,Point,Pecos Valley,Unconfined,Pecos,Middle Pecos GCD,Inactive,4662501
+30.621388,-103.363888,,Point,Edwards-Trinity Plateau,Unknown,Pecos,Middle Pecos GCD,Active,5230107
+30.844165999999998,-102.52194300000001,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Active,5312301
+30.762777000000003,-98.153611,,Point,Ellenburger-San Saba,Confined,Burnet,Central Texas GCD,Active,5715902
+30.762777000000003,-98.153611,,Point,Trinity,Confined,Burnet,Central Texas GCD,Active,5715901
+30.671943,-98.296666,,Point,Hickory,Confined,Burnet,Central Texas GCD,Active,5722505
+30.786665999999997,-103.031666,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5216911
+30.915554999999998,-103.134999,,Point,Edwards-Trinity Plateau,Confined,Pecos,Middle Pecos GCD,Inactive,5207905
+30.983054,-103.161111,,Point,Edwards-Trinity Plateau,Confined,Pecos,Middle Pecos GCD,Inactive,5207304
+30.825832000000002,-98.277777,,Point,Hickory,Confined,Burnet,Central Texas GCD,Active,5714604
+35.174443,-101.496666,,Point,Ogallala,Unconfined,Armstrong,Panhandle GCD,Active,0653401
+30.528053999999997,-95.563888,,Point,Gulf Coast,Unconfined,Walker,U.S. Geological Survey,Active,6028802
+30.210277,-97.781666,,Point,Edwards (Balcones Fault Zone),Confined,Travis,U.S. Geological Survey,Active,5850301
+30.443609999999996,-95.708055,,Point,Gulf Coast,Unconfined,Montgomery,U.S. Geological Survey,Active,6035505
+30.443609999999996,-95.708055,,Point,Gulf Coast,Unconfined,Montgomery,U.S. Geological Survey,Active,6035503
+30.329999,-95.483333,,Point,Gulf Coast,Unconfined,Montgomery,U.S. Geological Survey,Active,6045414
+30.329999,-95.483333,,Point,Gulf Coast,Unconfined,Montgomery,U.S. Geological Survey,Active,6045412
+30.251388000000002,-95.576943,,Point,Gulf Coast,Unconfined,Montgomery,U.S. Geological Survey,Active,6044805
+30.207777,-95.4575,,Point,Gulf Coast,Unconfined,Montgomery,U.S. Geological Survey,Active,6053516
+30.146944,-95.242499,,Point,Gulf Coast,Unconfined,Montgomery,U.S. Geological Survey,Active,6055710
+30.139999,-95.46305500000001,,Point,Gulf Coast,Unconfined,Montgomery,U.S. Geological Survey,Active,6053718
+29.913611,-95.14472099999999,,Point,Gulf Coast,Unconfined,Harris,U.S. Geological Survey,Active,6507905
+29.791109999999996,-95.33361,,Point,Gulf Coast,Unconfined,Harris,U.S. Geological Survey,Active,6514738
+29.790554999999998,-95.586388,,Point,Gulf Coast,Unconfined,Harris,U.S. Geological Survey,Active,6512729
+29.790833000000003,-95.58610999999999,,Point,Gulf Coast,Unconfined,Harris,U.S. Geological Survey,Active,6512726
+29.790554999999998,-95.586388,,Point,Gulf Coast,Unconfined,Harris,U.S. Geological Survey,Active,6512725
+29.727221000000004,-95.451111,,Point,Gulf Coast,Unconfined,Harris,U.S. Geological Survey,Active,6521230
+29.726943,-95.45083299999999,,Point,Gulf Coast,Unconfined,Harris,U.S. Geological Survey,Active,6521226
+29.563333,-95.118888,,Point,Gulf Coast,Unconfined,Harris,U.S. Geological Survey,Active,6532428
+31.953888,-106.605833,,Point,Hueco-Mesilla Bolson,Unconfined,El Paso,U.S. Geological Survey,Active,4904477
+31.953888,-106.605833,,Point,Hueco-Mesilla Bolson,Unconfined,El Paso,U.S. Geological Survey,Active,4904476
+31.953611,-106.605277,,Point,Other,Unconfined,El Paso,U.S. Geological Survey,Active,4904475
+31.953611,-106.605277,,Point,Other,Unconfined,El Paso,U.S. Geological Survey,Active,4904474
+30.049721,-100.052222,,Point,Edwards-Trinity Plateau,Unconfined,Edwards,U.S. Geological Survey,Inactive,5564503
+29.133888,-98.391388,,Point,Carrizo-Wilcox,Confined,Bexar,U.S. Geological Survey,Active,6853928
+29.867777,-99.56722099999999,,Point,Edwards-Trinity Plateau,Unconfined,Bandera,U.S. Geological Survey,Active,6912206
+29.208888,-99.784444,,Point,Edwards (Balcones Fault Zone),Confined,Uvalde,Edwards Aquifer Authority,Active,6950302
+29.479165999999996,-98.43249899999999,,Point,Edwards (Balcones Fault Zone),Confined,Bexar,Edwards Aquifer Authority,Active,6837203
+35.539165999999994,-100.464444,,Point,Ogallala,Unconfined,Wheeler,Texas Water Development Board,Inactive,0529711
+30.3075,-97.972499,,Point,Trinity,Confined,Travis,Texas Water Development Board,Inactive,5841406
+32.812222,-97.17472099999999,,Point,Trinity,Confined,Tarrant,Texas Water Development Board,Inactive,3215504
+30.471666,-94.980554,,Point,Gulf Coast,Unconfined,San Jacinto,Texas Water Development Board,Inactive,6133114
+29.791388,-98.71833199999999,,Point,Trinity,Unconfined,Kendall,Cow Creek GCD,Active,6811708
+29.830554,-98.72861,,Point,Trinity,Unconfined,Kendall,Cow Creek GCD,Active,6811418
+29.819443,-98.694999,,Point,Trinity,Unconfined,Kendall,Cow Creek GCD,Active,6811509
+29.854444,-98.598333,,Point,Trinity,Unconfined,Kendall,Cow Creek GCD,Active,6812106
+29.81,-98.76,,Point,Trinity,Unconfined,Kendall,Cow Creek GCD,Active,6810616
+29.909722,-98.823332,,Point,Trinity,Confined,Kendall,Cow Creek GCD,Active,6802807
+33.066111,-102.29111,,Point,Ogallala,Unconfined,Terry,Texas Water Development Board,Active,2462601
+36.124165999999995,-102.508611,,Point,Ogallala,Unconfined,Dallam,Texas Water Development Board,Active,0260303
+30.693054999999998,-94.746388,,Point,Gulf Coast,Unconfined,Polk,Texas Water Development Board,Active,6119417
+30.782498999999998,-100.25944399999999,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Plateau UWC & SD,Active,5514909
+30.907777000000003,-100.833333,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Plateau UWC & SD,Active,5502807
+30.594721000000003,-95.07861,,Point,Gulf Coast,Unconfined,San Jacinto,Lower Trinity GCD,Active,6032219
+30.114444,-99.035555,,Point,Edwards-Trinity Plateau,Unconfined,Kerr,Headwaters GCD,Active,5664302
+30.114444,-99.035555,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5664301
+31.758055,-103.159722,,Point,Pecos Valley,Unconfined,Winkler,City of Wink,Active,4615924
+30.981109999999997,-97.934721,,Point,Trinity,Unconfined,Burnet,Central Texas GCD,Active,5801202
+30.861388,-97.90722199999999,,Point,Trinity,Confined,Burnet,Central Texas GCD,Active,5809303
+30.690277000000002,-98.226943,,Point,Ellenburger-San Saba,Confined,Burnet,Central Texas GCD,Inactive,5723406
+30.747777000000003,-98.085833,,Point,Trinity,Confined,Burnet,Central Texas GCD,Active,5724101
+31.541388,-102.99499899999999,,Point,Pecos Valley,Unconfined,Ward,Texas Water Development Board,Active,4525715
+30.820277,-100.506388,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Plateau UWC & SD,Active,5512606
+35.574443,-100.434166,,Point,Ogallala,Unconfined,Wheeler,Panhandle GCD,Active,0529505
+32.07861,-94.874166,,Point,Carrizo-Wilcox,Unconfined,Rusk,Rusk County GCD,Active,3558405
+30.255277000000003,-98.057777,,Point,Trinity,Confined,Hays,Hays Trinity GCD: W&L Water Services Inc.,Active,5748811
+31.013888,-100.915277,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Plateau UWC & SD,Active,4357905
+35.373053999999996,-100.115555,,Point,Other,Unconfined,Wheeler,Panhandle GCD,Active,0539904
+29.108888,-96.409444,,Point,Gulf Coast,Unconfined,Wharton,Coastal Bend GCD,Active,6661302
+29.598609999999997,-96.214166,,Point,Gulf Coast,Unconfined,Wharton,Coastal Bend GCD,Active,6631107
+30.795277000000002,-100.765833,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Plateau UWC & SD,Active,5510611
+30.974165999999997,-100.736388,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Plateau UWC & SD,Active,5503109
+31.064444,-100.274999,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Plateau UWC & SD,Active,4362607
+31.007222,-100.49611,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Plateau UWC & SD,Inactive,4361706
+31.893888,-94.77027700000001,,Point,Carrizo-Wilcox,Confined,Rusk,Rusk County GCD,Active,3702905
+32.27111,-94.64694399999999,,Point,Carrizo-Wilcox,Unconfined,Rusk,Rusk County GCD,Active,3543906
+35.769166,-100.775832,,Point,Ogallala,Unconfined,Roberts,Panhandle GCD,Active,0510953
+35.889165999999996,-100.739999,,Point,Ogallala,Unconfined,Roberts,Panhandle GCD,Active,0503709
+29.540277000000003,-104.31,,Point,West Texas Bolson,Unconfined,Presidio,Sul Ross State University,Inactive,7430813
+30.315555,-104.016388,,Point,Igneous,Unconfined,Presidio,Sul Ross State University,Inactive,5148604
+35.413610999999996,-101.639999,,Point,Ogallala,Unconfined,Potter,Panhandle GCD,Active,0635912
+30.678054,-101.816666,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5418510
+30.356111,-102.846388,,Point,Other,Unconfined,Pecos,Middle Pecos GCD,Inactive,5342101
+30.441665999999998,-102.843888,,Point,Other,Confined,Pecos,Middle Pecos GCD,Inactive,5334401
+30.584165999999996,-102.51,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Active,5328303
+30.62861,-102.489166,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Active,5321704
+30.642777000000002,-102.528888,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Active,5320903
+30.692777000000003,-102.523888,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Active,5320603
+30.647777,-102.724721,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Active,5319701
+30.828888,-102.03611,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5316601
+30.772499,-102.581666,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Active,5312803
+30.772499,-102.58222099999999,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5312802
+30.899165999999997,-102.28916600000001,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5306901
+30.990277000000003,-102.923888,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5301209
+30.7025,-103.151666,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5223603
+30.786388,-103.00916600000001,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5216909
+30.867777,-103.015833,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,5216311
+30.901111,-103.046666,,Point,Other,Unconfined,Pecos,Middle Pecos GCD,Inactive,5208802
+30.930277,-103.270554,,Point,Edwards-Trinity Plateau,Confined,Pecos,Middle Pecos GCD,Inactive,5206604
+31.208888,-103.0025,,Point,Pecos Valley,Unconfined,Pecos,Middle Pecos GCD,Inactive,4656309
+31.183609999999998,-103.134721,,Point,Pecos Valley,Unconfined,Pecos,Middle Pecos GCD,Inactive,4655603
+31.017221000000003,-102.235555,,Point,Pecos Valley,Unconfined,Pecos,Middle Pecos GCD,Inactive,4563705
+31.056665999999996,-102.90722199999999,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Middle Pecos GCD,Inactive,4557603
+28.217221000000002,-97.83861,,Point,Gulf Coast,Unconfined,Live Oak,Bee GCD,Active,7950106
+29.988609999999998,-99.024443,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,6908305
+29.988609999999998,-99.024443,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,6908304
+29.969721000000003,-99.2125,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,6907107
+29.940833,-99.573054,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,6904503
+29.906944,-98.97277700000001,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,6801704
+29.906944,-98.97277700000001,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,6801703
+30.039165999999998,-98.92083199999999,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5757805
+30.013610999999997,-99.157777,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5663924
+30.013610999999997,-99.157777,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5663923
+30.117499,-99.492221,,Point,Edwards-Trinity Plateau,Unconfined,Kerr,Headwaters GCD,Active,5661102
+30.106944,-99.494166,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5661101
+30.106388,-99.695555,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5659201
+30.128888,-99.193333,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5655805
+30.242499,-99.343333,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5654106
+30.128054,-99.58666600000001,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5652704
+30.265,-99.654166,,Point,Trinity,Confined,Kerr,Headwaters GCD,Active,5643901
+30.494444,-103.753333,,Point,Igneous,Unconfined,Jeff Davis,Sul Ross State University,Inactive,5234302
+30.547777000000004,-103.928054,,Point,Igneous,Unconfined,Jeff Davis,Sul Ross State University,Inactive,5225509
+30.637221000000004,-104.028054,,Point,Igneous,Unconfined,Jeff Davis,Sul Ross State University,Inactive,5124901
+35.78111,-101.091944,,Point,Ogallala,Unconfined,Hutchinson,Panhandle GCD,Active,0616702
+31.75,-105.130277,,Point,Bone Spring-Victorio Peak,Unconfined,Hudspeth,Sul Ross State University,Inactive,4815903
+35.570554,-100.829999,,Point,Ogallala,Unconfined,Gray,Panhandle GCD,Active,0526501
+34.873332,-100.720832,,Point,Ogallala,Unconfined,Donley,Panhandle GCD,Active,1211118
+34.939444,-100.60555500000001,,Point,Ogallala,Unconfined,Donley,Panhandle GCD,Active,1204452
+34.91,-100.78111,,Point,Ogallala,Unconfined,Donley,Panhandle GCD,Inactive,1202959
+30.839444,-104.76055500000001,,Point,West Texas Bolson,Unconfined,Culberson,Sul Ross State University,Inactive,5110305
+31.118332000000002,-104.683888,,Point,West Texas Bolson,Unconfined,Culberson,Sul Ross State University,Inactive,4759212
+35.366665999999995,-101.39472099999999,,Point,Ogallala,Unconfined,Carson,Panhandle GCD,Inactive,0645305
+30.356944,-103.04111,,Point,Other,Unconfined,Brewster,Middle Pecos GCD,Inactive,5248301
+30.384999,-103.72194300000001,,Point,Igneous,Unconfined,Brewster,Sul Ross State University,Inactive,5235710
+29.616111,-98.735555,,Point,Trinity,Unconfined,Bexar,Trinity Glen Rose GCD,Active,6827112
+29.678054,-98.436944,,Point,Trinity,Unconfined,Bexar,Trinity Glen Rose GCD,Active,6821519
+29.69861,-98.494444,,Point,Trinity,Unconfined,Bexar,Trinity Glen Rose GCD,Inactive,6821410
+29.631943,-98.68611,,Point,Trinity,Unconfined,Bexar,Trinity Glen Rose GCD,Active,6819806
+30.91,-97.555,,Point,Edwards (Balcones Fault Zone),Confined,Bell,Clearwater UWCD,Active,5804816
+30.933888,-97.53111,,Point,Edwards (Balcones Fault Zone),Confined,Bell,Clearwater UWCD,Active,5804628
+31.111110999999998,-97.818054,,Point,Trinity,Confined,Bell,Clearwater UWCD,Active,4058201
+28.436388,-97.848888,,Point,Gulf Coast,Unconfined,Bee,Bee GCD,Active,7934409
+35.18111,-101.169166,,Point,Ogallala,Unconfined,Armstrong,Panhandle GCD,Active,0655504
+35.176943,-101.5075,,Point,Ogallala,Unconfined,Armstrong,Panhandle GCD,Inactive,0652603
+28.924443,-99.82583199999999,,Point,Carrizo-Wilcox,Confined,Zavala,Texas Water Development Board,Active,7702509
+29.121388,-98.36277700000001,,Point,Carrizo-Wilcox,Confined,Wilson,Texas Water Development Board,Active,6862104
+30.578888,-97.410833,,Point,Trinity,Confined,Williamson,Texas Water Development Board,Active,5829603
+30.596109999999996,-97.661111,,Point,Edwards (Balcones Fault Zone),Confined,Williamson,Texas Water Development Board,Inactive,5827305
+29.18611,-96.499444,,Point,Gulf Coast,Unconfined,Wharton,Texas Water Development Board,Active,6653406
+30.166388,-96.38416600000001,,Point,Gulf Coast,Unconfined,Washington,Texas Water Development Board,Active,5953915
+28.684165999999998,-96.948888,,Point,Gulf Coast,Unconfined,Victoria,Texas Water Development Board,Active,8017502
+29.883888,-100.988888,,Point,Edwards-Trinity Plateau,Unconfined,Val Verde,Texas Water Development Board,Active,7001707
+30.0575,-101.22277700000001,,Point,Edwards-Trinity Plateau,Unconfined,Val Verde,Texas Water Development Board,Active,5463401
+30.234999,-97.87305400000001,,Point,Trinity,Confined,Travis,Texas Water Development Board,Active,5850120
+31.374443,-100.405833,,Point,Lipan,Unconfined,Tom Green,Texas Water Development Board,Active,4345306
+31.499166,-100.466388,,Point,Lipan,Unconfined,Tom Green,Texas Water Development Board,Active,4337101
+34.354444,-101.758611,,Point,Ogallala,Unconfined,Swisher,Texas Water Development Board,Active,1142315
+30.359444,-100.378888,,Point,Edwards-Trinity Plateau,Unconfined,Sutton,Texas Water Development Board,Active,5545308
+32.531665999999994,-95.262777,,Point,Carrizo-Wilcox,Confined,Smith,Texas Water Development Board,Active,3430907
+30.862221999999996,-100.597499,,Point,Edwards-Trinity Plateau,Unconfined,Schleicher,Texas Water Development Board,Active,5512134
+32.298055,-94.875277,,Point,Carrizo-Wilcox,Confined,Rusk,Texas Water Development Board,Active,3541604
+35.723332,-100.934999,,Point,Ogallala,Unconfined,Roberts,Texas Water Development Board,Active,0517203
+35.822777,-100.928332,,Point,Ogallala,Unconfined,Roberts,Texas Water Development Board,Active,0509553
+31.324165999999998,-103.543888,,Point,Pecos Valley,Unconfined,Reeves,Texas Water Development Board,Active,4644501
+29.680277,-99.71555500000001,,Point,Trinity,Confined,Real,Texas Water Development Board,Active,6919401
+31.639165999999996,-101.545277,,Point,Edwards-Trinity Plateau,Unconfined,Reagan,Texas Water Development Board,Active,4420854
+30.51861,-104.429721,,Point,West Texas Bolson,Unconfined,Presidio,Texas Water Development Board,Active,5129805
+30.791109999999996,-103.04305500000001,,Point,Edwards-Trinity Plateau,Unconfined,Pecos,Texas Water Development Board,Active,5216802
+31.290554999999998,-103.05,,Point,Pecos Valley,Unconfined,Pecos,Texas Water Development Board,Active,4648806
+30.825277000000003,-96.653611,,Point,Carrizo-Wilcox,Confined,Milam,Texas Water Development Board,Active,5911621
+31.461944,-97.19861,,Point,Trinity,Confined,McLennan,Texas Water Development Board,Active,4039204
+30.949721000000004,-99.28083199999999,,Point,Hickory,Confined,McCulloch,Texas Water Development Board,Active,5606614
+30.929166,-99.26333299999999,,Point,Hickory,Unconfined,Mason,Texas Water Development Board,Active,5606613
+32.386666,-102.147777,,Point,Ogallala,Unconfined,Martin,Texas Water Development Board,Active,2739903
+34.169443,-102.402777,,Point,Ogallala,Unconfined,Lamb,U.S. Geological Survey,Active,1053602
+28.477221000000004,-99.357222,,Point,Carrizo-Wilcox,Confined,La Salle,Texas Water Development Board,Active,7738103
+30.005554999999998,-99.132777,,Point,Trinity,Confined,Kerr,Texas Water Development Board,Active,5663922
+30.169721000000003,-99.347499,,Point,Trinity,Confined,Kerr,Texas Water Development Board,Active,5654405
+29.798333000000003,-98.744721,,Point,Trinity,Unconfined,Kendall,Texas Water Development Board,Active,6811417
+29.970277000000003,-98.525277,,Point,Trinity,Unconfined,Kendall,Texas Water Development Board,Active,6804312
+29.929999,-98.788055,,Point,Trinity,Unconfined,Kendall,Texas Water Development Board,Active,6802609
+29.972221,-98.89472099999999,,Point,Trinity,Unconfined,Kendall,Texas Water Development Board,Active,6801314
+28.812222,-97.85,,Point,Gulf Coast,Unconfined,Karnes,Texas Water Development Board,Active,7910406
+30.590555,-103.94360999999999,,Point,Igneous,Unconfined,Jeff Davis,Texas Water Development Board,Active,5225209
+30.347777,-94.070554,,Point,Gulf Coast,Unconfined,Jasper,Texas Water Development Board,Active,6148209
+31.943888,-105.201944,,Point,Bone Spring-Victorio Peak,Unconfined,Hudspeth,Texas Water Development Board,Active,4807516
+32.318332,-97.783333,,Point,Trinity,Unconfined,Hood,Texas Water Development Board,Active,3242604
+30.015833,-98.116943,,Point,Trinity,Unconfined,Hays,Texas Water Development Board,Active,5764705
+30.034721,-98.24110999999999,,Point,Trinity,Confined,Hays,Texas Water Development Board,Active,5763705
+30.184444,-98.139166,,Point,Trinity,Unconfined,Hays,Texas Water Development Board,Active,5755607
+35.805833,-102.61361099999999,,Point,Ogallala,Unconfined,Hartley,Texas Water Development Board,Active,0712401
+33.391388,-99.749166,,Point,Seymour,Unconfined,Haskell,Texas Water Development Board,Active,2135748
+29.817221000000004,-95.369443,,Point,Gulf Coast,Unconfined,Harris,Texas Water Development Board,Active,6514409
+36.243333,-101.262222,,Point,Ogallala,Unconfined,Hansford,Texas Water Development Board,Active,0354301
+33.829166,-101.848333,,Point,Edwards-Trinity (High Plains),Unconfined,Hale,Texas Water Development Board,Active,2310401
+34.192221,-101.727221,,Point,Ogallala,Unconfined,Hale,Texas Water Development Board,Active,1151403
+33.710555,-96.657777,,Point,Woodbine,Confined,Grayson,Texas Water Development Board,Active,1819301
+31.795277000000002,-101.535833,,Point,Edwards-Trinity Plateau,Unconfined,Glasscock,Texas Water Development Board,Active,4412611
+30.205833000000002,-98.727777,,Point,Ellenburger-San Saba,Confined,Gillespie,Texas Water Development Board,Active,5751407
+30.230832,-98.79083299999999,,Point,Ellenburger-San Saba,Confined,Gillespie,Texas Water Development Board,Active,5750324
+30.215555,-98.841944,,Point,Ellenburger-San Saba,Confined,Gillespie,Texas Water Development Board,Active,5750108
+28.925553999999998,-99.073332,,Point,Carrizo-Wilcox,Confined,Frio,Texas Water Development Board,Active,7708511
+32.198333,-98.180554,,Point,Trinity,Unconfined,Erath,Texas Water Development Board,Active,3155504
+31.869999,-106.414722,,Point,Hueco-Mesilla Bolson,Unconfined,El Paso,Texas Water Development Board,Active,4913301
+27.758333,-98.241388,,Point,Gulf Coast,Unconfined,Duval,Texas Water Development Board,Active,8415702
+34.895555,-102.527777,,Point,Ogallala,Unconfined,Deaf Smith,Texas Water Development Board,Active,1004901
+32.574999,-101.881388,,Point,Ogallala,Unconfined,Dawson,Texas Water Development Board,Active,2825604
+32.725277,-101.984444,,Point,Ogallala,Unconfined,Dawson,Texas Water Development Board,Inactive,2817119
+32.588333,-96.956944,,Point,Trinity,Confined,Dallas,Texas Water Development Board,Active,3325202
+32.746388,-96.750277,,Point,Trinity,Confined,Dallas,Texas Water Development Board,Active,3319101
+31.124166,-104.73777700000001,,Point,Other,Unconfined,Culberson,Texas Water Development Board,Active,4759123
+33.587777,-101.341666,,Point,Ogallala,Unconfined,Crosby,Texas Water Development Board,Active,2330103
+30.713054999999997,-101.21305500000001,,Point,Edwards-Trinity Plateau,Unconfined,Crockett,Texas Water Development Board,Active,5423106
+31.198055,-97.91,,Point,Trinity,Unconfined,Coryell,Texas Water Development Board,Active,4049601
+31.432221000000002,-97.73083199999999,,Point,Trinity,Confined,Coryell,Texas Water Development Board,Active,4035404
+31.618888000000002,-97.799166,,Point,Trinity,Confined,Coryell,Texas Water Development Board,Active,4026201
+29.855555,-98.17527700000001,,Point,Trinity,Unconfined,Comal,Texas Water Development Board,Active,6815211
+29.937499,-98.20944399999999,,Point,Trinity,Unconfined,Comal,Texas Water Development Board,Active,6807407
+35.426388,-101.530277,,Point,Ogallala,Unconfined,Carson,Texas Water Development Board,Inactive,0636602
+29.319999,-103.212222,,Point,Other,Unconfined,Brewster,Texas Water Development Board,Active,7347404
+29.732777000000002,-98.62361,,Point,Trinity,Unconfined,Bexar,Texas Water Development Board,Active,6820110
+29.721666,-98.667221,,Point,Trinity,Unconfined,Bexar,Texas Water Development Board,Active,6819208
+30.916943,-97.591944,,Point,Edwards (Balcones Fault Zone),Unconfined,Bell,Texas Water Development Board,Active,5804702
+31.066665999999998,-97.904166,,Point,Trinity,Confined,Bell,Texas Water Development Board,Active,4057602
+31.066943,-97.904166,,Point,Trinity,Confined,Bell,Texas Water Development Board,Active,4057601
+33.631943,-99.296666,,Point,Seymour,Unconfined,Baylor,Texas Water Development Board,Active,2122850
+30.109444,-97.294721,,Point,Carrizo-Wilcox,Unconfined,Bastrop,Texas Water Development Board,Active,5862208
+29.734721,-99.074721,,Point,Trinity,Confined,Bandera,Texas Water Development Board,Active,6924225
+34.146665999999996,-102.658333,,Point,Ogallala,Unconfined,Bailey,Texas Water Development Board,Active,1051909
+28.929999,-98.549166,,Point,Carrizo-Wilcox,Confined,Atascosa,Texas Water Development Board,Active,7804508
