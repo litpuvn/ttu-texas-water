@@ -1,0 +1,83 @@
+body{
+    font-family:"Helvetica Neue, Helvetica, Liberation Sans, Arial, sans-serif";
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #aaa;
+}
+
+.nav-tabs>li>a{
+    margin-right: 2px;
+    line-height:1.4287143;
+    border:1px solid transparent;
+    border-radius:4px 4px 0 0;
+}
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:hover, .nav-tabs>li.active>a:focus {
+    color: #555;
+    cursor: default;
+    background-color: #fff;
+    border: 1px solid #aaa;
+    border-bottom-color: transparent;
+}
+
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+}
+.navbar-brand{
+    font-size:24px !important;
+}
+.input-group-btn.input-space {
+    padding-left: 10px;
+}
+
+.search {
+    position: relative;
+    color: #aaa;
+    font-size: 16px;
+}
+
+.search input {
+    width: 400px;
+    height: 32px;
+
+    background: #fcfcfc;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #ccc, 0 10px 15px #ebebeb inset;
+}
+
+.search input { padding-right:27px;}
+.search .fa-search {
+    position: absolute;
+    top: 9px;
+    right: 25px;
+}
+
+.content-container{
+    margin-bottom:3.5em;
+  }
+
+path:hover {
+	fill-opacity: .7;
+}
+
+/* Style for Custom Tooltip */
+div.tooltip {   
+ 	position: absolute;           
+	text-align: center;           
+	width: auto;                  
+	height: auto;                 
+	padding: 2px;             
+	font: 12px sans-serif;        
+	background: white;   
+	border: 0px;      
+	border-radius: 8px;           
+	pointer-events: none;         
+}
+
+.static {
+    position: static;
+}
