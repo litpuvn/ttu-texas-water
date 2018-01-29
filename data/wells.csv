@@ -1,0 +1,226 @@
+County,State Well Number,Aquifer,Aquifer Type,Entity/Cooperator,Data Transmission,Latest Transmission Date,Daily High Water Level(feet below land surface),Latitude,Longitude,Status
+Anderson,3813106,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,227.69,31.865833, -95.496388,Active
+Armstrong,653401,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,167.19,35.174443,-101.496666,Active
+Armstrong,655504,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,359.37,35.18111,-101.169166,Active
+Atascosa,7804508,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,178.47,28.929999,-98.549166,Active
+Bailey,1051909,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,149.06,34.146666,-102.658333,Active
+Bandera,6912206,Edwards-Trinity Plateau,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,248.57,29.867777,-99.567221,Active
+Bandera,6924225,Trinity,Confined,Texas Water Development Board,Satellite,1/23/2018,418.49,29.734721,-99.074721,Active
+Bastrop,5862208,Carrizo-Wilcox,Unconfined,Texas Water Development Board,Satellite,1/24/2018,205.36,30.109444,-97.294721,Active
+Baylor,2122850,Seymour,Unconfined,Texas Water Development Board,Satellite,1/24/2018,14.33,28.436388,-97.848888,Active
+Bee,7934409,Gulf Coast,Unconfined,Bee GCD,Satellite,1/24/2018,131.07,31.131666,-97.37361,Active
+Bell,4054701,Trinity,Confined,Clearwater UWCD,Satellite,1/24/2018,476.94,,,Active
+Bell,4057601,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,309.83,,,Active
+Bell,4057602,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,297.8,,,Active
+Bell,4058201,Trinity,Confined,Clearwater UWCD,Satellite,1/24/2018,83.32,,,Active
+Bell,4061509,Trinity,Confined,Clearwater UWCD,Satellite,1/24/2018,254.11,,,Active
+Bell,4062501,Trinity,Confined,Clearwater UWCD,Satellite,1/24/2018,357.34,,,Active
+Bell,5802202,Trinity,Unconfined,Clearwater UWCD,Satellite,1/24/2018,369.42,,,Active
+Bell,5802302,Trinity,Unconfined,Clearwater UWCD,Satellite,1/24/2018,333.47,,,Active
+Bell,5804628,Edwards (Balcones Fault Zone),Confined,Clearwater UWCD,Satellite,1/24/2018,57.93,,,Active
+Bell,5804702,Edwards (Balcones Fault Zone),Unconfined,Texas Water Development Board,Satellite,1/24/2018,73.04,,,Active
+Bell,5804816,Edwards (Balcones Fault Zone),Confined,Clearwater UWCD,Satellite,1/24/2018,124.17,,,Active
+Bexar,6819208,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,463.74,,,Active
+Bexar,6819618,Trinity,Unconfined,Trinity Glen Rose GCD,Satellite,1/24/2018,232.96,,,Active
+Bexar,6819806,Trinity,Unconfined,Trinity Glen Rose GCD,Satellite,1/24/2018,229.09,,,Active
+Bexar,6820110,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,277.38,,,Active
+Bexar,6820602,Trinity,Unconfined,Trinity Glen Rose GCD,Satellite,1/24/2018,261.23,,,Active
+Bexar,6820603,Trinity,Unconfined,Trinity Glen Rose GCD,Satellite,1/24/2018,299.04,,,Active
+Bexar,6821519,Trinity,Unconfined,Trinity Glen Rose GCD,Satellite,1/24/2018,288.35,,,Active
+Bexar,6827112,Trinity,Unconfined,Trinity Glen Rose GCD,Satellite,1/24/2018,233.15,,,Active
+Bexar,6837203,Edwards (Balcones Fault Zone),Confined,Edwards Aquifer Authority 3,Cellular,1/24/2018,67.01,,,Active
+Bexar,6853928,Carrizo-Wilcox,Confined,U.S. Geological Survey 1,Satellite,1/2/2018,96.16,,,Active
+Brewster,7347404,Other,Unconfined,Texas Water Development Board,Satellite,1/24/2018,145.34,,,Active
+Brooks,8455216,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,109.83,,,Active
+Burnet,5714604,Hickory,Confined,Central Texas GCD,Satellite,1/24/2018,187.14,,,Active
+Burnet,5715901,Trinity,Confined,Central Texas GCD,Satellite,1/24/2018,243.63,,,Active
+Burnet,5715902,Ellenburger-San Saba,Confined,Central Texas GCD,Satellite,1/24/2018,231.87,,,Active
+Burnet,5722505,Hickory,Confined,Central Texas GCD,Satellite,1/24/2018,75.44,,,Active
+Burnet,5724101,Trinity,Confined,Central Texas GCD,Satellite,1/24/2018,196.95,,,Active
+Burnet,5801202,Trinity,Unconfined,Central Texas GCD,Satellite,1/24/2018,99.9,,,Active
+Burnet,5809303,Trinity,Confined,Central Texas GCD,Satellite,1/24/2018,446.45,,,Active
+Cameron,8860415,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/15/2018,47.1,,,Active
+Carson,644102,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,494.09,,,Active
+Carson,646805,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,402.31,,,Active
+Comal,6807407,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,313,,,Active
+Comal,6815211,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,109.1,,,Active
+Coryell,4026201,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,727.24,,,Active
+Coryell,4035404,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,522.54,,,Active
+Coryell,4049601,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,280.87,,,Active
+Crockett,5423106,Edwards-Trinity Plateau,Unconfined,Texas Water Development Board,Satellite,1/24/2018,317.06,,,Active
+Crosby,2330103,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,217.26,,,Active
+Culberson,4759123,Other,Unconfined,Texas Water Development Board,Satellite,1/24/2018,254.43,,,Active
+Dallam,260303,Ogallala,Unconfined,Texas Water Development Board,Satellite,12/26/2017,404.9,,,Active
+Dallas,3319101,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,494.3,,,Active
+Dallas,3325202,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,1088.44,,,Active
+Dawson,2825604,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,55.49,,,Active
+Deaf Smith,1004901,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,229.86,,,Active
+Donley,1203112,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,12.87,,,Active
+Donley,1204452,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,139.74,,,Active
+Donley,1211118,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,105.74,,,Active
+Duval,8415702,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,237.25,,,Active
+El Paso,4904476,Hueco-Mesilla Bolson,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,57.95,,,Active
+El Paso,4913301,Hueco-Mesilla Bolson,Unconfined,Texas Water Development Board,Satellite,1/24/2018,294.55,,,Active
+Ellis,3325803,Woodbine,Confined,Prairielands GCD,Satellite,1/24/2018,565.43,,,Active
+Ellis,3326822,Woodbine,Confined,Prairielands GCD,Satellite,1/24/2018,470.97,,,Active
+Ellis,3333203,Trinity,Confined,Prairielands GCD,Satellite,1/24/2018,1347.25,,,Active
+Ellis,3334207,Trinity,Confined,Prairielands GCD,Satellite,1/24/2018,873.7,,,Active
+Ellis,3334209,Woodbine,Confined,Prairielands GCD,Satellite,1/24/2018,464.84,,,Active
+Erath,3155504,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,193.8,,,Active
+Frio,7708511,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,415.46,,,Active
+Gillespie,5750108,Ellenburger-San Saba,Confined,Texas Water Development Board,Satellite,1/24/2018,71.37,,,Active
+Gillespie,5750324,Ellenburger-San Saba,Confined,Texas Water Development Board,Satellite,1/24/2018,54.86,,,Active
+Gillespie,5751407,Ellenburger-San Saba,Confined,Texas Water Development Board,Satellite,1/24/2018,50.51,,,Active
+Glasscock,4412611,Edwards-Trinity Plateau,Unconfined,Texas Water Development Board,Satellite,1/24/2018,238.18,,,Active
+Gonzales,6727805,Carrizo-Wilcox,Confined,Gonzales County UWCD,Satellite,1/24/2018,41.58,,,Active
+Gray,526501,Ogallala,Unconfined,Panhandle GCD,Satellite,12/26/2017,371.5,,,Active
+Grayson,1819301,Woodbine,Confined,Texas Water Development Board,Satellite,1/24/2018,240.98,,,Active
+Hale,1151403,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,210.53,,,Active
+Hale,2310401,Edwards-Trinity (High Plains),Unconfined,Texas Water Development Board,Satellite,1/24/2018,177.73,,,Active
+Hansford,354301,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,159.23,,,Active
+Harris,6507905,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,73.46,,,Active
+Harris,6512725,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,9.54,,,Active
+Harris,6512726,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,342.75,,,Active
+Harris,6512729,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,154.33,,,Active
+Harris,6514409,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,192.35,,,Active
+Harris,6514738,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,173.23,,,Active
+Harris,6521226,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,228.68,,,Active
+Harris,6521230,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,252.32,,,Active
+Harris,6532428,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,132.7,,,Active
+Hartley,712401,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,251.53,,,Active
+Haskell,2135748,Seymour,Unconfined,Texas Water Development Board,Satellite,1/24/2018,46.62,,,Active
+Hays,5748811,Trinity,Confined,Hays Trinity GCD: W&L Water Services Inc.,Satellite,1/24/2018,636.15,,,Active
+Hays,5755607,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,151.29,,,Active
+Hays,5756702,Trinity,Unconfined,Hays Trinity GCD,Satellite,1/24/2018,69.69,,,Active
+Hays,5763705,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,237.76,,,Active
+Hays,5764502,Trinity,Unconfined,Hays Trinity GCD,Satellite,1/23/2018,327.96,,,Active
+Hays,5764705,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,121.92,,,Active
+Hays,5857502,Edwards (Balcones Fault Zone),Unconfined,Barton Springs/Edwards Aquifer CD,Satellite,1/20/2018,201.95,,,Active
+Hidalgo,8739308,Gulf Coast,Unconfined,Texas Water Development Board,Data Card,6/13/2017,28.78,,,Active
+Hill,4014602,Trinity,Confined,Prairielands GCD,Satellite,1/23/2018,315.88,,,Active
+Hill,4015102,Trinity,Confined,Prairielands GCD,Satellite,1/24/2018,625.02,,,Active
+Hood,3242604,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,289.95,,,Active
+Hudspeth,4807516,Bone Spring-Victorio Peak,Unconfined,Texas Water Development Board,Satellite,1/24/2018,140.25,,,Active
+Hutchinson,616702,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,245.53,,,Active
+Jasper,6148209,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,196.01,,,Active
+Jeff Davis,5225209,Igneous,Unconfined,Texas Water Development Board,Satellite,1/24/2018,137.89,,,Active
+Jim Hogg,8703901,Gulf Coast,Unconfined,Brush Country GCD,Satellite,1/24/2018,174.07,,,Active
+Johnson,3231906,Woodbine,Confined,Prairielands GCD,Satellite,1/24/2018,125.76,,,Active
+Karnes,7910406,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/19/2018,197.25,,,Active
+Kendall,5758203,Edwards-Trinity Plateau,Unconfined,Cow Creek GCD,Satellite,1/24/2018,30,,,Active
+Kendall,6801314,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,169.69,,,Active
+Kendall,6802609,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,132.88,,,Active
+Kendall,6802807,Trinity,Confined,Cow Creek GCD,Satellite,1/24/2018,176.11,,,Active
+Kendall,6804312,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,125.9,,,Active
+Kendall,6809303,Trinity,Unconfined,Cow Creek GCD,Satellite,1/24/2018,771.82,,,Active
+Kendall,6810616,Trinity,Unconfined,Cow Creek GCD,Satellite,1/24/2018,455.59,,,Active
+Kendall,6811302,Trinity,Unconfined,Cow Creek GCD,Satellite,1/24/2018,164.86,,,Active
+Kendall,6811417,Trinity,Unconfined,Texas Water Development Board,Satellite,1/24/2018,302.2,,,Active
+Kendall,6811418,Trinity,Unconfined,Cow Creek GCD,Satellite,1/24/2018,464.36,,,Active
+Kendall,6811509,Trinity,Unconfined,Cow Creek GCD,Satellite,1/24/2018,318.68,,,Active
+Kendall,6811708,Trinity,Unconfined,Cow Creek GCD,Satellite,1/24/2018,245.34,,,Active
+Kendall,6812106,Trinity,Unconfined,Cow Creek GCD,Satellite,1/24/2018,101.29,,,Active
+Kerr,5643901,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,456.37,,,Active
+Kerr,5644901,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,599.86,,,Active
+Kerr,5652704,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,669.58,,,Active
+Kerr,5654106,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,562.27,,,Active
+Kerr,5654405,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,446.45,,,Active
+Kerr,5655805,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,146.13,,,Active
+Kerr,5659201,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,651.33,,,Active
+Kerr,5661101,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,521.61,,,Active
+Kerr,5661907,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,330.9,,,Active
+Kerr,5663922,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,281.62,,,Active
+Kerr,5663923,Trinity,Confined,Headwaters GCD,Satellite,1/23/2018,291.22,,,Active
+Kerr,5663924,Trinity,Confined,Headwaters GCD,Satellite,1/23/2018,256.16,,,Active
+Kerr,5664301,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,431.42,,,Active
+Kerr,5664302,Edwards-Trinity Plateau,Unconfined,Headwaters GCD,Satellite,1/24/2018,76.31,,,Active
+Kerr,5757805,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,435.24,,,Active
+Kerr,6801703,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,230.21,,,Active
+Kerr,6801704,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,270.22,,,Active
+Kerr,6904503,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,698.94,,,Active
+Kerr,6907107,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,334.05,,,Active
+Kerr,6908304,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,283.71,,,Active
+Kerr,6908305,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,291.01,,,Active
+Kerr,6908513,Trinity,Confined,Headwaters GCD,Satellite,1/24/2018,227.08,,,Active
+Kinney,7038902,Edwards (Balcones Fault Zone),Unconfined,Texas Water Development Board,Satellite,1/24/2018,186.41,,,Active
+Kleberg,8326701,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,242.74,,,Active
+La Salle,7738103,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,481.98,,,Active
+Lamb,1053602,Ogallala,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,148.24,,,Active
+Live Oak,7950106,Gulf Coast,Unconfined,Bee GCD,Satellite,1/24/2018,129.09,,,Active
+Martin,2739903,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,143.77,,,Active
+Mason,5606613,Hickory,Unconfined,Texas Water Development Board,Satellite,1/24/2018,69.3,,,Active
+McCulloch,5606614,Hickory,Confined,Texas Water Development Board,Satellite,1/24/2018,139.9,,,Active
+McLennan,4039204,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,827.5,,,Active
+Milam,5911621,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,46.82,,,Active
+Montgomery,6035503,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,14.54,,,Active
+Montgomery,6035505,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,14.76,,,Active
+Montgomery,6044805,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,40.51,,,Active
+Montgomery,6045412,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,87.68,,,Active
+Montgomery,6045414,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,54.82,,,Active
+Montgomery,6053516,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,327.36,,,Active
+Montgomery,6053718,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,129.61,,,Active
+Montgomery,6055710,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,133.15,,,Active
+Pecos,4648806,Pecos Valley,Unconfined,Texas Water Development Board,Satellite,1/24/2018,249.53,,,Active
+Pecos,5216802,Edwards-Trinity Plateau,Unconfined,Texas Water Development Board,Satellite,1/24/2018,184.39,,,Active
+Pecos,5230107,Edwards-Trinity Plateau,Unknown,Middle Pecos GCD,Satellite,1/24/2018,201.89,,,Active
+Pecos,5312301,Edwards-Trinity Plateau,Unconfined,Middle Pecos GCD,Satellite,1/24/2018,40.59,,,Active
+Pecos,5312803,Edwards-Trinity Plateau,Unconfined,Middle Pecos GCD,Satellite,12/24/2017,217.35,,,Active
+Pecos,5319701,Edwards-Trinity Plateau,Unconfined,Middle Pecos GCD,Satellite,1/24/2018,567.11,,,Active
+Pecos,5320603,Edwards-Trinity Plateau,Unconfined,Middle Pecos GCD,Satellite,1/24/2018,492.58,,,Active
+Pecos,5320903,Edwards-Trinity Plateau,Unconfined,Middle Pecos GCD,Satellite,1/24/2018,604.7,,,Active
+Pecos,5321704,Edwards-Trinity Plateau,Unconfined,Middle Pecos GCD,Satellite,1/6/2018,628.25,,,Active
+Pecos,5328303,Edwards-Trinity Plateau,Unconfined,Middle Pecos GCD,Satellite,1/24/2018,722.56,,,Active
+Polk,6119417,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,189.76,,,Active
+Potter,635912,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,356.57,,,Active
+Presidio,5129805,West Texas Bolson,Unconfined,Texas Water Development Board,Satellite,1/23/2018,351.66,,,Active
+Reagan,4420854,Edwards-Trinity Plateau,Unconfined,Texas Water Development Board,Satellite,1/24/2018,227.83,,,Active
+Real,6919401,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,378.46,,,Active
+Reeves,4644501,Pecos Valley,Unconfined,Texas Water Development Board,Satellite,1/24/2018,160.45,,,Active
+Roberts,503709,Ogallala,Unconfined,Panhandle GCD,Satellite,1/23/2018,279.19,,,Active
+Roberts,509553,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,279.48,,,Active
+Roberts,510953,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,265.79,,,Active
+Roberts,517203,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,333.49,,,Active
+Rusk,3541604,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,174.01,,,Active
+Rusk,3543906,Carrizo-Wilcox,Unconfined,Rusk County GCD,Satellite,1/24/2018,158.9,,,Active
+Rusk,3558405,Carrizo-Wilcox,Unconfined,Rusk County GCD,Satellite,1/24/2018,138.54,,,Active
+Rusk,3702905,Carrizo-Wilcox,Confined,Rusk County GCD,Satellite,1/24/2018,122.38,,,Active
+San Jacinto,6032219,Gulf Coast,Unconfined,Lower Trinity GCD,Satellite,1/24/2018,99.06,,,Active
+Schleicher,4357905,Edwards-Trinity Plateau,Unconfined,Plateau UWC & SD,Satellite,1/24/2018,315.99,,,Active
+Schleicher,4362607,Edwards-Trinity Plateau,Unconfined,Plateau UWC & SD,Satellite,1/24/2018,276.25,,,Active
+Schleicher,5502807,Edwards-Trinity Plateau,Unconfined,Plateau UWC & SD,Satellite,1/24/2018,337.76,,,Active
+Schleicher,5503109,Edwards-Trinity Plateau,Unconfined,Plateau UWC & SD,Satellite,12/31/2017,277.17,,,Active
+Schleicher,5512134,Edwards-Trinity Plateau,Unconfined,Texas Water Development Board,Satellite,1/24/2018,309.67,,,Active
+Schleicher,5512606,Edwards-Trinity Plateau,Unconfined,Plateau UWC & SD,Satellite,1/24/2018,272.85,,,Active
+Schleicher,5514909,Edwards-Trinity Plateau,Unconfined,Plateau UWC & SD,Satellite,1/24/2018,96.02,,,Active
+Smith,3430907,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,432.54,,,Active
+Somervell,3242805,Trinity,Unconfined,Prairielands GCD,Satellite,1/24/2018,307.59,,,Active
+Somervell,3242906,Trinity,Unconfined,Prairielands GCD,Satellite,1/24/2018,173.19,,,Active
+Somervell,3242907,Trinity,Unconfined,Prairielands GCD,Satellite,1/24/2018,290.53,,,Active
+Somervell,3250201,Trinity,Unconfined,Prairielands GCD,Satellite,1/24/2018,43.72,,,Active
+Sutton,5545308,Edwards-Trinity Plateau,Unconfined,Texas Water Development Board,Satellite,1/24/2018,274.56,,,Active
+Swisher,1142315,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,189.6,,,Active
+Terry,2462601,Ogallala,Unconfined,Texas Water Development Board,Satellite,1/24/2018,138.02,,,Active
+Tom Green,4337101,Lipan,Unconfined,Texas Water Development Board,Satellite,1/24/2018,47,,,Active
+Tom Green,4345306,Lipan,Unconfined,Texas Water Development Board,Satellite,1/24/2018,51.37,,,Active
+Travis,5747310,Trinity,Unconfined,Travis County,Satellite,1/24/2018,19.44,,,Active
+Travis,5747312,Trinity,Unconfined,Travis County,Satellite,1/24/2018,55.26,,,Active
+Travis,5850120,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,344.9,,,Active
+Travis,5850301,Edwards (Balcones Fault Zone),Confined,U.S. Geological Survey 1,Satellite,1/24/2018,156.53,,,Active
+Uvalde,6950302,Edwards (Balcones Fault Zone),Confined,Edwards Aquifer Authority 3,Cellular,1/24/2018,30,,,Active
+Val Verde,5463401,Edwards-Trinity Plateau,Unconfined,Texas Water Development Board,Satellite,1/24/2018,177.7,,,Active
+Val Verde,7001707,Edwards-Trinity Plateau,Unconfined,Texas Water Development Board,Data Card,2/22/2017,55.98,,,Active
+Victoria,8017502,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,34.38,,,Active
+Walker,6028802,Gulf Coast,Unconfined,U.S. Geological Survey 1,Satellite,1/24/2018,78.14,,,Active
+Ward,4525715,Pecos Valley,Unconfined,Texas Water Development Board,Satellite,1/24/2018,143.21,,,Active
+Washington,5953915,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,33.76,,,Active
+Wharton,6631107,Gulf Coast,Unconfined,Coastal Bend GCD,Satellite,1/24/2018,37.69,,,Active
+Wharton,6653406,Gulf Coast,Unconfined,Texas Water Development Board,Satellite,1/24/2018,63.23,,,Active
+Wharton,6661302,Gulf Coast,Unconfined,Coastal Bend GCD,Satellite,1/24/2018,52.99,,,Active
+Wheeler,529505,Ogallala,Unconfined,Panhandle GCD,Satellite,1/24/2018,149.24,,,Active
+Wheeler,539904,Other,Unconfined,Panhandle GCD,Satellite,1/24/2018,22.61,,,Active
+Williamson,5803701,Trinity,Confined,Clearwater UWCD,Satellite,1/24/2018,649.77,,,Active
+Williamson,5803702,Edwards (Balcones Fault Zone),Unconfined,Clearwater UWCD,Satellite,1/24/2018,58.53,,,Active
+Williamson,5829603,Trinity,Confined,Texas Water Development Board,Satellite,1/24/2018,197.08,,,Active
+Wilson,6862104,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,194.4,,,Active
+Winkler,4615924,Pecos Valley,Unconfined,City of Wink,Satellite,1/24/2018,100.37,,,Active
+Zavala,7702509,Carrizo-Wilcox,Confined,Texas Water Development Board,Satellite,1/24/2018,401.45,,,Active
