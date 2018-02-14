@@ -4,8 +4,10 @@ var infoWindowWidth = 400;
 var infoWindowHeight = 300;
 
 
-function GoogleMap(containerId) {
-    this.containerId = containerId
+function GoogleMap(containerId, wellManager) {
+    this.containerId = containerId;
+    this.wellManager = wellManager;
+    this.wellMarker = {};
 }
 
 GoogleMap.prototype = {
@@ -19,7 +21,35 @@ GoogleMap.prototype = {
           });
 
           infoWindow = new google.maps.InfoWindow();
-          // initWellMarkers();
+          this.populateWells();
+    },
+
+    populateWells: function () {
+        var self = this;
+        var counties = self.wellManager.getCounties();
+
+        for(var county in counties) {
+            if (!counties.hasOwnProperty(county)) {
+                continue;
+            }
+
+            var wells = self.wellManager.getWellsByCounty(county);
+            wells.forEach(function (well) {
+
+
+                self.wellMarker[well.id] = new google.maps.Marker({
+                    position: {
+                                lat: well.latitude,
+                                lng: well.longitude
+                    },
+                    map: self.map,
+                    title: well.id,
+                    id: well.id//,
+                    //icon: 'ICON URL HERE'
+                });
+
+            });
+        }
     }
 };
 

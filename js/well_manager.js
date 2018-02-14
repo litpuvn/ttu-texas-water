@@ -23,8 +23,8 @@ WellManager.prototype = {
                var wellObject = {
                    id: row['state_well_number'],
                    water_level: row['state_well_number'],
-                   latitude: row['latitude'],
-                   longitude: row['longitude'],
+                   latitude: Number(row['latitude']),
+                   longitude: Number(row['longitude']),
                    aquifer: row['aquifer'],
                    active: 'Active' === row['active']
                };
@@ -33,11 +33,17 @@ WellManager.prototype = {
                 self.counties[county].push(wellObject)
 
            });
+
+           console.log(self.counties);
        })
 
     },
 
     getWellsByCounty: function (countyName) {
-        return self.counties[countyName];
+        return this.counties[countyName];
+    },
+
+    getCounties: function () {
+        return this.counties;
     }
 };
