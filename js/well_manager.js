@@ -35,7 +35,7 @@ WellManager.prototype = {
            });
 
            console.log(self.counties);
-       })
+       });
 
     },
 
@@ -45,5 +45,14 @@ WellManager.prototype = {
 
     getCounties: function () {
         return this.counties;
+    },
+
+    getWellTimeSeries: function (wellId, callback) {
+         $.get("../data/detail/" + wellId + ".csv", function(data) {
+           var csvObj = $.csv.toObjects(data);
+           console.log(csvObj);
+
+           callback(csvObj);
+       });
     }
 };

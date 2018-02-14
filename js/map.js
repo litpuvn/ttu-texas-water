@@ -1,9 +1,3 @@
-var infoWindow;
-//Info Window Size:
-var infoWindowWidth = 400;
-var infoWindowHeight = 300;
-
-
 function GoogleMap(containerId, wellManager) {
     this.containerId = containerId;
     this.wellManager = wellManager;
@@ -27,6 +21,7 @@ GoogleMap.prototype = {
     populateWells: function () {
         var self = this;
         var counties = self.wellManager.getCounties();
+        var infoWindow = new google.maps.InfoWindow();
 
         for(var county in counties) {
             if (!counties.hasOwnProperty(county)) {
@@ -36,8 +31,7 @@ GoogleMap.prototype = {
             var wells = self.wellManager.getWellsByCounty(county);
             wells.forEach(function (well) {
 
-
-                self.wellMarker[well.id] = new google.maps.Marker({
+                var wellMarker =  new google.maps.Marker({
                     position: {
                                 lat: well.latitude,
                                 lng: well.longitude
@@ -48,33 +42,21 @@ GoogleMap.prototype = {
                     //icon: 'ICON URL HERE'
                 });
 
+                self.wellMarker[well.id] = wellMarker;
+
+                wellMarker.addListener('click', function() {
+                    self.wellManager.getWellTimeSeries(well.id, function (data) {
+                        infoWindow.setContent('<div id="test" style="height: 300px; width: 400px;">' +
+                            'Hello world' +
+                        '</div>');
+
+                        infoWindow.open(self.map, wellMarker);
+                    });
+
+                });
+
             });
         }
     }
 };
 
-
-function initWellMarkers(){
-	$.get("https://raw.githubusercontent.com/litpuvn/ttu-texas-water/master/data/wells.csv", function(data) {
-    WellInfo = GetWellInfo(data);
-
-    var markers = []
-    for(i = 0; i < WellInfo.length; i++){
-      markers.push(new google.maps.Marker({
-        position: {lat: WellInfo[i][1], lng: WellInfo[i][2]},
-        map: map,
-        title: "I'm Well!",
-        WellNum: WellInfo[i][0]//,
-        //icon: 'ICON URL HERE'
-      }));
-
-      google.maps.event.addListener(markers[i], 'click', function(){
-        infoWindow.setContent('<div id="test" style="height: ' + infoWindowHeight + 'px; width: ' + infoWindowWidth + 'px"></div>');
-        ChartData(this.WellNum, 'test');
-        infoWindow.open(map, this);
-      });
-    }
-		PrintList(WellInfo);
-
-	}, 'text');
-}
