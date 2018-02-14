@@ -3,21 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>Water Resource Management</title>
-    <link rel="icon" href="resources/img/favicon.ico">
-
-     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
-      #map {
-        height: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+    <link rel="icon" href="./resources/img/favicon.ico"/>
+    <link rel="stylesheet" type="text/css" href="./resources/css/water.css"/>
 
     <script src="lib/jquery-3.1.1.min.js"></script>
     <script src="lib/jquery.csv.min.js"></script>
@@ -31,10 +18,21 @@
 
     <script src="main.js" ></script>
 
-
 </head>
 <body>
-<div id="map"></div>
+<div id="panel-left">
+    <div >
+        <div style="float: left; height: 30px; "><input type="text" placeholder="Search" class="search-box" /></div>
+        <div class="menu-button">Well Measures</div>
+        <div class="menu-button">Precipitation</div>
+    </div>
+
+    <div id="map"></div>
+</div>
+
+<div id="panel-right">
+    Some statistics and word cloud visualizations
+</div>
 
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvNMI8W0Q5Avt28mzzt-V-D23AKL1jk8I&callback=gmap.initMap">

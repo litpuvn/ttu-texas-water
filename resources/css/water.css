@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#panel-left {
+    width: 65%;
+    height: 100%;
+    float: left;
+}
+/* Always set the map height explicitly to define the size of the div
+* element that contains the map. */
+#map {
+    height: 100%;
+    width: 100%;
+}
+
+
+#panel-right {
+    width: 35%;
+    height: 100%;
+    background-color: blueviolet;
+    float: left;
+}
+
+.menu-button {
+    height: 30px;
+    margin-left: 20px;
+    display:inline-block;
+    color:#444;
+    border:1px solid #CCC;
+    background:#DDD;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
+    cursor:pointer;
+    vertical-align:middle;
+    max-width: 200px;
+    min-width: 150px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+
+.menu-button:hover {
+    color:red;
+    box-shadow: 0 0 5px -1px rgba(0,0,0,0.6);
+}
+
+.search-box {
+    height: 100%;
+    border: 1px;
+    width: 300px;
+    margin-left: 5px;
+}
