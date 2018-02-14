@@ -11,7 +11,7 @@ GoogleMap.prototype = {
 
           this.map = new google.maps.Map(document.getElementById(this.containerId), {
             center: {lat: 31.865833, lng: -95.496388},
-            zoom: 15
+            zoom: 8
           });
 
           infoWindow = new google.maps.InfoWindow();
