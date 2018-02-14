@@ -10,6 +10,10 @@
     <script src="lib/jquery.csv.min.js"></script>
     <script src="lib/highstock.js"></script>
     <script src="lib/exporting.js"></script>
+    <!-- Include D3 word cloud -->
+    <script type="text/javascript" src="lib/d3.min.js"></script>
+    <!--<script type="text/javascript" src="lib/d3.dispatch.js"></script>-->
+    <script type="text/javascript" src="lib/d3.layout.cloud.js"></script>
 
     <!-- Include Required Prerequisites -->
     <script type="text/javascript" src="lib/moment.min.js"></script>
@@ -22,6 +26,7 @@
 
     <script src="js/map.js"></script>
     <script src="js/stats_viewer.js"></script>
+    <script src="js/word_cloud.js"></script>
     <script src="js/well_manager.js"></script>
 
 
@@ -32,7 +37,7 @@
 </head>
 <body>
     <div id="panel-left">
-        <div >
+        <div>
             <div style="float: left; height: 30px; "><input type="text" placeholder="Search" class="search-box" /></div>
             <div class="menu-button">Well Measures</div>
             <div class="menu-button">Precipitation</div>
