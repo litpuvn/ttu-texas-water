@@ -6,7 +6,7 @@ function WellManager() {
 WellManager.prototype = {
     constructor: WellManager,
 
-    init: function () {
+    init: function (callback) {
 
         var self = this;
 
@@ -34,7 +34,10 @@ WellManager.prototype = {
 
            });
 
-           console.log(self.counties);
+           if (!!callback) {
+               callback();
+           }
+
        });
 
     },
