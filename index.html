@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <title>Title</title>
 
+     <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
     <script src="lib/jquery-3.1.1.min.js"></script>
     <script src="lib/highstock.js"></script>
     <script src="lib/exporting.js"></script>
@@ -12,10 +26,12 @@
     <script src="js/map.js"></script>
 
 
+    <script src="main.js" ></script>
+
+
 </head>
 <body>
 <div id="map"></div>
-<script src="main.js" ></script>
 
 <script async defer
 src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDvNMI8W0Q5Avt28mzzt-V-D23AKL1jk8I&callback=gmap.initMap">
