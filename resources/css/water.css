@@ -38,6 +38,8 @@ html, body {
     min-width: 150px;
     padding-top: 5px;
     text-align: center;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 
