@@ -42,6 +42,11 @@ html, body {
     padding-right: 8px;
 }
 
+.panel-left-header {
+    background-color: grey;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 .menu-button:hover {
     color:red;
