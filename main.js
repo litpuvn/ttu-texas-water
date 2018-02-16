@@ -1,11 +1,15 @@
 var statsViewre = new StatsViewer();
 var wordCloud = new WordCloud();
 
+// init news
+var newsReader = new NewsReader();
+newsReader.init();
+
 var wellManager = new WellManager();
 wellManager.init(function () {
     statsViewre.showDailyWaterLevelForCounty("h", "countyStats");
 
-    wordCloud.populateWordCloud("wordcloud");
+    wordCloud.populateWordCloud();
 });
 
 
