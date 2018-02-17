@@ -22,10 +22,11 @@ WellManager.prototype = {
 
                var wellObject = {
                    id: row['state_well_number'],
-                   water_level: row['state_well_number'],
+                   water_level: row['daily_high_water_level'],
                    latitude: Number(row['latitude']),
                    longitude: Number(row['longitude']),
                    aquifer: row['aquifer'],
+                   county: row['county'],
                    active: 'Active' === row['active']
                };
 
@@ -51,9 +52,9 @@ WellManager.prototype = {
     },
 
     getWellTimeSeries: function (wellId, callback) {
-         $.get("../data/detail/" + wellId + ".csv", function(data) {
+         $.get("../data/detail/" + wellId + "-daily.csv", function(data) {
            var csvObj = $.csv.toObjects(data);
-           console.log(csvObj);
+           // console.log(csvObj);
 
            callback(csvObj);
        });
