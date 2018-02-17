@@ -14,7 +14,7 @@ NewsReader.prototype = {
            var $xml = $(data),
            $items = $xml.first("channel").find("item");
            $items.each(function (index, item) {
-                  console.log(item);
+                  // console.log(item);
                   var $item = $(item);
                   var newsItemObject = {
                       title: $item.find('title').text(),

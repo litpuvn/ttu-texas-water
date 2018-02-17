@@ -15,3 +15,6 @@ wellManager.init(function () {
 
 var gmap = new GoogleMap('map', wellManager);
 
+function handle_stakeholder_click() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
