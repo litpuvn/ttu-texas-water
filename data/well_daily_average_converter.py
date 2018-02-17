@@ -65,7 +65,12 @@ if __name__ == '__main__':
     for f in files:
         well_id = f[0: f.index('.')]
         if 'daily' in well_id:
-            os.remove(f)
+            # os.remove(f)
             continue
+
+        # ignore file that has been proceeded
+        if os.path.isfile(well_id + '-daily.csv'):
+            continue
+
         logging.warning("calculating daily average for well " + str(well_id))
         create_daily_well_data(well_id)
