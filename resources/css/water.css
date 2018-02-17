@@ -42,6 +42,16 @@ html, body {
     padding-right: 8px;
 }
 
+.view-options {
+    display: inline-block;
+    float: right;
+}
+
+.view-option-item {
+    display: inline-block;
+    padding-left: 10px;
+}
+
 .panel-left-header {
     background-color: grey;
     padding-top: 10px;
