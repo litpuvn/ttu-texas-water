@@ -10,7 +10,7 @@ WellManager.prototype = {
 
         var self = this;
 
-       $.get("../data/wells.csv", function(data) {
+       $.get(SERVER_PATH + "/data/wells.csv", function(data) {
            var csvObj = $.csv.toObjects(data);
 
            csvObj.forEach(function (row) {
@@ -52,7 +52,7 @@ WellManager.prototype = {
     },
 
     getWellTimeSeries: function (wellId, callback) {
-         $.get("../data/detail/" + wellId + "-daily.csv", function(data) {
+         $.get(SERVER_PATH + "/data/detail/" + wellId + "-daily.csv", function(data) {
            var csvObj = $.csv.toObjects(data);
            // console.log(csvObj);
 

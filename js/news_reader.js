@@ -10,7 +10,7 @@ NewsReader.prototype = {
     init: function () {
         var self = this;
 
-        $.get("../data/news.xml", function(data) {
+        $.get(SERVER_PATH + "/data/news.xml", function(data) {
            var $xml = $(data),
            $items = $xml.first("channel").find("item");
            $items.each(function (index, item) {

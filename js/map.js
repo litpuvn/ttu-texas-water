@@ -2,6 +2,8 @@ function GoogleMap(containerId, wellManager) {
     this.containerId = containerId;
     this.wellManager = wellManager;
     this.wellMarker = {};
+    this.map = null;
+    this.layerManager = new LayerManager();
 }
 
 GoogleMap.prototype = {
@@ -16,6 +18,9 @@ GoogleMap.prototype = {
 
           infoWindow = new google.maps.InfoWindow();
           this.populateWells();
+
+          this.layerManager.addState('TX');
+          this.populateLayers();
     },
 
     populateWells: function () {
@@ -94,6 +99,26 @@ GoogleMap.prototype = {
 
             });
         }
+    },
+    
+    populateLayers: function () {
+        var self = this;
+        var layers = this.layerManager.getLayers();
+        for(var key in layers) {
+            if (!layers.hasOwnProperty(key)) {
+                continue;
+            }
+
+            var kmlFile = layers[key];
+
+            var ctaLayer = new google.maps.KmlLayer({
+                url: SERVER_PATH + 'data/geo/' + kmlFile,
+                map: self.map
+            });
+
+            // ctaLayer.setMap(self.map);
+        }
+
     }
 };
 
