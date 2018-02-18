@@ -22,18 +22,22 @@ GoogleMap.prototype = {
     constructor: GoogleMap,
 
     initMap: function () {
-
+        var self = this;
         this.map = new google.maps.Map(document.getElementById(this.containerId), {
             center: {lat: 31.865833, lng: -95.496388},
-            zoom: 8
+            zoom: 6
             });
-
-        this.infoWindow = new google.maps.InfoWindow();
 
         this._initInvoked = true;
         if (this._wellLoaded) {
             this.populateData();
         }
+
+        this.map.data.addListener('click', function(event) {
+
+            // self._showInfoWindow("Showing google content", this)
+
+        });
     },
 
     populateData: function () {
@@ -74,7 +78,7 @@ GoogleMap.prototype = {
                 wellMarker.addListener('click', function() {
                     self.wellManager.getWellTimeSeries(well.id, function (data) {
                         // console.log(data);
-                        self.infoWindow.setContent('<div style="height: 300px; width: 400px; font-weight: bold">' +
+                        infoWindow.setContent('<div style="height: 300px; width: 400px; font-weight: bold">' +
                             '<table>' +
                             '<tr>' +
                             '   <td>Well</td>' +
@@ -114,7 +118,7 @@ GoogleMap.prototype = {
                             '</table>' +
                         '</div>');
 
-                        self.infoWindow.open(self.map, wellMarker);
+                        infoWindow.open(self.map, wellMarker);
                     });
 
                 });
@@ -138,7 +142,6 @@ GoogleMap.prototype = {
         var polygon = new google.maps.Data.Polygon([layerData.paths]);
 
         self.map.data.add({geometry: polygon});
-
 
     }
 };
