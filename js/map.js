@@ -8,6 +8,7 @@ function GoogleMap(containerId, wellManager) {
     this._wellLoaded = false;
     this._initInvoked = false;
 
+
     var self =this;
     this.wellManager.addEventListener('wellLoaded', function () {
         self._wellLoaded = true;
@@ -29,15 +30,36 @@ GoogleMap.prototype = {
             });
 
         this._initInvoked = true;
+
+        this.infoWindow = new google.maps.InfoWindow();
+
         if (this._wellLoaded) {
             this.populateData();
         }
 
         this.map.data.addListener('click', function(event) {
 
-            // self._showInfoWindow("Showing google content", this)
-
+            var latLng = event.latLng;
+            var content = "<div><img src='resources/img/vdvi.jpg' class='mgGreenIndex' /></div>";
+            self._showInfoWindow(content, latLng);
         });
+    },
+
+    _showInfoWindow: function (content, pos) {
+        var self = this;
+        if (!!self.infoWindow) {
+            self.infoWindow.close();
+        }
+
+        var infoWindow = new google.maps.InfoWindow({
+            position:  {lat: pos.lat(), lng: pos.lng()}
+        });
+
+        infoWindow.setContent(content);
+        infoWindow.open(self.map);
+
+        self.infoWindow = infoWindow;
+
     },
 
     populateData: function () {
@@ -52,7 +74,6 @@ GoogleMap.prototype = {
     populateWells: function () {
         var self = this;
         var counties = self.wellManager.getCounties();
-        var infoWindow = new google.maps.InfoWindow();
 
         for(var county in counties) {
             if (!counties.hasOwnProperty(county)) {
@@ -78,7 +99,7 @@ GoogleMap.prototype = {
                 wellMarker.addListener('click', function() {
                     self.wellManager.getWellTimeSeries(well.id, function (data) {
                         // console.log(data);
-                        infoWindow.setContent('<div style="height: 300px; width: 400px; font-weight: bold">' +
+                        var content = '<div style="height: 300px; width: 400px; font-weight: bold">' +
                             '<table>' +
                             '<tr>' +
                             '   <td>Well</td>' +
@@ -116,9 +137,9 @@ GoogleMap.prototype = {
                             '   <td>' + (well.active == true ? 'Yes' : 'No') + '</td>' +
                             '</tr>' +
                             '</table>' +
-                        '</div>');
+                        '</div>';
 
-                        infoWindow.open(self.map, wellMarker);
+                        self._showInfoWindow(content, wellMarker.getPosition());
                     });
 
                 });

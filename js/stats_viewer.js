@@ -12,6 +12,7 @@ StatsViewer.prototype = {
 
                 Highcharts.chart(container_id, {
                     chart: {
+                        height: 230,
                         zoomType: 'x'
                     },
                     title: {
