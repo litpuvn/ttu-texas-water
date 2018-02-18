@@ -58,7 +58,7 @@ GoogleMap.prototype = {
 
                 wellMarker.addListener('click', function() {
                     self.wellManager.getWellTimeSeries(well.id, function (data) {
-                        console.log(data);
+                        // console.log(data);
                         self.infoWindow.setContent('<div style="height: 300px; width: 400px; font-weight: bold">' +
                             '<table>' +
                             '<tr>' +
