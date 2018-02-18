@@ -11,16 +11,23 @@ GoogleMap.prototype = {
 
     initMap: function () {
 
+        var self =this;
+
           this.map = new google.maps.Map(document.getElementById(this.containerId), {
             center: {lat: 31.865833, lng: -95.496388},
             zoom: 8
           });
 
-          infoWindow = new google.maps.InfoWindow();
-          this.populateWells();
+          this.infoWindow = new google.maps.InfoWindow();
 
-          this.layerManager.addState('TX');
-          this.populateLayers();
+          while (!self.wellManager.isWellsLoaded()) {
+              console.log("waiting for wells being loaded")
+          }
+
+
+        self.populateWells();
+        self.layerManager.addState('TX');
+        self.populateLayers();
     },
 
     populateWells: function () {
@@ -52,7 +59,7 @@ GoogleMap.prototype = {
                 wellMarker.addListener('click', function() {
                     self.wellManager.getWellTimeSeries(well.id, function (data) {
                         console.log(data);
-                        infoWindow.setContent('<div style="height: 300px; width: 400px; font-weight: bold">' +
+                        self.infoWindow.setContent('<div style="height: 300px; width: 400px; font-weight: bold">' +
                             '<table>' +
                             '<tr>' +
                             '   <td>Well</td>' +
@@ -92,7 +99,7 @@ GoogleMap.prototype = {
                             '</table>' +
                         '</div>');
 
-                        infoWindow.open(self.map, wellMarker);
+                        self.infoWindow.open(self.map, wellMarker);
                     });
 
                 });

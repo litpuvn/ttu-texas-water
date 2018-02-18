@@ -1,5 +1,6 @@
 function WellManager() {
     this.counties = {};
+    this.wellsLoaded = false;
 }
 
 
@@ -35,6 +36,8 @@ WellManager.prototype = {
 
            });
 
+           self.wellsLoaded = true;
+
            if (!!callback) {
                callback();
            }
@@ -58,5 +61,9 @@ WellManager.prototype = {
 
            callback(csvObj);
        });
+    },
+
+    isWellsLoaded: function () {
+        return this.wellsLoaded;
     }
 };
