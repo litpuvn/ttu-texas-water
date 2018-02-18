@@ -39,8 +39,10 @@ GoogleMap.prototype = {
     populateData: function () {
         var self =this;
         self.populateWells();
-        self.layerManager.addState('TX');
-        self.populateLayers();
+        self.layerManager.addState('TX', function (layerData) {
+            self.populateLayer('TX', layerData);
+
+        });
     },
 
     populateWells: function () {
@@ -121,23 +123,22 @@ GoogleMap.prototype = {
         }
     },
     
-    populateLayers: function () {
-        var self = this;
-        var layers = this.layerManager.getLayers();
-        for(var key in layers) {
-            if (!layers.hasOwnProperty(key)) {
-                continue;
-            }
+    populateLayer: function (layerId, layerData) {
 
-            var kmlFile = layers[key];
-
-            var ctaLayer = new google.maps.KmlLayer({
-                url: SERVER_PATH + 'data/geo/' + kmlFile,
-                map: self.map
-            });
-
-            // ctaLayer.setMap(self.map);
+        if (layerId !== layerData.id) {
+            throw new Error('Layer id and data mismatch');
         }
+
+        if (!layerData) {
+            layerData = this.layerManager.getLayer(layerId)
+        }
+
+        var self = this;
+
+        var polygon = new google.maps.Data.Polygon([layerData.paths]);
+
+        self.map.data.add({geometry: polygon});
+
 
     }
 };
