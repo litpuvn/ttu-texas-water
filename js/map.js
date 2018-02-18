@@ -40,7 +40,7 @@ GoogleMap.prototype = {
         this.map.data.addListener('click', function(event) {
 
             var latLng = event.latLng;
-            var content = "<div><img src='resources/img/vdvi.jpg' class='mgGreenIndex' /></div>";
+            var content = "<div><img src='" + SERVER_PATH + "/resources/img/vdvi.jpg' class='mgGreenIndex' /></div>";
             self._showInfoWindow(content, latLng);
         });
     },
