@@ -37,6 +37,7 @@ WellManager.prototype = {
            });
 
            self.wellsLoaded = true;
+           self.dispatchEvent( { type: 'wellLoaded', message: '' } );
 
            if (!!callback) {
                callback();
@@ -67,3 +68,5 @@ WellManager.prototype = {
         return this.wellsLoaded;
     }
 };
+
+Object.assign( WellManager.prototype, EventDispatcher.prototype );

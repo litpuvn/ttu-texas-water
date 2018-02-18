@@ -8,14 +8,16 @@ var newsReader = new NewsReader();
 newsReader.init();
 
 var wellManager = new WellManager();
+var gmap = new GoogleMap('map', wellManager);
+
 wellManager.init(function () {
+
     statsViewre.showDailyWaterLevelForCounty("h", "countyStats");
 
     wordCloud.populateWordCloud();
 });
 
 
-var gmap = new GoogleMap('map', wellManager);
 
 function handle_stakeholder_click() {
     document.getElementById("myDropdown").classList.toggle("show");

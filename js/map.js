@@ -4,6 +4,18 @@ function GoogleMap(containerId, wellManager) {
     this.wellMarker = {};
     this.map = null;
     this.layerManager = new LayerManager();
+
+    this._wellLoaded = false;
+    this._initInvoked = false;
+
+    var self =this;
+    this.wellManager.addEventListener('wellLoaded', function () {
+        self._wellLoaded = true;
+
+        if (self._initInvoked) {
+            self.populateData();
+        }
+    })
 }
 
 GoogleMap.prototype = {
@@ -11,20 +23,21 @@ GoogleMap.prototype = {
 
     initMap: function () {
 
-        var self =this;
-
-          this.map = new google.maps.Map(document.getElementById(this.containerId), {
+        this.map = new google.maps.Map(document.getElementById(this.containerId), {
             center: {lat: 31.865833, lng: -95.496388},
             zoom: 8
-          });
+            });
 
-          this.infoWindow = new google.maps.InfoWindow();
+        this.infoWindow = new google.maps.InfoWindow();
 
-          while (!self.wellManager.isWellsLoaded()) {
-              console.log("waiting for wells being loaded")
-          }
+        this._initInvoked = true;
+        if (this._wellLoaded) {
+            this.populateData();
+        }
+    },
 
-
+    populateData: function () {
+        var self =this;
         self.populateWells();
         self.layerManager.addState('TX');
         self.populateLayers();
@@ -128,4 +141,6 @@ GoogleMap.prototype = {
 
     }
 };
+
+
 
