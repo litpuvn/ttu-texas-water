@@ -4,7 +4,7 @@ West texas water <br />
 ## How to Clone from the repository in Github  <br />
 
 1)Copy the web url of the repository in the Github.  <br />
-2)Open Command line tool( i,e Terminal in Mac ) and choose a destination path by accessing it there.<br />  
+2)Open Command line tool( i,e Terminal in Mac ) and choose a destination path by accessing it there.
 3)Then type "git clone -copied web url-" without quotes or the dash marks and then hit enter.  <br />
 
 ## How to make modification to the existing code in Github via command line tool<br />
