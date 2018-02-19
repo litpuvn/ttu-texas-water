@@ -108,35 +108,43 @@ GoogleMap.prototype = {
                     self.wellManager.getWellTimeSeries(well.id, function (data) {
                         // console.log(data);
                         var content = '<div style="height: 400px; width: 500px; font-weight: bold">' +
-                            '<table>' +
+                            '<table style="width: 400px;">' +
+                            '<tr>' +
+                            '<td class="well-popup-content">' +
+                            '<table style="width: 100%">' +
                             '<tr>' +
                             '   <td>Well</td>' +
-                            '   <td>:</td>' +
+                            '   <td>:&nbsp;</td>' +
                             '   <td>' + well.id + '</td>' +
                             '</tr>' +
                             '<tr>' +
                             '   <td>Walter level</td>' +
-                            '   <td>:</td>' +
+                            '   <td>:&nbsp;</td>' +
                             '   <td>' + well.water_level + '</td>' +
                             '</tr>' +
                             '<tr>' +
                             '   <td>Longitude</td>' +
-                            '   <td>:</td>' +
+                            '   <td>:&nbsp;</td>' +
                             '   <td>' + well.longitude + '</td>' +
                             '</tr>' +
                             '<tr>' +
                             '   <td>Latitude</td>' +
-                            '   <td>:</td>' +
+                            '   <td>:&nbsp;</td>' +
                             '   <td>' + well.latitude + '</td>' +
                             '</tr>' +                            '' +
+
+                            '</table>' +
+                            '</td>' +
+                            '<td class="well-popup-content">' +
+                            '<table style="width: 100%">' +
                             '<tr>' +
                             '   <td>Aquifer</td>' +
-                            '   <td>:</td>' +
+                            '   <td>:&nbsp;</td>' +
                             '   <td>' + well.aquifer + '</td>' +
                             '</tr>' +
                             '<tr>' +
                             '   <td>County</td>' +
-                            '   <td>:</td>' +
+                            '   <td>:&nbsp;</td>' +
                             '   <td>' + well.county + '</td>' +
                             '</tr>' +
                             '<tr>' +
@@ -144,6 +152,10 @@ GoogleMap.prototype = {
                             '   <td>:</td>' +
                             '   <td>' + (well.active == true ? 'Yes' : 'No') + '</td>' +
                             '</tr>' +
+                            '</table>' +
+                            '</td>' +
+                            '</tr>' +
+
                             '</table>' +
                             '<div id="' + well.id + '"></div>' +
                         '</div>';

@@ -112,3 +112,7 @@ html, body {
 #wordcloud {
     background-color: #666666;
 }
+
+.well-popup-content {
+    vertical-align: top;
+}
