@@ -89,7 +89,7 @@ GoogleMap.prototype = {
                                 lng: well.longitude
                     },
                     map: self.map,
-                    title: well.id,
+                    title: 'Well ' + well.id,
                     id: well.id//,
                     //icon: 'ICON URL HERE'
                 });
