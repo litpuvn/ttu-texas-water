@@ -114,6 +114,30 @@ html, body {
     background-color: #666666;
 }
 
+#stats-scale img {
+    min-width:242px;
+    max-width: 645px;
+    /*min-height:290px;*/
+    width: auto;
+    height: auto;
+}
+
+#statistics img {
+    min-width:242px;
+    max-width: 645px;
+    min-height:290px;
+    width: auto;
+    height: auto;
+}
+
+#well-horizon img {
+    min-width:242px;
+    max-width: 645px;
+    min-height:290px;
+    width: auto;
+    height: auto;
+}
+
 .well-popup-content {
     vertical-align: top;
 }

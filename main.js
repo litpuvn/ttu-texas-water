@@ -12,9 +12,9 @@ var gmap = new GoogleMap('map', wellManager);
 
 wellManager.init(function () {
 
-    statsViewer.showDailyWaterLevelForCounty("h", "statistics");
+    // statsViewer.showDailyWaterLevelForCounty("h", "statistics");
 
-    wordCloud.populateWordCloud();
+    // wordCloud.populateWordCloud();
 });
 
 
