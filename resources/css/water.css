@@ -29,9 +29,9 @@ html, body {
     height: 30px;
     margin-left: 20px;
     display:inline-block;
-    color:#444;
+    color:#FFFFFF;
     border:1px solid #CCC;
-    background:#DDD;
+    background:#444;
     box-shadow: 0 0 5px -1px rgba(0,0,0,0.2);
     cursor:pointer;
     vertical-align:middle;
