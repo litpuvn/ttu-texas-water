@@ -45,15 +45,23 @@ GoogleMap.prototype = {
         });
     },
 
-    _showInfoWindow: function (content, pos) {
+    _showInfoWindow: function (content, pos, callback) {
         var self = this;
         if (!!self.infoWindow) {
             self.infoWindow.close();
+
+            delete self.infoWindow;
+            // self.infoWindow.removeEve
         }
 
         var infoWindow = new google.maps.InfoWindow({
             position:  {lat: pos.lat(), lng: pos.lng()}
         });
+
+        if (!!callback) {
+            infoWindow.addListener('domready', callback);
+        }
+
 
         infoWindow.setContent(content);
         infoWindow.open(self.map);
@@ -99,7 +107,7 @@ GoogleMap.prototype = {
                 wellMarker.addListener('click', function() {
                     self.wellManager.getWellTimeSeries(well.id, function (data) {
                         // console.log(data);
-                        var content = '<div style="height: 300px; width: 400px; font-weight: bold">' +
+                        var content = '<div style="height: 400px; width: 500px; font-weight: bold">' +
                             '<table>' +
                             '<tr>' +
                             '   <td>Well</td>' +
@@ -137,9 +145,12 @@ GoogleMap.prototype = {
                             '   <td>' + (well.active == true ? 'Yes' : 'No') + '</td>' +
                             '</tr>' +
                             '</table>' +
+                            '<div id="' + well.id + '"></div>' +
                         '</div>';
 
-                        self._showInfoWindow(content, wellMarker.getPosition());
+                        self._showInfoWindow(content, wellMarker.getPosition(), function (e) {
+                            statsViewer.showDailyWaterLevelForWell(well.id);
+                        });
                     });
 
                 });

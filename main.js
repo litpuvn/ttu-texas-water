@@ -1,4 +1,4 @@
-var statsViewre = new StatsViewer();
+var statsViewer = new StatsViewer();
 var wordCloud = new WordCloud();
 // var SERVER_PATH = 'http://localhost:8080';
 var SERVER_PATH = 'https://litpuvn.github.io/ttu-texas-water';
@@ -12,7 +12,7 @@ var gmap = new GoogleMap('map', wellManager);
 
 wellManager.init(function () {
 
-    statsViewre.showDailyWaterLevelForCounty("h", "statistics");
+    statsViewer.showDailyWaterLevelForCounty("h", "statistics");
 
     wordCloud.populateWordCloud();
 });
