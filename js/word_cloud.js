@@ -7,6 +7,7 @@ WordCloud.prototype = {
     
     populateWordCloud: function () {
 
+        var self = this;
         var cloud = d3.layout.cloud;
 
         var fill = d3.scale.category20();
@@ -24,7 +25,7 @@ WordCloud.prototype = {
         layout.start();
 
         function draw(words) {
-          d3.select("body").select('#wordcloud').append("svg")
+          d3.select("body").select('#' + self.containerId).append("svg")
               .attr("width", layout.size()[0])
               .attr("height", layout.size()[1])
             .append("g")

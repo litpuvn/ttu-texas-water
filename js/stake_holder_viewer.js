@@ -1,12 +1,19 @@
 function StakeHolderViewer() {
 
+    this.wordCloud = new WordCloud('adminBoard');
+
 }
 
 StakeHolderViewer.prototype = {
     constructor: StakeHolderViewer,
 
+    _createAdminBoardVis: function () {
+        this.wordCloud.populateWordCloud();
+    },
+
     showAdminBoardGroup: function () {
-         vex.dialog.open(
+        var self = this;
+         vex.dialog.alert(
             {
                 message: 'Admin Board',
                 className: 'water-admin-board',
@@ -14,7 +21,7 @@ StakeHolderViewer.prototype = {
                 showCloseButton: false,
                 escapeButtonCloses: true,
                 overlayClosesOnClick: true,
-                input: 'Admin group concerns and concerns evolve',
+                input: '<div id="adminBoard"></div>',
                 buttons: [],
                 callback: function(data) {
                     if (!data) {
@@ -23,7 +30,7 @@ StakeHolderViewer.prototype = {
                 },
 
                 afterOpen: function (element) {
-                    console.log(element);
+                    self._createAdminBoardVis();
                 }
             }
         );

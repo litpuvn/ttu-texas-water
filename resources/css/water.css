@@ -160,6 +160,8 @@ html, body {
     top: 0;
     bottom: 0;
     margin: auto;
+    border: solid 2px black;
+
 }
 
 .water-admin-board-overlay, .news-overlay {
@@ -188,10 +190,15 @@ html, body {
     top: 0;
     bottom: 0;
     margin: auto;
+    border: solid 2px black;
 }
 
 .horizontal-Line {
     display: block;
     height: 3px;
     background-color: black;
+}
+
+.popup-container {
+    border: solid 1px black;
 }
