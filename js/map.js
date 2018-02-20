@@ -8,6 +8,13 @@ function GoogleMap(containerId, wellManager) {
     this._wellLoaded = false;
     this._initInvoked = false;
 
+    this._viewOption = 'water-level';
+    this.currentHeatMapLayer = null;
+
+    GoogleMap.VIEW_WATER_LEVEL_INDEX = 'water-level'; // default view option
+    GoogleMap.VIEW_DROUGHT_INDEX = 'drought-index';
+
+    this._viewOption = GoogleMap.VIEW_WATER_LEVEL_INDEX;
 
     var self =this;
     this.wellManager.addEventListener('wellLoaded', function () {
@@ -70,12 +77,9 @@ GoogleMap.prototype = {
 
     },
 
-    populateData: function () {
-        var self =this;
-        self.populateWells();
-
+    activateWaterLevelHeatMap: function () {
         var layer = new google.maps.FusionTablesLayer({
-                map: self.map,
+                // map: self.map,
                 heatmap: { enabled: false },
                 query: {
                     select: "col4",
@@ -87,6 +91,52 @@ GoogleMap.prototype = {
                 templateId: 2
                 }
         });
+
+        if (!!this.currentHeatMapLayer) {
+            this.currentHeatMapLayer.setMap(null);
+        }
+
+        this.currentHeatMapLayer = layer;
+        this.currentHeatMapLayer.setMap(this.map);
+
+
+    },
+
+    activateDroughtIndexlHeatMap: function () {
+        var layer = new google.maps.FusionTablesLayer({
+                heatmap: { enabled: false },
+                query: {
+                    select: "col4",
+                    from: "1e4mmi41K2K9Iiy7tXHP31TeHnTOgLTqCkqWlpSWc",
+                    where: ""
+                },
+                options: {
+                styleId: 2,
+                templateId: 2
+                }
+        });
+
+
+        if (!!this.currentHeatMapLayer) {
+            this.currentHeatMapLayer.setMap(null);
+        }
+
+        this.currentHeatMapLayer = layer;
+        this.currentHeatMapLayer.setMap(this.map);
+    },
+
+
+    populateData: function () {
+        var self = this;
+        self.populateWells();
+        switch (self._viewOption) {
+            case GoogleMap.VIEW_WATER_LEVEL_INDEX:
+                self.activateWaterLevelHeatMap();
+                break;
+            case GoogleMap.VIEW_DROUGHT_INDEX:
+                self.activateDroughtIndexlHeatMap();
+                break;
+        }
 
         // self.layerManager.addState('TX', function (layerData) {
         //     self.populateLayer('TX', layerData);
