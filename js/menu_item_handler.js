@@ -11,6 +11,12 @@ MenuItemHandler.prototype = {
         this.stakeHolderViewer.showAdminBoardGroup();
     },
 
+    onAgChatClick: function () {
+        this.showStakeHolders();
+
+        this.stakeHolderViewer.showAgChatGroup();
+    },
+
     showStakeHolders: function () {
         document.getElementById("myDropdown").classList.toggle("show");
     }

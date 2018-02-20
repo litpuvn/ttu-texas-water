@@ -26,11 +26,15 @@
     <script type="text/javascript" src="lib/EventDispatcher.js"></script>
 
     <!-- Include Vex - Popup manager -->
+    <script src="lib/Chart.Streamgraph.S.min.js"></script>
+
+    <!-- Include Vex - Popup manager -->
     <script type="text/javascript" src="lib/vex.js"></script>
     <script type="text/javascript" src="lib/vex.combined.js"></script>
     <link rel="stylesheet" type="text/css" href="resources/css/vex/vex.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/vex/vex-theme-os.css" />
 
+    <script src="js/menu_item_handler.js"></script>
     <script src="js/well_manager.js"></script>
     <script src="js/layer_manger.js"></script>
     <script src="js/map.js"></script>
@@ -38,7 +42,6 @@
     <script src="js/word_cloud.js"></script>
     <script src="js/news_reader.js"></script>
     <script src="js/stake_holder_viewer.js"></script>
-    <script src="js/menu_item_handler.js"></script>
 
 
 
@@ -58,7 +61,7 @@
                 <div id="myDropdown" class="dropdown-content">
                     <div onclick="menuItemHandler.onAdminBoardClick()">Water Admin Board</div>
                     <div >Water Suppliers</div>
-                    <div>AgChat / Citizens</div>
+                    <div onclick="menuItemHandler.onAgChatClick()">AgChat / Citizens</div>
                     <div>Stakeholders' Cooperation</div>
                 </div>
             </div>
