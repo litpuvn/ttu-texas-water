@@ -37,6 +37,8 @@
     <script src="js/stats_viewer.js"></script>
     <script src="js/word_cloud.js"></script>
     <script src="js/news_reader.js"></script>
+    <script src="js/stake_holder_viewer.js"></script>
+    <script src="js/menu_item_handler.js"></script>
 
 
 
@@ -50,14 +52,14 @@
             <div class="menu-button">Sat. Thickness Index</div>
             <div class="menu-button">Precipitation/ Drought Index</div>
             <div class="menu-button">
-                <div onclick="handle_stakeholder_click()">
+                <div onclick="menuItemHandler.showStakeHolders()">
                     Stakeholders
                 </div>
                 <div id="myDropdown" class="dropdown-content">
-                    <a href="#">Water Admin Board</a>
-                    <a href="#">Water Suppliers</a>
-                    <a href="#">AgChat / Citizens</a>
-                    <a href="#">Stakeholders' Cooperation</a>
+                    <div onclick="menuItemHandler.onAdminBoardClick()">Water Admin Board</div>
+                    <div >Water Suppliers</div>
+                    <div>AgChat / Citizens</div>
+                    <div>Stakeholders' Cooperation</div>
                 </div>
             </div>
             <div class="menu-button" onclick="newsReader.showNews();">News</div>
