@@ -182,7 +182,20 @@ html, body {
 
 .water-admin-board {
     width: 1000px;
-    height: 800px;
+    height: 600px;
+    background-color: #FFFFFF;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: solid 2px black;
+}
+
+.ag-chat-board {
+    width: 1000px;
+    height: 550px;
     background-color: #FFFFFF;
 
     left: 0;
