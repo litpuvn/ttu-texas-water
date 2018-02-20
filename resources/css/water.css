@@ -141,3 +141,31 @@ html, body {
 .well-popup-content {
     vertical-align: top;
 }
+
+.news-window {
+    width: 500px;
+    height: 800px;
+    background-color: #FFFFFF;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.news-overlay {
+    background: transparent !important;
+}
+
+.news-item {
+    display: block;
+    border: 1px;
+    padding-left: 10px;
+}
+
+.news-date {
+    display: block;
+    text-align: right;
+    padding-right: 10px
+}
