@@ -73,10 +73,25 @@ GoogleMap.prototype = {
     populateData: function () {
         var self =this;
         self.populateWells();
-        self.layerManager.addState('TX', function (layerData) {
-            self.populateLayer('TX', layerData);
 
+        var layer = new google.maps.FusionTablesLayer({
+                map: self.map,
+                heatmap: { enabled: false },
+                query: {
+                    select: "col4",
+                    from: "1a8905VZBsis0r6Ysd0UQytpWaartCwLectsj63jf",
+                    where: ""
+                },
+                options: {
+                styleId: 2,
+                templateId: 2
+                }
         });
+
+        // self.layerManager.addState('TX', function (layerData) {
+        //     self.populateLayer('TX', layerData);
+        //
+        // });
     },
 
     populateWells: function () {
