@@ -237,26 +237,31 @@ GoogleMap.prototype = {
 
                     '</table>' +
                     '<div id="' + well.id + '"></div>' +
-                    '<div class="user-feedback">' +
-                        '<table>' +
-                        '<tr><td>' +
-                        '<textarea class="feedback-content" placeholder="Please write your feedback"></textarea><br/>' +
-                        '<input type="button" name="share" value="Share Now" />' +
-                        '</td>' +
-                        '<td style="vertical-align: top">' +
-                            '<div style="padding-left: 5px">' +
-                                'Category<br/>' +
-                                '<input type="radio" name="category"/><label>Issue</label><br/>' +
-                                '<input type="radio" name="category"/><label>Solution</label><br/>' +
-                                '<input type="radio" name="category"/><label>General</label>' +
-                            '</div>' +
-                        '</td>' +
-                        '</tr>' +
-                        '</table>' +
-                    '</div>' +
+                    this._createUserFeedback() +
                 '</div>';
 
         return content;
+    },
+
+    _createUserFeedback: function () {
+        return '<div class="user-feedback">' +
+                    '<table>' +
+                    '<tr><td>' +
+                    '<textarea class="feedback-content" placeholder="Please write your feedback"></textarea><br/>' +
+                    '<input type="button" name="share" value="Share Now" />' +
+                    '</td>' +
+                    '<td style="vertical-align: top">' +
+                        '<div style="padding-left: 5px">' +
+                            'Category<br/>' +
+                            '<input type="radio" name="category"/><label>Issue</label><br/>' +
+                            '<input type="radio" name="category"/><label>Solution</label><br/>' +
+                            '<input type="radio" name="category"/><label>General</label>' +
+                        '</div>' +
+                    '</td>' +
+                    '</tr>' +
+                    '</table>' +
+                '</div>'
+            ;
     },
     
     populateLayer: function (layerId, layerData) {
