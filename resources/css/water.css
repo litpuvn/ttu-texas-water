@@ -216,3 +216,12 @@ html, body {
 .popup-container {
     border: solid 1px black;
 }
+
+.user-feedback {
+    margin-left: 60px;
+}
+
+.feedback-content {
+    width: 300px;
+    height: 80px;
+}

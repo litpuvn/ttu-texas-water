@@ -185,58 +185,76 @@ GoogleMap.prototype = {
     },
 
     _generateIndividualWellInfocontent: function (well) {
-        var content = '<div style="height: 400px; width: 500px; font-weight: bold">' +
-                            '<table style="width: 400px;">' +
-                            '<tr>' +
-                            '<td class="well-popup-content">' +
-                            '<table style="width: 100%">' +
-                            '<tr>' +
-                            '   <td>Well</td>' +
-                            '   <td>:&nbsp;</td>' +
-                            '   <td>' + well.id + '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                            '   <td>Walter level</td>' +
-                            '   <td>:&nbsp;</td>' +
-                            '   <td>' + well.water_level + '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                            '   <td>Longitude</td>' +
-                            '   <td>:&nbsp;</td>' +
-                            '   <td>' + well.longitude + '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                            '   <td>Latitude</td>' +
-                            '   <td>:&nbsp;</td>' +
-                            '   <td>' + well.latitude + '</td>' +
-                            '</tr>' +                            '' +
+        var content = '' +
+            '<div style="height: 430px; width: 500px; font-weight: bold">' +
+                    '<table style="width: 400px;">' +
+                    '<tr>' +
+                    '<td class="well-popup-content">' +
+                    '<table style="width: 100%">' +
+                    '<tr>' +
+                    '   <td>Well</td>' +
+                    '   <td>:&nbsp;</td>' +
+                    '   <td>' + well.id + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '   <td>Walter level</td>' +
+                    '   <td>:&nbsp;</td>' +
+                    '   <td>' + well.water_level + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '   <td>Longitude</td>' +
+                    '   <td>:&nbsp;</td>' +
+                    '   <td>' + well.longitude + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '   <td>Latitude</td>' +
+                    '   <td>:&nbsp;</td>' +
+                    '   <td>' + well.latitude + '</td>' +
+                    '</tr>' +                            '' +
 
-                            '</table>' +
-                            '</td>' +
-                            '<td class="well-popup-content">' +
-                            '<table style="width: 100%">' +
-                            '<tr>' +
-                            '   <td>Aquifer</td>' +
-                            '   <td>:&nbsp;</td>' +
-                            '   <td>' + well.aquifer + '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                            '   <td>County</td>' +
-                            '   <td>:&nbsp;</td>' +
-                            '   <td>' + well.county + '</td>' +
-                            '</tr>' +
-                            '<tr>' +
-                            '   <td>Active</td>' +
-                            '   <td>:</td>' +
-                            '   <td>' + (well.active == true ? 'Yes' : 'No') + '</td>' +
-                            '</tr>' +
-                            '</table>' +
-                            '</td>' +
-                            '</tr>' +
+                    '</table>' +
+                    '</td>' +
+                    '<td class="well-popup-content">' +
+                    '<table style="width: 100%">' +
+                    '<tr>' +
+                    '   <td>Aquifer</td>' +
+                    '   <td>:&nbsp;</td>' +
+                    '   <td>' + well.aquifer + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '   <td>County</td>' +
+                    '   <td>:&nbsp;</td>' +
+                    '   <td>' + well.county + '</td>' +
+                    '</tr>' +
+                    '<tr>' +
+                    '   <td>Active</td>' +
+                    '   <td>:</td>' +
+                    '   <td>' + (well.active == true ? 'Yes' : 'No') + '</td>' +
+                    '</tr>' +
+                    '</table>' +
+                    '</td>' +
+                    '</tr>' +
 
-                            '</table>' +
-                            '<div id="' + well.id + '"></div>' +
-                        '</div>';
+                    '</table>' +
+                    '<div id="' + well.id + '"></div>' +
+                    '<div class="user-feedback">' +
+                        '<table>' +
+                        '<tr><td>' +
+                        '<textarea class="feedback-content" placeholder="Please write your feedback"></textarea><br/>' +
+                        '<input type="button" name="share" value="Share Now" />' +
+                        '</td>' +
+                        '<td style="vertical-align: top">' +
+                            '<div style="padding-left: 5px">' +
+                                'Category<br/>' +
+                                '<input type="radio" name="category"/><label>Issue</label><br/>' +
+                                '<input type="radio" name="category"/><label>Solution</label><br/>' +
+                                '<input type="radio" name="category"/><label>General</label>' +
+                            '</div>' +
+                        '</td>' +
+                        '</tr>' +
+                        '</table>' +
+                    '</div>' +
+                '</div>';
 
         return content;
     },
