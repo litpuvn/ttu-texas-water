@@ -21,8 +21,13 @@ WellManager.prototype = {
                    self.counties[county] = [];
                }
 
+               var wellId = row['state_well_number'];
+               if (wellId.length < 7) {
+                   wellId = '0' + wellId;
+               }
+
                var wellObject = {
-                   id: row['state_well_number'],
+                   id: wellId,
                    water_level: row['daily_high_water_level'],
                    latitude: Number(row['latitude']),
                    longitude: Number(row['longitude']),
