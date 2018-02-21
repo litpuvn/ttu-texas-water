@@ -171,8 +171,21 @@ GoogleMap.prototype = {
 
                 wellMarker.addListener('click', function() {
                     self.wellManager.getWellTimeSeries(well.id, function (data) {
-                        // console.log(data);
-                        var content = '<div style="height: 400px; width: 500px; font-weight: bold">' +
+                        var content = self._generateIndividualWellInfocontent(well);
+
+                        self._showInfoWindow(content, wellMarker.getPosition(), function (e) {
+                            statsViewer.showDailyWaterLevelForWell(well.id);
+                        });
+                    });
+
+                });
+
+            });
+        }
+    },
+
+    _generateIndividualWellInfocontent: function (well) {
+        var content = '<div style="height: 400px; width: 500px; font-weight: bold">' +
                             '<table style="width: 400px;">' +
                             '<tr>' +
                             '<td class="well-popup-content">' +
@@ -225,15 +238,7 @@ GoogleMap.prototype = {
                             '<div id="' + well.id + '"></div>' +
                         '</div>';
 
-                        self._showInfoWindow(content, wellMarker.getPosition(), function (e) {
-                            statsViewer.showDailyWaterLevelForWell(well.id);
-                        });
-                    });
-
-                });
-
-            });
-        }
+        return content;
     },
     
     populateLayer: function (layerId, layerData) {
