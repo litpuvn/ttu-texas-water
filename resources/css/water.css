@@ -279,3 +279,7 @@ html, body {
     color: red;
     cursor: pointer;
 }
+
+.discovery-topic-link {
+    text-transform: uppercase;
+}
