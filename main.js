@@ -1,7 +1,7 @@
 var statsViewer = new StatsViewer();
 // var wordCloud = new WordCloud();
-var SERVER_PATH = 'http://localhost:8080';
-// var SERVER_PATH = 'https://litpuvn.github.io/ttu-texas-water';
+// var SERVER_PATH = 'http://localhost:8080';
+var SERVER_PATH = 'https://litpuvn.github.io/ttu-texas-water';
 
 // init news
 var newsReader = new NewsReader();
