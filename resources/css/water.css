@@ -242,12 +242,17 @@ html, body {
 
 
 .discovery-topic {
-    width:128px;
+    width:250px;
+    height:225px;
     margin: 10px;
+    border:10px solid white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+}
+
+.discovery-topic:hover {
     border:10px solid red;
-    border-radius: 500px;
-    -webkit-border-radius: 500px;
-    -moz-border-radius: 500px;
 }
 
 .discovery-content {
@@ -258,6 +263,12 @@ html, body {
 .discovery-content-row td{
     text-align: center;
     vertical-align: middle;
+    color: black;
+}
+
+.discovery-content-row td:hover{
+    color: red;
+    cursor: pointer;
 }
 
 .discovery-topic-link {

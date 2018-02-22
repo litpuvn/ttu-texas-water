@@ -35,9 +35,9 @@ WaterDiscovery.prototype = {
         var content = '' +
             '<table class="discovery-content">' +
             '<tr class="discovery-content-row">' +
-            '<td><img class="discovery-topic" src="http://cs409019.vk.me/v409019863/1b6/09FPiv6Nr5A.jpg" /><br/><span class="discovery-topic-link">Water Sources</span></td>' +
-            '<td><img class="discovery-topic" src="http://cs409019.vk.me/v409019863/1b6/09FPiv6Nr5A.jpg" /><br/><span class="discovery-topic-link">Water Processing</span></td>' +
-            '<td><img class="discovery-topic" src="http://cs409019.vk.me/v409019863/1b6/09FPiv6Nr5A.jpg" /><br/><span class="discovery-topic-link">Water Usage</span></td>' +
+            '<td><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-source.png" /><br/><span class="discovery-topic-link">Water Sources</span></td>' +
+            '<td><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-processing.png"  /><br/><span class="discovery-topic-link">Water Processing</span></td>' +
+            '<td><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-usage.jpeg" /><br/><span class="discovery-topic-link">Water Usage</span></td>' +
             '</tr>' +
             '<tr class="discovery-content-row">' +
             '<td><img class="discovery-topic" src="http://cs409019.vk.me/v409019863/1b6/09FPiv6Nr5A.jpg" /><br/><span class="discovery-topic-link">Water Treatment</span></td>' +
