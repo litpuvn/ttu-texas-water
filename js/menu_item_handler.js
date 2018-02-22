@@ -1,5 +1,6 @@
 function MenuItemHandler(stakeHolderViewer) {
     this.stakeHolderViewer = stakeHolderViewer;
+    this.discovery = new WaterDiscovery();
 }
 
 MenuItemHandler.prototype = {
@@ -15,6 +16,10 @@ MenuItemHandler.prototype = {
         this.showStakeHolders();
 
         this.stakeHolderViewer.showAgChatGroup();
+    },
+
+    onDiscoveryClick: function () {
+        this.discovery.showTopics();
     },
 
     showStakeHolders: function () {

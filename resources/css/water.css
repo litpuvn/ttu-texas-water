@@ -225,3 +225,46 @@ html, body {
     width: 300px;
     height: 80px;
 }
+
+.discovery-window {
+    width: 1000px;
+    height: 600px;
+    background-color: #FFFFFF;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: solid 2px black;
+
+}
+
+
+.discovery-topic {
+    width:128px;
+    margin: 10px;
+    border:10px solid red;
+    border-radius: 500px;
+    -webkit-border-radius: 500px;
+    -moz-border-radius: 500px;
+}
+
+.discovery-content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.discovery-content-row td{
+    text-align: center;
+    vertical-align: middle;
+}
+
+.discovery-topic-link {
+    font-weight: bold;
+}
+
+.discovery-topic-link:hover {
+    color: red;
+    cursor: pointer;
+}
