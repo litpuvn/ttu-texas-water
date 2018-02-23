@@ -322,6 +322,13 @@ html, body {
     margin-left: 5px;
 }
 
+.topic-category-heading {
+    font-weight: bold;
+    color: #ec971f;
+    font-size: 18px;
+
+}
+
 .topic-category-content {
     font-weight: bold;
     /*margin-left: 5px;*/
@@ -371,6 +378,13 @@ html, body {
 
 .item-title {
     display: block;
+}
+
+.item-title a {
     color: #ec971f;
     font-weight: bold;
+}
+
+.item-title a:hover {
+    color: #ec971f;
 }

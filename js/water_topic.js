@@ -97,16 +97,16 @@ WaterTopic.prototype = {
     },
     
     _createContentBlockForCategory: function (category) {
-        var contentBlock =  '<div style="display: block; height: 15px; margin-bottom: 20px">' + category['title'] + '</div>';
+        var contentBlock =  '<div class="topic-category-heading" style="display: block; height: 15px; margin-bottom: 20px">' + category['title'] + '</div>';
         var items = category['items'];
         var itemBlock = '';
         items.forEach(function (item) {
             itemBlock += '' +
                  '<div class="topic-item">' +
                         '<div class="topic-item-block">' +
-                            '<div class="item-title">' + item['title'] + '</div>' +
+                            '<div class="item-title"><a href="' + item['link'] + '">' + item['title'] + '</a></div>' +
                             '<div class="item-body">' + item['body'] + '</div>' +
-                            '<div class="item-more"><a href="' + item['link'] + '">more...</a></div>' +
+                            '<div class="item-more"><a href="' + item['link'] + '" target="_blank">more...</a></div>' +
                         '</div>' +
                         '<div class="item-avatar"><img  src="' + SERVER_PATH + '/resources/img/default-topic.png" /></div>' +
                     '</div>'
