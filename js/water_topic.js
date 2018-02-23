@@ -100,6 +100,7 @@ WaterTopic.prototype = {
         var contentBlock =  '<div class="topic-category-heading" style="display: block; height: 15px; margin-bottom: 20px">' + category['title'] + '</div>';
         var items = category['items'];
         var itemBlock = '';
+        var itemRating = this._createRatingView(3);
         items.forEach(function (item) {
             itemBlock += '' +
                  '<div class="topic-item">' +
@@ -109,11 +110,38 @@ WaterTopic.prototype = {
                             '<div class="item-more"><a href="' + item['link'] + '" target="_blank">more...</a></div>' +
                         '</div>' +
                         '<div class="item-avatar"><img  src="' + SERVER_PATH + '/resources/img/default-topic.png" /></div>' +
+                        '<div class="item-rating">' + itemRating + '</div>' +
                     '</div>'
             ;
         });
 
         return contentBlock + itemBlock;
+
+    },
+
+    _createRatingView: function (currentRate) {
+        var ratingContent = '';
+        var items = [5, 4.5, 4, 3.5, 3, 2.5, 2, 1.5, 1, 0.5];
+
+        items.forEach(function (rate) {
+            var checked = rate === currentRate ? 'checked' : '';
+            var forItem = rate === Math.round(rate) ? ('star' + rate) : ('star' + Math.floor(rate) + 'half');
+            var idItem = rate === Math.round(rate) ? ('star' + rate) : ('star' + Math.floor(rate) + 'half');
+            var cssClass = rate === Math.round(rate) ? 'full' : 'half';
+
+            ratingContent += '<input type="radio" id="' + idItem + '" name="rating" value="' + rate + '" ' + checked + '/>' +
+                '<label class = "' + cssClass + '" for="' + forItem + '" title="Awesome - 5 stars"></label>\n'
+
+        });
+
+        var content = '' +
+            '<fieldset class="rating">\n' +
+                    ratingContent +
+            '</fieldset>' +
+            '<span style="float: left">(' + Math.round(5*Math.random()) + ')</span>'
+        ;
+
+        return content;
 
     }
 };
