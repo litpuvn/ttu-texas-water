@@ -55,6 +55,26 @@ WaterTopic.prototype = {
     },
 
     _createWaterSourceContent: function (data) {
-        return 'Hello world'
+        var content = '' +
+            '<div style="display: block; margin-top: 10px">' +
+                '<div class="topic-category">' +
+                    '<div class="topic-category-header"></div>' +
+                    '<div class="topic-category-content">' +
+                        '<div><div>Category 1 hello worl for the category</div></div>' +
+                        '<div><div>Category 2 that i dont know if it would be good</div></div>' +
+                    '</div>' +
+                '</div>' +
+                '<div class="topic-items">' +
+                    '<div class="topic-item">' +
+                        '<div class="topic-item-block">' +
+                            '<div class="item-title">Title item 1</div>' +
+                            '<div class="item-body">item body</div>' +
+                        '</div>' +
+                        '<div class="item-avatar"><img width="45" height="45" src="' + SERVER_PATH + '/resources/img/default-topic.png" /></div>' +
+                    '</div>' +
+                '</div>' +
+            '</div>';
+
+        return content;
     }
 };

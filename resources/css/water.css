@@ -285,8 +285,8 @@ html, body {
 }
 
 .water-topic-window {
-    width: 500px;
-    height: 800px;
+    width: 700px;
+    height: 900px;
     background-color: #FFFFFF;
 
     left: 0;
@@ -295,4 +295,46 @@ html, body {
     bottom: 0;
     margin: auto;
     border: solid 2px black;
+}
+
+.topic-category {
+    display: block;
+    float: left;
+    width: 200px;
+    height: 700px;
+    margin-left: 2px;
+    /*border: 1px solid black;*/
+}
+
+.topic-category-header {
+    display: block;
+    height: 15px;
+    background-color: #444444;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+
+}
+
+.topic-category-content {
+    font-weight: bold;
+    /*margin-left: 5px;*/
+}
+
+.topic-category-content div {
+    display: block;
+    /*margin-top: 5px;*/
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.topic-category-content div div{
+    margin-left: 5px;
+}
+
+
+.topic-category-content div:hover{
+    color: red;
+    cursor: pointer;
+    text-decoration: underline;
+    background-color: #8c8c8c;
 }
