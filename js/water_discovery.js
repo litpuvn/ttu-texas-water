@@ -35,6 +35,10 @@ WaterDiscovery.prototype = {
         this.waterTopic.init(topic);
     },
 
+    showCategory: function (categoryId) {
+        this.waterTopic.showCategory(categoryId);
+    },
+
     _createWaterDiscoveryTopics: function () {
         var content = '' +
             '<table class="discovery-content">' +

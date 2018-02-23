@@ -7,6 +7,10 @@ WaterTopic.prototype = {
     
     init: function (topic, callback) {
         var self = this;
+
+        this.current_topic = topic;
+        this.current_category_id = 1;
+
         $.get(SERVER_PATH + "/data/" + topic + ".xml", function(data) {
             console.log(data);
             var $xml = $(data),
@@ -20,7 +24,8 @@ WaterTopic.prototype = {
                   var title = $category.find('topic').text();
 
                   var categoryObject = {
-                      title: title
+                      title: title,
+                      id: $category.attr('id')
                   };
 
                   var $items = $category.first('items').find('item');
@@ -44,6 +49,7 @@ WaterTopic.prototype = {
                   topicCategories.push(categoryObject);
             });
 
+            self.currentTopicCategories = topicCategories;
             self.showWaterSource(topicCategories);
         });
     },
@@ -72,15 +78,40 @@ WaterTopic.prototype = {
         );
     },
 
+    showCategory: function (categoryId) {
+
+        var currentCategory = this._getCategoryData(categoryId);
+        var content = this._createContentBlockForCategory(currentCategory);
+
+        $('#topic-items').html(content);
+
+        // alert("showing category" + categoryId);
+    },
+
+    _getCategoryData: function (categoryId) {
+        var cate;
+        for(var i=0; i < this.currentTopicCategories.length; i++) {
+            cate = this.currentTopicCategories[i];
+            if (cate['id'] == categoryId) {
+                return cate;
+            }
+
+        }
+
+        throw new Error('not found category id=' + categoryId);
+
+    },
+
     _createWaterSourceContent: function (categories) {
         var categoryBlock = '';
 
         categories.forEach(function (cate) {
-            categoryBlock += '<div><div>' + cate['title'] + '</div></div>';
+            categoryBlock += '<div onclick="menuItemHandler.showCategory(' + cate['id'] + ')"><div>' + cate['title'] + '</div></div>';
 
         });
 
-        var selectedContentBody = this._createContentBlockForCategory(categories[0]);
+        var selectedCategory = categories[0]
+        var selectedContentBody = this._createContentBlockForCategory(selectedCategory);
 
         var content = '' +
             '<div style="display: block; margin-top: 10px">' +
@@ -89,7 +120,7 @@ WaterTopic.prototype = {
                     '<div class="topic-category-content">' + categoryBlock +
                     '</div>' +
                 '</div>' +
-                '<div class="topic-items">' + selectedContentBody +
+                '<div id="topic-items" class="topic-items">' + selectedContentBody +
                 '</div>' +
             '</div>';
 
@@ -100,8 +131,12 @@ WaterTopic.prototype = {
         var contentBlock =  '<div class="topic-category-heading" style="display: block; height: 15px; margin-bottom: 20px">' + category['title'] + '</div>';
         var items = category['items'];
         var itemBlock = '';
-        var itemRating = this._createRatingView(3);
+        var self = this;
         items.forEach(function (item) {
+
+            var itemRate = 3 + Math.round(2*Math.random());
+            var itemRating = self._createRatingView(itemRate);
+
             itemBlock += '' +
                  '<div class="topic-item">' +
                         '<div class="topic-item-block">' +
@@ -126,16 +161,16 @@ WaterTopic.prototype = {
         items.forEach(function (rate) {
             var checked = rate === currentRate ? 'checked' : '';
             var forItem = rate === Math.round(rate) ? ('star' + rate) : ('star' + Math.floor(rate) + 'half');
-            var idItem = rate === Math.round(rate) ? ('star' + rate) : ('star' + Math.floor(rate) + 'half');
+            // var idItem = rate === Math.round(rate) ? ('star' + rate) : ('star' + Math.floor(rate) + 'half');
             var cssClass = rate === Math.round(rate) ? 'full' : 'half';
 
-            ratingContent += '<input type="radio" id="' + idItem + '" name="rating" value="' + rate + '" ' + checked + '/>' +
-                '<label class = "' + cssClass + '" for="' + forItem + '" title="Awesome - 5 stars"></label>\n'
+            ratingContent += '<input type="radio" name="rating" value="' + rate + '" ' + checked + '/>' +
+                '<label class = "' + cssClass + '" for="' + forItem + '" title=""></label>\n'
 
         });
 
         var content = '' +
-            '<fieldset class="rating">\n' +
+            '<fieldset class="rating">' +
                     ratingContent +
             '</fieldset>' +
             '<span style="float: left">(' + Math.round(5*Math.random()) + ')</span>'

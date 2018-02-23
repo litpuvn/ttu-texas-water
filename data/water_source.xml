@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <source>
-    <category>
+    <category id="1">
         <topic>Ground water</topic>
         <items>
             <item>
@@ -35,7 +35,7 @@
             </item>
         </items>
     </category>
-    <category>
+    <category id="2">
         <topic>Reservoir</topic>
         <items>
             <item>
@@ -50,7 +50,7 @@
             </item>
         </items>
     </category>
-     <category>
+     <category id="3">
         <topic>Lake, River and Pond</topic>
         <items>
             <item>

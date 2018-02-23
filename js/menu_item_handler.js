@@ -28,5 +28,10 @@ MenuItemHandler.prototype = {
 
     showWaterTopic: function (topic) {
         this.discovery.showTopic(topic);
+    },
+
+    showCategory: function (categoryId) {
+        this.discovery.showCategory(categoryId);
+
     }
 };
