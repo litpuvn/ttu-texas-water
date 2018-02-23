@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <source>
     <category>
-        <title>Ground water</title>
+        <topic>Ground water</topic>
         <items>
             <item>
                 <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
@@ -16,7 +16,7 @@
         </items>
     </category>
     <category>
-        <title>Reservoir</title>
+        <topic>Reservoir</topic>
         <items>
             <item>
                 <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
@@ -31,7 +31,7 @@
         </items>
     </category>
      <category>
-        <title>Lake, River and Pond</title>
+        <topic>Lake, River and Pond</topic>
         <items>
             <item>
                 <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>

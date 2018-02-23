@@ -308,11 +308,18 @@ html, body {
 
 .topic-category-header {
     display: block;
-    height: 15px;
+    height: 20px;
     background-color: #444444;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    margin-bottom: 20px;
+}
 
+.topic-category-header span{
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 5px;
 }
 
 .topic-category-content {
@@ -337,4 +344,26 @@ html, body {
     cursor: pointer;
     text-decoration: underline;
     background-color: #8c8c8c;
+}
+
+.topic-items {
+    float: left;
+    margin-left: 10px;
+}
+
+
+.topic-item-block {
+    float: left;
+    display: block;
+    width: 350px;
+}
+
+.item-avatar {
+    float: left;
+}
+
+.item-title {
+    display: block;
+    color: #ec971f;
+    font-weight: bold;
 }
