@@ -1,5 +1,5 @@
 function WaterDiscovery() {
-
+    this.waterTopic = new WaterTopic();
 }
 
 WaterDiscovery.prototype = {
@@ -31,11 +31,15 @@ WaterDiscovery.prototype = {
         );
     },
 
+    showTopic: function (topic) {
+        this.waterTopic.init(topic);
+    },
+
     _createWaterDiscoveryTopics: function () {
         var content = '' +
             '<table class="discovery-content">' +
             '<tr class="discovery-content-row">' +
-            '<td><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-source.png" /><br/><span class="discovery-topic-link">1. Water Sources</span></td>' +
+            '<td onclick="menuItemHandler.showWaterTopic(\'water-source\')"><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-source.png" /><br/><span class="discovery-topic-link">1. Water Sources</span></td>' +
             '<td><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-processing.png"  /><br/><span class="discovery-topic-link">2. Water Processing</span></td>' +
             '</tr>' +
             '<tr class="discovery-content-row">' +

@@ -24,5 +24,9 @@ MenuItemHandler.prototype = {
 
     showStakeHolders: function () {
         document.getElementById("myDropdown").classList.toggle("show");
+    },
+
+    showWaterTopic: function (topic) {
+        this.discovery.showTopic(topic);
     }
 };
