@@ -349,6 +349,8 @@ html, body {
 .topic-items {
     float: left;
     margin-left: 10px;
+    display: block;
+    width: 480px;
 }
 
 
@@ -360,6 +362,11 @@ html, body {
 
 .item-avatar {
     float: left;
+}
+
+.item-avatar img {
+    max-width: 120px;
+    max-height: 120px;
 }
 
 .item-title {

@@ -48,7 +48,7 @@ WaterTopic.prototype = {
         });
     },
 
-    showWaterSource: function (data) {
+    showWaterSource: function (categories) {
         vex.dialog.open(
             {
                 message: 'Water Source',
@@ -57,7 +57,7 @@ WaterTopic.prototype = {
                 showCloseButton: false,
                 escapeButtonCloses: true,
                 overlayClosesOnClick: true,
-                input: this._createWaterSourceContent(),
+                input: this._createWaterSourceContent(categories),
                 buttons: [],
                 callback: function(data) {
                     if (!data) {
@@ -72,29 +72,48 @@ WaterTopic.prototype = {
         );
     },
 
-    _createWaterSourceContent: function (data) {
+    _createWaterSourceContent: function (categories) {
+        var categoryBlock = '';
+
+        categories.forEach(function (cate) {
+            categoryBlock += '<div><div>' + cate['title'] + '</div></div>';
+
+        });
+
+        var selectedContentBody = this._createContentBlockForCategory(categories[0]);
+
         var content = '' +
             '<div style="display: block; margin-top: 10px">' +
                 '<div class="topic-category">' +
                     '<div class="topic-category-header"><span>Category</span></div>' +
-                    '<div class="topic-category-content">' +
-                        '<div><div>Category 1 hello worl for the category</div></div>' +
-                        '<div><div>Category 2 that i dont know if it would be good</div></div>' +
+                    '<div class="topic-category-content">' + categoryBlock +
                     '</div>' +
                 '</div>' +
-                '<div class="topic-items">' +
-                    '<div style="display: block; height: 15px; margin-bottom: 20px">hello world</div>' +
-                    '<div class="topic-item">' +
-                        '<div class="topic-item-block">' +
-                            '<div class="item-title">Title item 1</div>' +
-                            '<div class="item-body">item body</div>' +
-                            '<div class="item-more">more...</div>' +
-                        '</div>' +
-                        '<div class="item-avatar"><img width="45" height="45" src="' + SERVER_PATH + '/resources/img/default-topic.png" /></div>' +
-                    '</div>' +
+                '<div class="topic-items">' + selectedContentBody +
                 '</div>' +
             '</div>';
 
         return content;
+    },
+    
+    _createContentBlockForCategory: function (category) {
+        var contentBlock =  '<div style="display: block; height: 15px; margin-bottom: 20px">' + category['title'] + '</div>';
+        var items = category['items'];
+        var itemBlock = '';
+        items.forEach(function (item) {
+            itemBlock += '' +
+                 '<div class="topic-item">' +
+                        '<div class="topic-item-block">' +
+                            '<div class="item-title">' + item['title'] + '</div>' +
+                            '<div class="item-body">' + item['body'] + '</div>' +
+                            '<div class="item-more"><a href="' + item['link'] + '">more...</a></div>' +
+                        '</div>' +
+                        '<div class="item-avatar"><img  src="' + SERVER_PATH + '/resources/img/default-topic.png" /></div>' +
+                    '</div>'
+            ;
+        });
+
+        return contentBlock + itemBlock;
+
     }
 };
