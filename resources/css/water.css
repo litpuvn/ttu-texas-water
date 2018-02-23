@@ -301,7 +301,7 @@ html, body {
     display: block;
     float: left;
     width: 150px;
-    height: 700px;
+    height: 845px;
     margin-left: 2px;
     /*border: 1px solid black;*/
 }
@@ -388,4 +388,10 @@ html, body {
 
 .item-title a:hover {
     color: #ec971f;
+}
+
+.water-stories textarea {
+    margin-top: 5px;
+    width: 390px;
+    height: 130px;
 }

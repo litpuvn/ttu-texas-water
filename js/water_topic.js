@@ -113,6 +113,13 @@ WaterTopic.prototype = {
         var selectedCategory = categories[0]
         var selectedContentBody = this._createContentBlockForCategory(selectedCategory);
 
+        var shareStoryBlock = '' +
+                '<div class="water-stories">' +
+                    '<input type="text" placeholder="summary" /><br/>' +
+                    '<textarea placeholder="Enter your stories"></textarea><br/>' +
+                    '<input type="button" value="Share now" />' +
+                '</div>' +            '';
+
         var content = '' +
             '<div style="display: block; margin-top: 10px">' +
                 '<div class="topic-category">' +
@@ -121,7 +128,7 @@ WaterTopic.prototype = {
                     '</div>' +
                 '</div>' +
                 '<div id="topic-items" class="topic-items">' + selectedContentBody +
-                '</div>' +
+                '</div>' + shareStoryBlock +
             '</div>';
 
         return content;
@@ -149,6 +156,7 @@ WaterTopic.prototype = {
                     '</div>'
             ;
         });
+
 
         return contentBlock + itemBlock;
 
