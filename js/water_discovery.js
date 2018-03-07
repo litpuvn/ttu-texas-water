@@ -44,11 +44,11 @@ WaterDiscovery.prototype = {
             '<table class="discovery-content">' +
             '<tr class="discovery-content-row">' +
             '<td onclick="menuItemHandler.showWaterTopic(\'water_source\')"><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-source.png" /><br/><span class="discovery-topic-link">1. Water Sources</span></td>' +
-            '<td><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-processing.png"  /><br/><span class="discovery-topic-link">2. Water Processing</span></td>' +
+            '<td onclick="menuItemHandler.showWaterTopic(\'water_processing\')"><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-processing.png"  /><br/><span class="discovery-topic-link">2. Water Processing</span></td>' +
             '</tr>' +
             '<tr class="discovery-content-row">' +
             '<td onclick="menuItemHandler.showWaterTopic(\'water_usage\')"><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-usage.jpeg" /><br/><span class="discovery-topic-link">3. Water Usage</span></td>' +
-            '<td><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-treatment.jpg" /><br/><span class="discovery-topic-link">4. Water Treatment</span></td>' +
+            '<td onclick="menuItemHandler.showWaterTopic(\'water_treatment\')"><img class="discovery-topic" src="' + SERVER_PATH + '/resources/img/water-treatment.jpg" /><br/><span class="discovery-topic-link">4. Water Treatment</span></td>' +
             '</tr>' +
             '</table>'
         ;
