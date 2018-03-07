@@ -50,14 +50,16 @@ WaterTopic.prototype = {
             });
 
             self.currentTopicCategories = topicCategories;
-            self.showWaterSource(topicCategories);
+            var myHeading = topic.split('_').join(' ');
+            self.showWaterSource(myHeading, topicCategories);
         });
     },
 
-    showWaterSource: function (categories) {
+    showWaterSource: function (heading, categories) {
         vex.dialog.open(
             {
-                message: 'Water Source',
+                unsafeMessage: '<span style="text-transform: capitalize">' + heading  + '</span>',
+                // message: '<span style="text-transform: capitalize"> ' + heading  + '</span>',
                 className: 'water-topic-window',
                 overlayClassName: 'news-overlay',
                 showCloseButton: false,
