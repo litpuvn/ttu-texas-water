@@ -93,11 +93,11 @@ class CountyWellManager:
 
             # Now we need to write the data to a CSV
             with open(current_well_file, 'w', newline="", encoding="utf-8") as write_county_data_file:
-                county_data_writer = csv.DictWriter(write_county_data_file, fieldnames=["date", "average_water_level"],
+                county_data_writer = csv.DictWriter(write_county_data_file, fieldnames=["datetime", "average_water_level"],
                                                     delimiter=',')
                 county_data_writer.writeheader()
                 for item in self.write_data:
-                    county_data_writer.writerow({"date": item[0], "average_water_level": item[1]})
+                    county_data_writer.writerow({"datetime": item[0], "average_water_level": item[1]})
                 write_county_data_file.flush()  # To be safe -_-
                 write_county_data_file.close()  # To be smart o_o
                 print("Completed writing data to {}\n".format(current_well_file))

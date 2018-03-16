@@ -1,4 +1,4 @@
-date,average_water_level
+datetime,average_water_level
 2018-01-31,382.74000000000007
 2018-01-30,382.84250000000003
 2018-01-29,382.86625
