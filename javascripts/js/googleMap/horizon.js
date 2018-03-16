@@ -219,7 +219,7 @@ function drawHorizon(wellList){
           idv.timeChartManager.activateWellAsAreaChart(wellName);
           idv.comparisonChart.generateAverageComparisonChart('average', wellName, false);
 
-            setCenter(d.detail.position.lat, d.detail.position.lon);
+            // setCenter(d.detail.position.lat, d.detail.position.lon);
 
 
         })
@@ -231,8 +231,8 @@ function drawHorizon(wellList){
         .insert('svg', ':nth-child(2)')
           .attr('width', 14)
           .attr('height', 14)
-          .attr("class", "horizon-chart-well ")
-
+          .attr('preserveAspectRatio', "none")
+          .attr("class", "horizon-chart-well")
         .append('circle')
           .attr('cx', 6)
           .attr('cy', 6)
@@ -242,7 +242,6 @@ function drawHorizon(wellList){
           .style('fill', function (d) {
               return d.getMyColor();
           })
-        // .text('1')
     ;
 
   // d3.select("#horizonChart").selectAll('.title').on("mouseover", function(d){

@@ -448,6 +448,7 @@ idv.load = function() {
                         // Long sets active wells
                 idv.wellManager.activateWells(topWells);
 
+                drawHorizon(topWells);
 
             });    
         });    

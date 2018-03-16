@@ -127,6 +127,7 @@ table.c3-tool-tip-background {
 
 .horizon-chart-well {
     margin-top: -20px;
+    position: absolute;
 }
 
 
