@@ -1,0 +1,44 @@
+2017-01
+
+[('system', 10), ('use', 10), ('tnris', 11), ('attend', 11), ('meeting', 11), ('improvements', 12), ('join', 12), ('today', 13), ('dpr', 13), ('approved', 13), ('new', 14), ('plan', 14), ('great', 15), ('drought', 16), ('groundwater', 17), ('flood', 19), ('conservation', 23), ('conference', 29), ('need', 34), ('panel', 36)]
+
+2017-02
+[('today', 5), ('cityofcc', 5), ('congressman', 5), ('appearance', 6), ('hill', 6), ('capitol', 6), ('texaswaterdays', 6), ('march', 6), ('conference', 6), ('lake', 7), ('plan', 7), ('made', 7), ('tnris', 7), ('system', 7), ('feb', 8), ('improvements', 8), ('approved', 9), ('thx', 9), ('meeting', 10), ('austin', 16)]
+
+2017-03
+[('rain', 7), ('stop', 7), ('today', 7), ('congrats', 8), ('map', 8), ('conservation', 8), ('rainwater', 8), ('using', 8), ('learn', 9), ('award', 10), ('bluelegacy', 10), ('texaswaterday', 11), ('aquifers', 11), ('march', 12), ('capitol', 12), ('brackish', 12), ('austin', 13), ('meeting', 13), ('day', 17), ('groundwater', 21)]
+
+2017-04
+[('bldg', 6), ('great', 6), ('congress', 6), ('center', 6), ('study', 6), ('well', 7), ('today', 7), ('speaking', 7), ('approved', 7), ('jeff', 7), ('improvements', 7), ('txawwa', 8), ('financial', 8), ('tnris', 8), ('groundwater', 8), ('conservation', 9), ('may', 11), ('april', 14), ('austin', 15), ('meeting', 16)]
+
+2017-05
+[('register', 8), ('week', 8), ('learn', 8), ('wastewater', 8), ('improvements', 8), ('join', 9), ('bldg', 9), ('asr', 9), ('flood', 10), ('recovery', 10), ('free', 10), ('storage', 11), ('aquifer', 12), ('today', 13), ('approved', 13), ('system', 13), ('austin', 14), ('tnris', 17), ('meeting', 17), ('may', 27)]
+
+2017-06
+[('check', 6), ('city', 6), ('mtg', 6), ('txcoloradoriver', 6), ('week', 6), ('wastewater', 6), ('year', 6), ('meeting', 7), ('annual', 7), ('congress', 7), ('early', 7), ('protection', 7), ('warning', 8), ('grant', 8), ('data', 8), ('today', 8), ('june', 8), ('provided', 9), ('flood', 9), ('system', 13)]
+
+2017-07
+[('supply', 9), ('wastewater', 10), ('instagram', 11), ('mtg', 11), ('join', 11), ('txhistcomm', 12), ('photo', 12), ('tower', 13), ('today', 13), ('austin', 13), ('improvements', 14), ('meeting', 16), ('photos', 17), ('city', 17), ('windmill', 18), ('system', 19), ('txwaterproud', 22), ('approved', 27), ('txwatertowers', 32), ('txwindmills', 38)]
+
+2017-08
+[('job', 7), ('new', 8), ('check', 8), ('well', 8), ('assistance', 8), ('learn', 8), ('august', 8), ('day', 9), ('flood', 9), ('river', 10), ('meeting', 10), ('rainfall', 10), ('mtg', 11), ('city', 11), ('rain', 11), ('flooding', 12), ('info', 12), ('planning', 13), ('today', 13), ('harvey', 20)]
+
+2017-09
+[('check', 7), ('local', 7), ('hurricane', 7), ('austin', 7), ('new', 8), ('discussing', 8), ('watercycle', 9), ('financial', 9), ('fema', 9), ('learn', 10), ('day', 10), ('mtg', 12), ('harveyrecovery', 12), ('assistance', 12), ('sept', 13), ('meeting', 13), ('recovery', 13), ('today', 15), ('city', 16), ('harvey', 29)]
+
+
+2017-10
+[('financial', 8), ('austin', 8), ('sfa', 9), ('bldg', 9), ('congress', 9), ('great', 9), ('comments', 10), ('oct', 10), ('leave', 10), ('assistance', 11), ('tomorrow', 12), ('check', 13), ('learn', 13), ('today', 14), ('meeting', 15), ('back', 15), ('false', 15), ('answer', 16), ('txgisforum', 25), ('tnris', 36)]
+
+2017-11
+[('data', 3), ('learn', 3), ('antonio', 3), ('read', 3), ('including', 3), ('word', 3), ('check', 3), ('gis', 3), ('thx', 3), ('enjoyed', 4), ('agency', 4), ('groundwater', 4), ('disaster', 4), ('created', 4), ('jeff', 4), ('happy', 5), ('conservation', 5), ('program', 6), ('drought', 6), ('tnris', 6)]
+
+2017-12
+[('financial', 3), ('flood', 3), ('application', 3), ('funding', 3), ('report', 4), ('swift', 4), ('holding', 4), ('meeting', 4), ('learn', 4), ('planning', 4), ('austin', 4), ('thx', 4), ('years', 4), ('disaster', 5), ('workshop', 5), ('know', 5), ('approved', 5), ('system', 5), ('recovery', 6), ('december', 7)]
+
+2018-01
+[('held', 5), ('projects', 5), ('building', 5), ('annual', 5), ('holding', 5), ('public', 6), ('conservation', 6), ('financial', 6), ('receive', 6), ('workshop', 6), ('improvements', 7), ('regional', 7), ('today', 7), ('loss', 7), ('next', 7), ('system', 9), ('meeting', 9), ('january', 9), ('austin', 10), ('approved', 11)]
+
+
+2018-02
+[('system', 6), ('resources', 6), ('approved', 6), ('great', 6), ('thanks', 6), ('training', 6), ('enjoyed', 7), ('groundwater', 7), ('february', 8), ('district', 8), ('audit', 8), ('attend', 8), ('austin', 9), ('workshop', 9), ('city', 10), ('today', 12), ('manager', 12), ('loss', 13), ('conservation', 15), ('meeting', 18)]
