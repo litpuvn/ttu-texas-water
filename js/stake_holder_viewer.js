@@ -45,6 +45,7 @@ StakeHolderViewer.prototype = {
     var maxHeightChart = new Chart(this._getCtx('adminBoard'))
         .Streamgraph(sampleData, {
           responsive: true,
+          colorAssignmentMethod: 'verticalPosition',
           labelPlacementMethod: 'maxHeight',
             colors: [
                 '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94',
