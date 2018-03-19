@@ -84,6 +84,8 @@ trainSamples = np.array(waterLevels)
 from keras.models import Sequential
 from keras.layers.core import Dense, Activation
 from keras.layers.recurrent import LSTM
+from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+import math
 
 #Time to start building the NN
 model = Sequential()
@@ -111,6 +113,18 @@ model.fit(trainTimes, trainSamples, epochs=args.epochs, batch_size=30, verbose=a
 trainPredict = model.predict(trainTimes)
 testPredict = model.predict(predictTimes)
 
+#Get the error and print it.
+error = mean_squared_error(waterLevels, trainPredict)
+print("\nMean Squared Error: " + str(error))
+
+print("Root Mean Squared Error: " + str(math.sqrt(error)))
+
+error = r2_score(waterLevels, trainPredict)
+print("R Squared Error: " + str(error))
+
+error = mean_absolute_error(waterLevels, trainPredict)
+print("Mean Absolute Error: " + str(error))
+
 
 #-------------------------------------------------------------------
 #Optional File Saving Component
@@ -121,7 +135,7 @@ if(args.save):
         pathParts = args.path.split('\\')
         inName = pathParts[len(pathParts)-1]
         outName = inName.split('.')[0]
-        outName = outName + '_preditions.csv'
+        outName = outName + '_LSTMpreditions.csv'
     else:
         outName = args.output
 
