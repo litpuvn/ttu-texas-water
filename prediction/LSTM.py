@@ -2,12 +2,17 @@
 # By Nicholas Alvarez
 # Not written to be the most modular thing in the world. Apologies for that.
 # I had a lot of other work to do for classes so couldn't spend time cleaning up.
+#
+# The program assumes that all the data provided is mostly evenly spaced.
+# If it is not, the prediction may be a little off.
 #-------------------------------------------------------------------
 
 import csv
 from datetime import datetime
 from datetime import timedelta
 import argparse
+
+inputReversed = False
 
 #This will retrieve the data. Skips the
 #   header and assumes its in chronological order (New to old)
@@ -26,8 +31,13 @@ def ReadData(path):
             except ValueError:
                 continue
     #Again, data assumed to be in order from newest to oldest.
-    data.reverse()
-    dates.reverse()
+    #data.reverse()
+    #dates.reverse()
+    if(dates[0] > dates[1]):
+        print("Reversing input data order for processing...")
+        data.reverse()
+        dates.reverse()
+        inputReversed = True
     return data, dates
 
 #Handle Command Line Stuff...
@@ -140,15 +150,17 @@ if(args.save):
         outName = args.output
 
     #Prepare the data to be written
-    outDates = []
+    outDates = dates
     outData = dataScaler.inverse_transform(np.concatenate((waterLevels, testPredict)))
-    firstDate = dates[0]
     dateIncrement = dates[1]-dates[0]
-    for i in range(0, len(times)):
-        outDates.append(firstDate + dateIncrement*(i))
+    for i in range(len(dates), len(times)):
+        #outDates.append(dates[-1] + dateIncrement*(i))
+        outDates.append(outDates[-1] + dateIncrement)
     #Flip data to comply with original format.
-    outData = np.flip(outData, 0)
-    outDates = np.flip(outDates, 0)
+    if(inputReversed):
+        print('Flipping output data back to original order of file...')
+        outData = np.flip(outData, 0)
+        outDates = np.flip(outDates, 0)
         
     #Write the data.
     with open(outName, 'w', newline='') as CSV:
