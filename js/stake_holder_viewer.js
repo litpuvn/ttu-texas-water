@@ -52,6 +52,7 @@ StakeHolderViewer.prototype = {
                 '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf'
             ],
             labelFontColor: 'black',
+            labelMinimumSize: 9,
             stroke: false
         });
 
