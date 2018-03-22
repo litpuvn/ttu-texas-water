@@ -12,6 +12,7 @@ from datetime import datetime
 from datetime import timedelta
 import argparse
 
+global inputReversed
 inputReversed = False
 
 #This will retrieve the data. Skips the
@@ -37,6 +38,7 @@ def ReadData(path):
         print("Reversing input data order for processing...")
         data.reverse()
         dates.reverse()
+        global inputReversed
         inputReversed = True
     return data, dates
 
