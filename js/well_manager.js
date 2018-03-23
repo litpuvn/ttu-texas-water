@@ -1,7 +1,7 @@
 function WellManager() {
     this.counties = {};
     this.wellsLoaded = false;
-    this.westTexas = ['El Paso', 'Lubbock', 'Potter', 'Midland', 'Taylor', 'Ector', 'Tom Green', 'Howard', 'Hale',
+    this.westTexas = [
 
         'Brewster', 'Culberson', 'El Paso', 'Hudspeth', 'Jeff Davis', 'Presidio',
 
