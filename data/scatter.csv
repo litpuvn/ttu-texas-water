@@ -1,14 +1,14 @@
-month, water_loss, data_categories
-2018-01,-0.31, "{improvements:7, projects:5, financial:6, conservation:6}"
-2017-12,-0.34, "{financial: 3}"
-2017-11,-0.24, "{drought:6, conservation:5, groundwater:4}"
-2017-10,-0.2, "{financial: 8}"
-2017-09,0.16, "{harveyrecovery:12, financial:9}"
-2017-08,0.42, "{river:10, rainfall:10, well:8}"
-2017-07,0.74, "{supply:9, wastewater:10, improvements:14, windmill:18}"
-2017-06,0.5, "{grant:8, wastewater:6}"
-2017-05,0.11, "{wastewater:8, improvements:8, aquifer:12, storage:11}"
-2017-04,-0.09, "{improvements:7, financial:8, conservation:9, groundwater:8, well:7}"
-2017-03,-0.15, "{brackish:12, conservation:8, groundwater:21}"
-2017-02,-0.26, "{improvements:8, lake:7}"
-2017-01,-0.29, "{improvements: 12, drought: 16, dpr: 13, conservation: 23, groundwater: 17}"
+month,water_loss,data_categories
+2018-01,-0.31, {"improvements":7; "projects":5; "financial":6; "conservation":6}
+2017-12,-0.34, {"financial": 3}
+2017-11,-0.24, {"drought":6; "conservation":5; "groundwater":4}
+2017-10,-0.2, {"financial": 8}
+2017-09,0.16, {"harveyrecovery":12; "financial":9}
+2017-08,0.42, {"river":10; "rainfall":10; "well":8}
+2017-07,0.74, {"supply":9; "wastewater":10; "improvements":14; "windmill":18}
+2017-06,0.5, {"grant":8; "wastewater":6}
+2017-05,0.11, {"wastewater":8; "improvements":8; "aquifer":12; "storage":11}
+2017-04,-0.09, {"improvements":7; "financial":8; "conservation":9; "groundwater":8; "well":7}
+2017-03,-0.15, {"brackish":12; "conservation":8; "groundwater":21}
+2017-02,-0.26, {"improvements":8; "lake":7}
+2017-01,-0.29, {"improvements": 12; "drought": 16; "dpr": 13; "conservation": 23; "groundwater": 17}
