@@ -1,6 +1,23 @@
 function WellManager() {
     this.counties = {};
     this.wellsLoaded = false;
+    this.westTexas = ['El Paso', 'Lubbock', 'Potter', 'Midland', 'Taylor', 'Ector', 'Tom Green', 'Howard', 'Hale',
+
+        'Brewster', 'Culberson', 'El Paso', 'Hudspeth', 'Jeff Davis', 'Presidio',
+
+        'Andrews', 'Borden', 'Crane', 'Dawson', 'Ector', 'Gaines', 'Glasscock', 'Howard', 'Loving', 'Martin', 'Midland',
+        'Pecos', 'Reeves', 'Terrell', 'Upton', 'Ward', 'Winkler',
+
+         'Coke', 'Concho', 'Crockett', 'Irion', 'Kimble', 'Mason', 'McCulloch', 'Menard', 'Reagan', 'Schleicher',
+        'Sterling', 'Sutton', 'Tom Green',
+
+        'Bailey', 'Cochran', 'Crosby', 'Dickens', 'Floyd', 'Garza', 'Hale', 'Hockley', 'King', 'Lamb', 'Lubbock', 'Lynn',
+        'Motley', 'Terry', 'Yoakum',
+
+        'Brown', 'Callahan', 'Coleman', 'Comanche', 'Eastland', 'Fisher', 'Haskell', 'Jones', 'Kent', 'Knox', 'Mitchell',
+        'Nolan', 'Runnels', 'Scurry', 'Shackelford', 'Stephens', 'Stonewall', 'Taylor', 'Throckmorton'
+    ]
+
 }
 
 
@@ -16,6 +33,10 @@ WellManager.prototype = {
 
            csvObj.forEach(function (row) {
                var county = row['county'];
+
+               if (self.westTexas.indexOf(county) < 0) {
+                   return; // ignore non-west texas region
+               }
 
                if (!self.counties.hasOwnProperty(county)) {
                    self.counties[county] = [];
