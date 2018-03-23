@@ -1,6 +1,7 @@
 function WellManager() {
     this.counties = {};
     this.wellsLoaded = false;
+    //http://www.texascounties.net/statistics/regions.htm
     this.westTexas = [
 
         'Brewster', 'Culberson', 'El Paso', 'Hudspeth', 'Jeff Davis', 'Presidio',
