@@ -4,20 +4,22 @@ function WellManager() {
     //http://www.texascounties.net/statistics/regions.htm
     this.westTexas = [
 
-        'Brewster', 'Culberson', 'El Paso', 'Hudspeth', 'Jeff Davis', 'Presidio',
+        // 'Brewster', 'Culberson', 'El Paso', 'Hudspeth', 'Jeff Davis', 'Presidio',
+        //
+        // 'Andrews', 'Borden', 'Crane', 'Dawson', 'Ector', 'Gaines', 'Glasscock', 'Howard', 'Loving', 'Martin', 'Midland',
+        // 'Pecos', 'Reeves', 'Terrell', 'Upton', 'Ward', 'Winkler',
+        //
+        //  'Coke', 'Concho', 'Crockett', 'Irion', 'Kimble', 'Mason', 'McCulloch', 'Menard', 'Reagan', 'Schleicher',
+        // 'Sterling', 'Sutton', 'Tom Green',
+        //
+        // 'Bailey', 'Cochran', 'Crosby', 'Dickens', 'Floyd', 'Garza', 'Hale', 'Hockley', 'King', 'Lamb', 'Lubbock', 'Lynn',
+        // 'Motley', 'Terry', 'Yoakum',
+        //
+        // 'Brown', 'Callahan', 'Coleman', 'Comanche', 'Eastland', 'Fisher', 'Haskell', 'Jones', 'Kent', 'Knox', 'Mitchell',
+        // 'Nolan', 'Runnels', 'Scurry', 'Shackelford', 'Stephens', 'Stonewall', 'Taylor', 'Throckmorton'
+    ];
 
-        'Andrews', 'Borden', 'Crane', 'Dawson', 'Ector', 'Gaines', 'Glasscock', 'Howard', 'Loving', 'Martin', 'Midland',
-        'Pecos', 'Reeves', 'Terrell', 'Upton', 'Ward', 'Winkler',
 
-         'Coke', 'Concho', 'Crockett', 'Irion', 'Kimble', 'Mason', 'McCulloch', 'Menard', 'Reagan', 'Schleicher',
-        'Sterling', 'Sutton', 'Tom Green',
-
-        'Bailey', 'Cochran', 'Crosby', 'Dickens', 'Floyd', 'Garza', 'Hale', 'Hockley', 'King', 'Lamb', 'Lubbock', 'Lynn',
-        'Motley', 'Terry', 'Yoakum',
-
-        'Brown', 'Callahan', 'Coleman', 'Comanche', 'Eastland', 'Fisher', 'Haskell', 'Jones', 'Kent', 'Knox', 'Mitchell',
-        'Nolan', 'Runnels', 'Scurry', 'Shackelford', 'Stephens', 'Stonewall', 'Taylor', 'Throckmorton'
-    ]
 
 }
 
@@ -34,10 +36,15 @@ WellManager.prototype = {
 
            csvObj.forEach(function (row) {
                var county = row['county'];
+               var aquier = row['aquifer'];
 
-               if (self.westTexas.indexOf(county) < 0) {
-                   return; // ignore non-west texas region
+               if (aquier != 'Ogallala') {
+                   return;
                }
+
+               // if (self.westTexas.indexOf(county) < 0) {
+               //     return; // ignore non-west texas region
+               // }
 
                if (!self.counties.hasOwnProperty(county)) {
                    self.counties[county] = [];
