@@ -6,6 +6,10 @@
 # The program assumes that all the data provided is mostly evenly spaced.
 # If it is not, the prediction may be a little off.
 #-------------------------------------------------------------------
+from numpy.random import seed
+seed(1)
+from tensorflow import set_random_seed
+set_random_seed(2)
 
 import csv
 from datetime import datetime
@@ -104,17 +108,17 @@ model = Sequential()
 
 #Dimensions...
 inOutNeurons = 1
-hiddenNeurons = 4
+hiddenNeurons = 3
 
 #Main Layer
-model.add(LSTM(hiddenNeurons, input_shape=(inOutNeurons, 1), return_sequences=False))
-model.add(Activation('sigmoid'))
+model.add(LSTM(hiddenNeurons, input_shape=(inOutNeurons, 1), return_sequences=False, activation='tanh', recurrent_activation='sigmoid'))
+model.add(Activation('hard_sigmoid'))
 
 #Output Layer
 model.add(Dense(inOutNeurons))
 
 #Ran through a lot of options here. This one seems to perform the best.
-model.compile(loss="mean_squared_error", optimizer="adam")
+model.compile(loss="mean_squared_error", optimizer="nadam") #Previously Adam Optimizer
 
 print("\nBeginning matrix magic...\n")
 
@@ -126,15 +130,18 @@ trainPredict = model.predict(trainTimes)
 testPredict = model.predict(predictTimes)
 
 #Get the error and print it.
-error = mean_squared_error(waterLevels, trainPredict)
+trainPredictActual = dataScaler.inverse_transform(trainPredict)
+waterLevelsActual = dataScaler.inverse_transform(waterLevels)
+
+error = mean_squared_error(waterLevelsActual, trainPredictActual)
 print("\nMean Squared Error: " + str(error))
 
 print("Root Mean Squared Error: " + str(math.sqrt(error)))
 
-error = r2_score(waterLevels, trainPredict)
+error = r2_score(waterLevelsActual, trainPredictActual)
 print("R Squared Error: " + str(error))
 
-error = mean_absolute_error(waterLevels, trainPredict)
+error = mean_absolute_error(waterLevelsActual, trainPredictActual)
 print("Mean Absolute Error: " + str(error))
 
 
@@ -163,16 +170,16 @@ if(args.save):
         print('Flipping output data back to original order of file...')
         outData = np.flip(outData, 0)
         outDates = np.flip(outDates, 0)
-        
+
     #Write the data.
     with open(outName, 'w', newline='') as CSV:
         writer = csv.writer(CSV, delimiter=',')
         writer.writerow(['datetime', 'water_level(ft below land surface)'])
         for i in range(0, len(outDates)):
             writer.writerow([outDates[i].strftime('%Y-%m-%d'), "{0:.2f}".format(outData[i][0])])
-    
 
-    
+
+
 #-------------------------------------------------------------------
 #Optional Graphing Component
 if(args.graph):
@@ -199,11 +206,3 @@ if(args.graph):
     plt.plot(trainPredictPlot)
     plt.plot(testPredictPlot)
     plt.show()
-
-
-
-
-
-
-
-

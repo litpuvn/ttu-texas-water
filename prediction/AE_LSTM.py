@@ -143,17 +143,17 @@ model = Sequential()
 
 #Dimensions...
 inOutNeurons = 1
-hiddenNeurons = 4
+hiddenNeurons = 3
 
 #Main Layer
-model.add(LSTM(hiddenNeurons, input_shape=(inOutNeurons, 1), return_sequences=False))
-model.add(Activation('sigmoid'))
+model.add(LSTM(hiddenNeurons, input_shape=(inOutNeurons, 1), return_sequences=False, activation='tanh', recurrent_activation='sigmoid'))
+model.add(Activation('hard_sigmoid'))
 
 #Output Layer
 model.add(Dense(inOutNeurons))
 
 #Ran through a lot of options here. This one seems to perform the best.
-model.compile(loss="mean_squared_error", optimizer="adam")
+model.compile(loss="mean_squared_error", optimizer="nadam") #Previously Adam Optimizer
 
 print("\nBeginning matrix magic...\n")
 
