@@ -55,6 +55,7 @@ parser.add_argument('-s', '--save', action='store_true', help='Toggle saving an 
 parser.add_argument('-o', '--output', type=str, default=None, help='Saves output file with name provided. Make sure to also use -s!')
 parser.add_argument('-e', '--epochs', '--epoch', type=int, default=1000, help='Number of training passes. Default 1000.')
 parser.add_argument('-v', '--verbose', type=int, default=0, help='Referse to verbose on the NN. 0(default) is silent, 1 is large progress bars, 2 is small notes each epoch.')
+parser.add_argument('-b', '--batch_size', type=int, default=64, help='Sets the number of elements of the dataset to process at one time in the NN.')
 args = parser.parse_args()
 timeCount = args.timeCount
 
@@ -122,12 +123,12 @@ model.compile(loss="mean_squared_error", optimizer="nadam") #Previously Adam Opt
 
 print("\nBeginning matrix magic...\n")
 
-#Train the NN
-model.fit(trainTimes, trainSamples, epochs=args.epochs, batch_size=30, verbose=args.verbose)
+#Train the NN, batch_size previously 30, default 32
+model.fit(trainTimes, trainSamples, epochs=args.epochs, batch_size=args.batch_size, verbose=args.verbose)
 
 #Some predictions
-trainPredict = model.predict(trainTimes)
-testPredict = model.predict(predictTimes)
+trainPredict = model.predict(trainTimes, batch_size=args.batch_size)
+testPredict = model.predict(predictTimes, batch_size=args.batch_size)
 
 #Get the error and print it.
 trainPredictActual = dataScaler.inverse_transform(trainPredict)
@@ -205,4 +206,5 @@ if(args.graph):
     plt.plot(dataScaler.inverse_transform(waterLevels))
     plt.plot(trainPredictPlot)
     plt.plot(testPredictPlot)
+    plt.title("LSTM Result")
     plt.show()

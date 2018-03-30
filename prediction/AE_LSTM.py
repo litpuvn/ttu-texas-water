@@ -8,6 +8,10 @@
 # This version will attempt to integrate the Auto Encoder idea.
 # With test, at 400 Epochs it starts to become, seemingly, more accurate than base LSTM.
 #-------------------------------------------------------------------
+from numpy.random import seed
+seed(1)
+from tensorflow import set_random_seed
+set_random_seed(2)
 
 import csv
 from datetime import datetime
@@ -47,7 +51,8 @@ parser.add_argument('-g', '--graph', action='store_true', help='Toggle display o
 parser.add_argument('-s', '--save', action='store_true', help='Toggle saving an output file with predicted values.')
 parser.add_argument('-o', '--output', type=str, default=None, help='Saves output file with name provided. Make sure to also use -s!')
 parser.add_argument('-e', '--epochs', '--epoch', type=int, default=1000, help='Number of training passes. Default 1000.')
-parser.add_argument('-v', '--verbose', type=int, default=0, help='Referse to verbose on the NN. 0(default) is silent, 1 is large progress bars, 2 is small notes each epoch.')
+parser.add_argument('-v', '--verbose', type=int, default=0, help='Refers to verbose on the NN. 0(default) is silent, 1 is large progress bars, 2 is small notes each epoch.')
+parser.add_argument('-b', '--batch_size', type=int, default=64, help='Sets the number of elements of the dataset to process at one time in the NN.')
 args = parser.parse_args()
 timeCount = args.timeCount
 
@@ -105,34 +110,35 @@ encodingDim = 1
 decodingDim = len(trainSamples)
 
 encoded = Sequential()
-encoded.add(Dense(decodingDim, input_shape=(1, )))
-encoded.add(Activation('selu'))
-encoded.add(Dense(encodingDim))
+encoded.add(Dense(decodingDim, input_shape=(1, ), activation='selu'))
+encoded.add(Dense(encodingDim, activation='sigmoid'))
 
 # With testing, the adam optimizer provides the closest results.
 encoded.compile(loss="mean_squared_error", optimizer="adam")
 encodeTimes = np.reshape(np.array(trainTimes), (-1, 1))
 # print(encodeTimes.shape)
 
-encoded.fit(encodeTimes, trainSamples, epochs=args.epochs, batch_size=30, verbose=0)
+# Previously 30, default 32
+encoded.fit(encodeTimes, trainSamples, epochs=args.epochs, batch_size=args.batch_size, verbose=0)
 
 # dataAE = encoded.predict(encodeTimes)
-trainSamples = encoded.predict(encodeTimes)
+trainSamples = encoded.predict(encodeTimes, batch_size=args.batch_size)
 
-# print("Error: " + str(mean_squared_error(trainSamples, dataAE)))
 
-import matplotlib.pyplot as plt
-
-#Invert Transforms
+# Invert Transforms
 # dataAE = dataScaler.inverse_transform(dataAE)
 # trainSamples = dataScaler.inverse_transform(trainSamples)
-
-# plt.plot(trainSamples)
-# plt.plot(dataAE)
-
-# plt.show()
-
-
+#
+# print("Error: " + str(mean_squared_error(trainSamples, dataAE)))
+#
+# if(args.graph):
+#     import matplotlib.pyplot as plt
+#     plt.plot(trainSamples)
+#     plt.plot(dataAE)
+#     plt.title("AE_LSTM Auto-Encoder Result")
+#     plt.show()
+#
+#
 # quit()
 
 #-------------------------------------------------------------------
@@ -158,22 +164,25 @@ model.compile(loss="mean_squared_error", optimizer="nadam") #Previously Adam Opt
 print("\nBeginning matrix magic...\n")
 
 #Train the NN
-model.fit(trainTimes, trainSamples, epochs=args.epochs, batch_size=30, verbose=args.verbose)
+model.fit(trainTimes, trainSamples, epochs=args.epochs, batch_size=args.batch_size, verbose=args.verbose)
 
 #Some predictions
-trainPredict = model.predict(trainTimes)
-testPredict = model.predict(predictTimes)
+trainPredict = model.predict(trainTimes, batch_size=args.batch_size)
+testPredict = model.predict(predictTimes, batch_size=args.batch_size)
 
 #Get the error and print it.
-error = mean_squared_error(waterLevels, trainPredict)
+trainPredictActual = dataScaler.inverse_transform(trainPredict)
+waterLevelsActual = dataScaler.inverse_transform(waterLevels)
+
+error = mean_squared_error(waterLevelsActual, trainPredictActual)
 print("\nMean Squared Error: " + str(error))
 
 print("Root Mean Squared Error: " + str(math.sqrt(error)))
 
-error = r2_score(waterLevels, trainPredict)
+error = r2_score(waterLevelsActual, trainPredictActual)
 print("R Squared Error: " + str(error))
 
-error = mean_absolute_error(waterLevels, trainPredict)
+error = mean_absolute_error(waterLevelsActual, trainPredictActual)
 print("Mean Absolute Error: " + str(error))
 
 
@@ -237,4 +246,5 @@ if(args.graph):
     plt.plot(dataScaler.inverse_transform(waterLevels))
     plt.plot(trainPredictPlot)
     plt.plot(testPredictPlot)
+    plt.title("AE_LSTM Result")
     plt.show()
