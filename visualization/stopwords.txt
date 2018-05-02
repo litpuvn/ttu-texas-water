@@ -1,0 +1,5 @@
+; Add stopwords here, one per line
+; As you may have guessed, semicolons will act as comments for this file.
+
+;TEXA
+;Water
