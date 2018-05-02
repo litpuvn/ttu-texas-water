@@ -138,14 +138,14 @@ with open(path.join(d, 'stopwords.txt')) as stopWordsFile:
 #Plot and show the actual word cloud.
 import matplotlib.pyplot as plt
 
-wordcloud = WordCloud(width=1280, height=720, background_color='white', stopwords=stopWords).generate(' '.join(outputDataWords))
-plt.figure(figsize=(14, 9))
+wordcloud = WordCloud(collocations=False, width=1280, height=720, mode='RGBA', background_color=None, stopwords=stopWords).generate(' '.join(outputDataWords))
+plt.figure(figsize=(12.8, 7.2))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.title("Word WordCloud")
 
-wordcloud = WordCloud(width=1280, height=720, background_color='white', stopwords=stopWords).generate(' '.join(outputDataHashtags))
-plt.figure(figsize=(14, 9))
+wordcloud = WordCloud(collocations=False, width=1280, height=720, mode='RGBA', background_color=None, stopwords=stopWords).generate(' '.join(outputDataHashtags))
+plt.figure(figsize=(12.8, 7.2))
 plt.imshow(wordcloud, interpolation='bilinear')
 plt.axis("off")
 plt.title("Hashtag WordCloud")
