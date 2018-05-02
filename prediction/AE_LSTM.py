@@ -8,10 +8,11 @@
 # This version will attempt to integrate the Auto Encoder idea.
 # With test, at 400 Epochs it starts to become, seemingly, more accurate than base LSTM.
 #-------------------------------------------------------------------
+#Remove this seeding when actually using it. I have it on for testing.
 from numpy.random import seed
 seed(1)
 from tensorflow import set_random_seed
-set_random_seed(2)
+set_random_seed(2) I
 
 import csv
 from datetime import datetime
@@ -104,7 +105,7 @@ import math
 
 
 #-------------------------------------------------------------------
-
+#Auto-encoder stuff...
 
 encodingDim = 1
 decodingDim = len(trainSamples)

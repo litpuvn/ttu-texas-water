@@ -6,6 +6,7 @@
 # The program assumes that all the data provided is mostly evenly spaced.
 # If it is not, the prediction may be a little off.
 #-------------------------------------------------------------------
+#Remove this seeding when actually using it. I have it on for testing.
 from numpy.random import seed
 seed(1)
 from tensorflow import set_random_seed
