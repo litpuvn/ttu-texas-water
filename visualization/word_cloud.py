@@ -20,6 +20,7 @@ dirPath = path.join(d, '../data/tweets/twdb_monthly')
 #Have another with only the hashtags.
 outputDataWords = []
 outputDataHashtags = []
+tweetCount = 0
 
 
 for filename in os.listdir(dirPath):
@@ -32,6 +33,7 @@ for filename in os.listdir(dirPath):
         text = file.read()
         lines = text.split('\n')
         del lines[0] #Remove the legend at the top of the file.
+
 
         for line in lines:
             #print(line)
@@ -78,6 +80,7 @@ for filename in os.listdir(dirPath):
 
             #Word by Word processing
             #processedWords = []
+            tweetCount += 1
             words = trimmedLine.split(' ')
             for word in words:
                 #Ignore empty 'words'
@@ -111,15 +114,9 @@ for filename in os.listdir(dirPath):
 
 
 
-    
-    
-
-
-
-
-
 print("Length of word list: " + str(len(outputDataWords)))
 print("Length of hashtag list: " + str(len(outputDataHashtags)))
+print("Total number of tweets: " + str(tweetCount))
 
 #Seems like it's cutting Texas and Texans into 'Texa' or something.
 #Will work on that later.
