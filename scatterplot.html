@@ -64,6 +64,7 @@ var div = d3.select("body").append("div")
 
 d3.csv("data/scatter.csv", function(d) {
   d.water_loss = +d.water_loss;
+  d.water_loss = -1* d.water_loss;
   d.data_categories = d.data_categories.replace(/;/g, ',').trim();
   d.data_categories = JSON.parse(d.data_categories);
 
@@ -127,12 +128,12 @@ d3.csv("data/scatter.csv", function(d) {
 //      .text("Water Loss (ft)")
   ;
 
-  g.append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("text-anchor", "end")
-      .text("Water Loss (ft)");
+//  g.append("text")
+//      .attr("transform", "rotate(-90)")
+//      .attr("y", -46)
+//      .attr("dy", "0.71em")
+//      .attr("text-anchor", "end")
+//      .text("Water Change (ft)");
 
   g.selectAll(".bar")
     .data(data)
