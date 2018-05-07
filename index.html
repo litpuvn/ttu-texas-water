@@ -39,6 +39,7 @@
     <script src="js/menu_item_handler.js"></script>
     <script src="js/water_topic.js"></script>
     <script src="js/water_discovery.js"></script>
+    <script src="js/water_forecasting.js"></script>
     <script src="js/well_manager.js"></script>
     <script src="js/layer_manger.js"></script>
     <script src="js/map.js"></script>
@@ -58,7 +59,7 @@
             <!--<div style="float: left; height: 30px; "><input type="text" placeholder="Search state or county..." class="search-box" /></div>-->
             <div class="menu-button" onclick="gmap.activateWaterLevelHeatMap()">Water Level Index</div>
             <div class="menu-button" onclick="gmap.activateDroughtIndexlHeatMap()">Precipitation Index</div>
-            <div class="menu-button" >Water Level Forecasting</div>
+            <div class="menu-button" onclick="menuItemHandler.showWaterForecasting()">Water Level Forecasting</div>
 
             <div class="menu-button">
                 <div onclick="menuItemHandler.showStakeHolders()">

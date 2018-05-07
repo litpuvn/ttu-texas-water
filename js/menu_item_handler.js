@@ -1,6 +1,7 @@
 function MenuItemHandler(stakeHolderViewer) {
     this.stakeHolderViewer = stakeHolderViewer;
     this.discovery = new WaterDiscovery();
+    this.waterForecasting = new WaterForecasting();
 }
 
 MenuItemHandler.prototype = {
@@ -33,5 +34,9 @@ MenuItemHandler.prototype = {
     showCategory: function (categoryId) {
         this.discovery.showCategory(categoryId);
 
+    },
+
+    showWaterForecasting: function () {
+        this.waterForecasting.showCountyForecast('lubbock');
     }
 };
