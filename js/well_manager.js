@@ -38,9 +38,9 @@ WellManager.prototype = {
                var county = row['county'];
                var aquier = row['aquifer'];
 
-               if (aquier != 'Ogallala') {
-                   return;
-               }
+               // if (aquier != 'Ogallala') {
+               //     return;
+               // }
 
                // if (self.westTexas.indexOf(county) < 0) {
                //     return; // ignore non-west texas region
