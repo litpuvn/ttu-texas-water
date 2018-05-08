@@ -12,11 +12,15 @@ var gmap = new GoogleMap('map', wellManager);
 var stakeHolderViewer = new StakeHolderViewer();
 
 var menuItemHandler = new MenuItemHandler(stakeHolderViewer);
+var horizon = new Horizon();
+
 wellManager.init(function () {
 
     // statsViewer.showDailyWaterLevelForCounty("h", "statistics");
 
     // wordCloud.populateWordCloud();
+
+    horizon.drawHorizon();
 });
 
 
