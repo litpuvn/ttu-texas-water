@@ -133,5 +133,10 @@ table {
     background-color: #fff;
 }
 
+.horizon-chart-well {
+    margin-top: -20px;
+    position: absolute;
+}
+
 
 
