@@ -10,13 +10,38 @@
   fill: brown;
 }
 
-.axis--x path {
-  display: none;
+text {
+    color: black;
+    font-size: 14px;
 }
+
+div.tooltip {
+  position: absolute;
+  text-align: left;
+  width: 100px;
+  /*height: 50px;*/
+  padding-left: 5px;
+  padding-top: 2px;
+    padding-bottom: 2px;
+  font: 12px sans-serif;
+  background: lightsteelblue;
+  border: 0px;
+  border-radius: 8px;
+  pointer-events: none;
+    font-weight: bold;
+}
+
+/*.axis--x path {*/
+  /*display: none;*/
+/*}*/
 
 </style>
 <svg width="960" height="500"></svg>
 <script src="https://d3js.org/d3.v4.min.js"></script>
+<script src="//d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
+<script src="lib/jquery-3.1.1.min.js"></script>
+<script src="lib/jquery.csv.min.js"></script>
+
 <script>
 
 var svg = d3.select("svg"),
@@ -31,17 +56,59 @@ var g = svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 var xAxis = d3.axisBottom(x);
-var yAxis = d3.axisLeft(y).ticks(10, "%");
+var yAxis = d3.axisLeft(y).ticks(10);
 
-d3.tsv("data/scatter.tsv", function(d) {
-  d.frequency = +d.frequency;
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
+d3.csv("data/scatter.csv", function(d) {
+  d.water_loss = +d.water_loss;
+  d.water_loss = -1* d.water_loss;
+  d.data_categories = d.data_categories.replace(/;/g, ',').trim();
+  d.data_categories = JSON.parse(d.data_categories);
+
+  let sum = 0;
+  let myCates = [];
+  for (let pro in d.data_categories) {
+      if (!d.data_categories.hasOwnProperty(pro)) {
+          continue;
+      }
+
+      myCates.push({"label": pro, "val": d.data_categories[pro]});
+      sum += d.data_categories[pro];
+  }
+
+  d.totalRepeat = sum;
+  d.my_categories = myCates;
   return d;
 }, function(error, data) {
   if (error) throw error;
 
+  data = data.reverse();
   // Define Extent for each Dataset
-  x.domain(data.map(function(d) { return d.letter; }));
-  y.domain([0, d3.max(data, function(d) { return d.frequency; })]);
+  x.domain(data.map(function(d) { return d.month; }));
+
+  var y_domain = d3.extent(data, function(d) { return d.water_loss; });
+
+  y.domain(y_domain);
+
+  var radius_range = d3.extent(data, function (item) {
+      return item.totalRepeat;
+  });
+
+  var radiusScale = d3.scaleLinear()
+      .rangeRound([3, 20])
+      .domain(radius_range)
+  ;
+
+  var color = function (item) {
+
+      var color = d3.scaleOrdinal()
+            .range(["#98abc5", "#8a89a6", "#7b6888"]);
+
+        return color(item.label);
+  };
 
   // Add Axes
   // X AXIS
@@ -53,22 +120,58 @@ d3.tsv("data/scatter.tsv", function(d) {
   g.append("g")
       .attr("class", "axis axis--y")
       .call(yAxis)
-    .append("text")
-      .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("dy", "0.71em")
-      .attr("text-anchor", "end")
-      .text("Frequency");
+//    .append("text")
+//      .attr("transform", "rotate(-90)")
+//      .attr("y", 1)
+//      .attr("dy", "0.71em")
+//      .attr("text-anchor", "end")
+//      .text("Water Loss (ft)")
+  ;
+
+//  g.append("text")
+//      .attr("transform", "rotate(-90)")
+//      .attr("y", -46)
+//      .attr("dy", "0.71em")
+//      .attr("text-anchor", "end")
+//      .text("Water Change (ft)");
 
   g.selectAll(".bar")
     .data(data)
     .enter().append("circle")
       .attr("class", "bar")
-      .attr("cx", function(d) { return x(d.letter); })
-      .attr("cy", function(d) { return y(d.frequency); })
-      .attr('r', 3)
-//       .attr("width", x.bandwidth())
-//       .attr("height", function(d) { return height - y(d.frequency); });
+      .attr("cx", function(d) { return d.cx = x(d.month) + 15; })
+      .attr("cy", function(d) { return d.cy = y(d.water_loss); })
+      .attr('r', function (d) {
+          return d.r = radiusScale(d.totalRepeat);
+      })
+      .on("mouseover", handleMouseOver)
+      .on("mouseout", handleMouseOut)
+    ;
+
+    // Create Event Handlers for mouse
+      function handleMouseOver(d, i) {  // Add interactivity
+         div.transition()
+                 .duration(200)
+                 .style("opacity", .9);
+         let myText = '';
+         d.my_categories.forEach(function (cate) {
+                myText += cate.label + ":" + "<span style='color: #FF0000;'>" + cate.val + "</span></br>";
+         });
+
+          div.html(myText)
+                 .style("left", 10  + (d3.event.pageX) + "px")
+                 .style("top", (d3.event.pageY - 28) + "px")
+                    .style("height", 10 * d.my_categories.length + 5)
+          ;
+
+      }
+
+      function handleMouseOut(d, i) {
+        div.transition()
+         .duration(500)
+         .style("opacity", 0);
+      }
+
 });
 
 </script>

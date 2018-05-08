@@ -2,12 +2,23 @@
 # By Nicholas Alvarez
 # Not written to be the most modular thing in the world. Apologies for that.
 # I had a lot of other work to do for classes so couldn't spend time cleaning up.
+#
+# The program assumes that all the data provided is mostly evenly spaced.
+# If it is not, the prediction may be a little off.
 #-------------------------------------------------------------------
+#Remove this seeding when actually using it. I have it on for testing.
+from numpy.random import seed
+seed(1)
+from tensorflow import set_random_seed
+set_random_seed(2)
 
 import csv
 from datetime import datetime
 from datetime import timedelta
 import argparse
+
+global inputReversed
+inputReversed = False
 
 #This will retrieve the data. Skips the
 #   header and assumes its in chronological order (New to old)
@@ -26,8 +37,14 @@ def ReadData(path):
             except ValueError:
                 continue
     #Again, data assumed to be in order from newest to oldest.
-    data.reverse()
-    dates.reverse()
+    #data.reverse()
+    #dates.reverse()
+    if(dates[0] > dates[1]):
+        print("Reversing input data order for processing...")
+        data.reverse()
+        dates.reverse()
+        global inputReversed
+        inputReversed = True
     return data, dates
 
 #Handle Command Line Stuff...
@@ -39,6 +56,7 @@ parser.add_argument('-s', '--save', action='store_true', help='Toggle saving an 
 parser.add_argument('-o', '--output', type=str, default=None, help='Saves output file with name provided. Make sure to also use -s!')
 parser.add_argument('-e', '--epochs', '--epoch', type=int, default=1000, help='Number of training passes. Default 1000.')
 parser.add_argument('-v', '--verbose', type=int, default=0, help='Referse to verbose on the NN. 0(default) is silent, 1 is large progress bars, 2 is small notes each epoch.')
+parser.add_argument('-b', '--batch_size', type=int, default=64, help='Sets the number of elements of the dataset to process at one time in the NN.')
 args = parser.parse_args()
 timeCount = args.timeCount
 
@@ -92,37 +110,40 @@ model = Sequential()
 
 #Dimensions...
 inOutNeurons = 1
-hiddenNeurons = 4
+hiddenNeurons = 3
 
 #Main Layer
-model.add(LSTM(hiddenNeurons, input_shape=(inOutNeurons, 1), return_sequences=False))
-model.add(Activation('sigmoid'))
+model.add(LSTM(hiddenNeurons, input_shape=(inOutNeurons, 1), return_sequences=False, activation='tanh', recurrent_activation='sigmoid'))
+model.add(Activation('hard_sigmoid'))
 
 #Output Layer
 model.add(Dense(inOutNeurons))
 
 #Ran through a lot of options here. This one seems to perform the best.
-model.compile(loss="mean_squared_error", optimizer="adam")
+model.compile(loss="mean_squared_error", optimizer="nadam") #Previously Adam Optimizer
 
 print("\nBeginning matrix magic...\n")
 
-#Train the NN
-model.fit(trainTimes, trainSamples, epochs=args.epochs, batch_size=30, verbose=args.verbose)
+#Train the NN, batch_size previously 30, default 32
+model.fit(trainTimes, trainSamples, epochs=args.epochs, batch_size=args.batch_size, verbose=args.verbose)
 
 #Some predictions
-trainPredict = model.predict(trainTimes)
-testPredict = model.predict(predictTimes)
+trainPredict = model.predict(trainTimes, batch_size=args.batch_size)
+testPredict = model.predict(predictTimes, batch_size=args.batch_size)
 
 #Get the error and print it.
-error = mean_squared_error(waterLevels, trainPredict)
+trainPredictActual = dataScaler.inverse_transform(trainPredict)
+waterLevelsActual = dataScaler.inverse_transform(waterLevels)
+
+error = mean_squared_error(waterLevelsActual, trainPredictActual)
 print("\nMean Squared Error: " + str(error))
 
 print("Root Mean Squared Error: " + str(math.sqrt(error)))
 
-error = r2_score(waterLevels, trainPredict)
+error = r2_score(waterLevelsActual, trainPredictActual)
 print("R Squared Error: " + str(error))
 
-error = mean_absolute_error(waterLevels, trainPredict)
+error = mean_absolute_error(waterLevelsActual, trainPredictActual)
 print("Mean Absolute Error: " + str(error))
 
 
@@ -140,25 +161,27 @@ if(args.save):
         outName = args.output
 
     #Prepare the data to be written
-    outDates = []
+    outDates = dates
     outData = dataScaler.inverse_transform(np.concatenate((waterLevels, testPredict)))
-    firstDate = dates[0]
     dateIncrement = dates[1]-dates[0]
-    for i in range(0, len(times)):
-        outDates.append(firstDate + dateIncrement*(i))
+    for i in range(len(dates), len(times)):
+        #outDates.append(dates[-1] + dateIncrement*(i))
+        outDates.append(outDates[-1] + dateIncrement)
     #Flip data to comply with original format.
-    outData = np.flip(outData, 0)
-    outDates = np.flip(outDates, 0)
-        
+    if(inputReversed):
+        print('Flipping output data back to original order of file...')
+        outData = np.flip(outData, 0)
+        outDates = np.flip(outDates, 0)
+
     #Write the data.
     with open(outName, 'w', newline='') as CSV:
         writer = csv.writer(CSV, delimiter=',')
         writer.writerow(['datetime', 'water_level(ft below land surface)'])
         for i in range(0, len(outDates)):
             writer.writerow([outDates[i].strftime('%Y-%m-%d'), "{0:.2f}".format(outData[i][0])])
-    
 
-    
+
+
 #-------------------------------------------------------------------
 #Optional Graphing Component
 if(args.graph):
@@ -184,12 +207,5 @@ if(args.graph):
     plt.plot(dataScaler.inverse_transform(waterLevels))
     plt.plot(trainPredictPlot)
     plt.plot(testPredictPlot)
+    plt.title("LSTM Result")
     plt.show()
-
-
-
-
-
-
-
-

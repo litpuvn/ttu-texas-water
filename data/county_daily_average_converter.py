@@ -1,6 +1,7 @@
 import csv
 from collections import defaultdict
-
+from os import listdir
+from os.path import isfile, join
 
 class CountyWellManager:
     # Organize counties and its associated wells
@@ -107,6 +108,16 @@ class CountyWellManager:
 
 
 if __name__ == '__main__':
+    # mypath = 'counties'
+    # onlyfiles = []
+    #
+    # for f in listdir(mypath):
+    #     if not isfile(join(mypath, f)):
+    #         continue
+    #     f = f[0:f.index('-')]
+    #     onlyfiles.append(f)
+    # print('","'.join(onlyfiles))
+
 
     manager = CountyWellManager() # Intantiate a CountyWellManager object
     manager.get_counties_and_states_wells() # Read the CSV for counties and wells

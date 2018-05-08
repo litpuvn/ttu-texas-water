@@ -395,3 +395,19 @@ html, body {
     width: 390px;
     height: 130px;
 }
+
+.water-forecasting-header {
+    margin-left: 30px;
+}
+
+.select-counties {
+    min-width: 200px;
+}
+
+.select-lead-time {
+    margin-top: 5px;
+}
+
+.water-forecasting-header {
+    margin-top: 10px;
+}
