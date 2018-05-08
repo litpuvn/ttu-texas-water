@@ -1,4 +1,5 @@
 function WaterForecasting() {
+    this.counties = ['Winkler', 'Victoria'];
 }
 
 
@@ -17,7 +18,7 @@ WaterForecasting.prototype = {
                 showCloseButton: false,
                 escapeButtonCloses: true,
                 overlayClosesOnClick: true,
-                input: '<b>hello word</b>',
+                input: self._create_water_forecast(),
                 buttons: [],
                 callback: function(data) {
                     if (!data) {
@@ -31,4 +32,17 @@ WaterForecasting.prototype = {
             }
         );
     },
+
+    _create_water_forecast: function () {
+        let countyOptions = '';
+        let self = this;
+        let c;
+
+        for(let i=0; i<self.counties.length; i++) {
+            c = self.counties[i];
+            countyOptions += '<option value="' + c + '">' + c + '</option>\n';
+        }
+
+        return '<select>' + countyOptions + '</select>';
+    }
 };
