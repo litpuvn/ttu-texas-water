@@ -1,5 +1,5 @@
 function WaterForecasting() {
-    this.counties = ['Winkler', 'Victoria'];
+    this.counties = ["cameron","dallam","baylor","lamb","brewster","la salle","hood","val verde","hansford","burnet","somervell","crosby","bee","tarrant","travis","washington","mason","jasper","donley","hutchinson","armstrong","erath","gray","atascosa","dawson","presidio","sutton","bastrop","karnes","kinney","reeves","reagan","gillespie","duval","terry","bell","bexar","pecos","kerr","rusk","zavala","haskell","williamson","tom green","deaf smith","walker","hale","mcculloch","martin","live oak","potter","roberts","comal","johnson","swisher","wilson","real","bandera","wheeler","victoria","hartley","kleberg","jeff davis","polk","schleicher","wharton","kendall","grayson","hill","brooks","coryell","crockett","smith","ellis","milam","anderson","jim hogg","glasscock","dallas","edwards","winkler","uvalde","san jacinto","el paso","bailey","hays","carson","gonzales","culberson","hidalgo","frio","hudspeth","mclennan","montgomery","ward","harris"];
 }
 
 
@@ -38,11 +38,13 @@ WaterForecasting.prototype = {
     _create_water_forecast: function () {
         let countyOptions = '';
         let self = this;
-        let c;
+        let c, capC;
 
         for(let i=0; i<self.counties.length; i++) {
             c = self.counties[i];
-            countyOptions += '<option value="' + c + '">' + c + '</option>\n';
+            capC = c.charAt(0).toUpperCase() + c.slice(1);
+
+            countyOptions += '<option value="' + c + '">' + capC + '</option>\n';
         }
 
         return '' +
