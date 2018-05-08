@@ -12,7 +12,7 @@ WaterForecasting.prototype = {
 
         vex.dialog.open(
             {
-                message: 'Water Discovery',
+                message: 'Water Level Forecasting',
                 className: 'discovery-window',
                 overlayClassName: 'news-overlay',
                 showCloseButton: false,
@@ -28,6 +28,8 @@ WaterForecasting.prototype = {
 
                 afterOpen: function (element) {
                     console.log(element);
+
+                    statsViewer.showDailyWaterLevelForCounty('lubbock', 'my_county');
                 }
             }
         );
@@ -43,6 +45,14 @@ WaterForecasting.prototype = {
             countyOptions += '<option value="' + c + '">' + c + '</option>\n';
         }
 
-        return '<select>' + countyOptions + '</select>';
+        return '' +
+            '<div>Select a county</div>' +
+            '<select>' + countyOptions + '</select>' +
+            '<div>Select lead time</div>' +
+            '<select>' +
+            '   <option value="7">7 days</option>' +
+            '</select>' +
+            '<div id="my_county"></div>';
+
     }
 };
