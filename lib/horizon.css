@@ -138,5 +138,9 @@ table {
     position: absolute;
 }
 
+.horizon-tooltip {
+    background-color: #666666;
+    color: white;
+}
 
 
