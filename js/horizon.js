@@ -91,6 +91,38 @@ Horizon.prototype = {
                               return d.color;
                           })
                     ;
+
+
+                    var startYear = 95;
+                    var endYear = 117;
+                    var numMonths = (endYear-startYear)*12;
+
+                    // Draw x axis *********************************
+                    var mindate = new Date(1900+startYear,1,1),
+                      maxdate = new Date(1900+endYear,1,1);
+
+                    // define the y axis
+                    var xScale = d3.time.scale()
+                          .domain([mindate, maxdate])    // values between for month of january
+                          .range([0, 2*numMonths]);   // map these the the chart width = total width minus padding at both sides
+
+                    var xAxis = d3.svg.axis()
+                            .orient("bottom")
+                            .scale(xScale);
+
+                    var svgAxis = d3.select("#horizonChart").append("svg")
+                            .attr("class", "horizonSVG")
+                            .attr("width", 700)
+                            .attr("height", 20)
+                            .append("g")
+                              .attr("transform", "translate(" + 85 + "," + 20 +")");
+
+                    svgAxis.append("g")
+                      .attr("class", "xaxis")   // give it a class so it can be used to select only xaxis labels  below
+                      .attr("dy", -13)
+                      .attr("transform", "translate(" + 0 + "," + -20 +")")
+                      .call(xAxis)
+                    ;
                 }
             });
         }
@@ -101,35 +133,5 @@ Horizon.prototype = {
 
 
 
-        var startYear = 95;
-        var endYear = 117;
-        var numMonths = (endYear-startYear)*12;
-// var cut = 103;
-
-      // Draw x axis *********************************
-      var mindate = new Date(1900+startYear,1,1),
-          maxdate = new Date(1900+endYear,1,1);
-
-      // define the y axis
-      var xScale = d3.time.scale()
-              .domain([mindate, maxdate])    // values between for month of january
-              .range([0, 2*numMonths]);   // map these the the chart width = total width minus padding at both sides
-
-      var xAxis = d3.svg.axis()
-                .orient("bottom")
-                .scale(xScale);
-
-      var svgAxis = d3.select("#horizonChart").append("svg")
-                .attr("class", "horizonSVG")
-                .attr("width", 700)
-                .attr("height", 20)
-                .append("g")
-                  .attr("transform", "translate(" + 85 + "," + 20 +")");
-
-      svgAxis.append("g")
-          .attr("class", "xaxis")   // give it a class so it can be used to select only xaxis labels  below
-          .attr("dy", -13)
-          .attr("transform", "translate(" + 0 + "," + -20 +")")
-          .call(xAxis);
         }
 };
