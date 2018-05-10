@@ -56,7 +56,12 @@ if __name__ == '__main__':
                         county = w['County']
                         active = 'active'
                         day = w['MeasurementDay']
+                        if len(day) < 2:
+                            day = '0' + day
                         mon = w['MeasurementMonth']
+                        if len(mon) < 2:
+                            mon = '0' + mon
+
                         year = w['MeasurementYear']
 
                         csv_writer.writerow([id, lat, lon, aquifer, county, water_level, day, mon, year])
