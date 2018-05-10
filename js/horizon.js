@@ -37,8 +37,15 @@ Horizon.prototype = {
                   // console.log('Well ' + curWell.id);
 
                   curWell.series = csvObj.map(function (item) {
-                     return parseInt(item['water_level(ft below land surface)']);
+                      let wl = parseInt(item['water_level(ft below land surface)']);
+                      if (isNaN(wl)) {
+                          wl = 0;
+                      }
+
+                     return wl;
                   });
+
+                  console.log('max:' + Math.max.apply(null, curWell.series));
 
                   wellList.push(curWell);
 

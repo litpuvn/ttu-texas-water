@@ -170,14 +170,19 @@ GoogleMap.prototype = {
                 self.wellMarker[well.id] = wellMarker;
 
                 wellMarker.addListener('click', function() {
-                    self.wellManager.getWellTimeSeries(well.id, function (data) {
-                        var content = self._generateIndividualWellInfocontent(well);
+                    // self.wellManager.getWellTimeSeries(well.id, function (data) {
+                    //     var content = self._generateIndividualWellInfocontent(well);
+                    //
+                    //     self._showInfoWindow(content, wellMarker.getPosition(), function (e) {
+                    //         statsViewer.showDailyWaterLevelForWell(well.id);
+                    //     });
+                    // });
+
+                     var content = self._generateIndividualWellInfocontent(well);
 
                         self._showInfoWindow(content, wellMarker.getPosition(), function (e) {
-                            statsViewer.showDailyWaterLevelForWell(well.id);
+                            statsViewer.showDailyWaterLevelForWell(well.id, self.wellManager.getLoadedWellTimeSeries(well.id));
                         });
-                    });
-
                 });
 
             });

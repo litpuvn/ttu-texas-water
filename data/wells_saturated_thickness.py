@@ -28,16 +28,14 @@ if __name__ == '__main__':
 
             wells_in_county = county_well[county]
 
-            # ignore if the total wells is over and current well is a new one
-            if id not in wells_in_county and len(wells_in_county) > 5:
-                continue
-
             if id not in wells_in_county:
                 wells_in_county[id] = []
 
             # append time series data
             well_timeseries = wells_in_county[id]
             well_timeseries.append(r)
+
+        # remove wells with few data
 
             # if id not in well_ids:
             #     well_ids[id] = r
@@ -47,7 +45,13 @@ if __name__ == '__main__':
             csv_writer.writerow(['id', 'latitude', 'longitude', 'aquifer', 'county', 'water_level', 'day', 'month', 'year', 'active'])
 
             for county, wells in county_well.items():
+                accepted_county_well_count = 0
                 for id, series in wells.items():
+                    # ignore the well if its timeseries is too short
+                    if len(series) < 10:
+                        continue
+
+                    accepted_county_well_count = accepted_county_well_count + 1
                     for w in series:
                         water_level = w['SaturatedThickness']
                         lat = w['y_lat']
@@ -66,6 +70,8 @@ if __name__ == '__main__':
 
                         csv_writer.writerow([id, lat, lon, aquifer, county, water_level, day, mon, year])
 
+                    if accepted_county_well_count > 5:
+                        break
                 # id: wellId,
                 # water_level: row['daily_high_water_level'],
                 # latitude: Number(row['latitude']),

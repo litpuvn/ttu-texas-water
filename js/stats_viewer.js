@@ -5,23 +5,10 @@ function StatsViewer() {
 StatsViewer.prototype = {
     constructor: StatsViewer,
 
-    showDailyWaterLevelForWell: function (wellId) {
-        $.get(
-            SERVER_PATH + '/data/detail/' + wellId + '-daily.csv',
-            function (data) {
+    showDailyWaterLevelForWell: function (wellId, data) {
 
-                data = $.csv.toObjects(data);
-                var myData = [];
-
-                data.forEach(function (item) {
-                    var dateValue = Date.parse(item['datetime']);
-                    var waterLevel = parseFloat(item['water_level(ft below land surface)']);
-                    var element = [dateValue, waterLevel];
-
-                    myData.push(element);
-                });
-
-                Highcharts.chart(wellId, {
+        let populate_well_timeseries = function (id, myData) {
+             Highcharts.chart(id, {
                     chart: {
                         height: 250,
                         width: 450,
@@ -74,8 +61,42 @@ StatsViewer.prototype = {
                         data: myData
                     }]
                 });
-            }
-        );
+        };
+
+        if (!!data) {
+             var myData = [];
+
+                    data.forEach(function (item) {
+                        var dateValue = Date.parse(item['datetime']);
+                        var waterLevel = parseFloat(item['water_level']);
+                        var element = [dateValue, waterLevel];
+
+                        myData.push(element);
+                    });
+            populate_well_timeseries(wellId, myData);
+
+        }
+        else {
+            $.get(
+                SERVER_PATH + '/data/detail/' + wellId + '-daily.csv',
+                function (data) {
+
+                    data = $.csv.toObjects(data);
+                    var myData = [];
+
+                    data.forEach(function (item) {
+                        var dateValue = Date.parse(item['datetime']);
+                        var waterLevel = parseFloat(item['water_level(ft below land surface)']);
+                        var element = [dateValue, waterLevel];
+
+                        myData.push(element);
+                    });
+
+                   populate_well_timeseries(wellId, myData);
+                }
+            );
+        }
+
     },
     
     showDailyWaterLevelForCounty: function (countyName, container_id) {
