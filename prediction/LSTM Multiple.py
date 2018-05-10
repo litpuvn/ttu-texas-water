@@ -46,12 +46,13 @@ def ReadData(path):
                 dates.append(datetime.strptime(row[0], '%Y-%m-%d'))
             except ValueError:
                 continue
-    if(dates[0] > dates[1]):
-        print("Reversing input data order for processing...")
-        data.reverse()
-        dates.reverse()
-        global inputReversed
-        inputReversed = True
+    if len(dates) > 1:
+        if(dates[0] > dates[1]):
+            print("Reversing input data order for processing...")
+            data.reverse()
+            dates.reverse()
+            global inputReversed
+            inputReversed = True
     return data, dates
 
 #Get some path stuff
@@ -62,7 +63,7 @@ writePath = path.join(myPath, '../data/counties-predicted')
 #Set some vars for the data.
 batchSize = 64
 verbose = 0
-epochs = 100 #Was 1000
+epochs = 1000 #Was 1000
 timeCount = 7 #A week ahead
 
 x = 0
@@ -70,8 +71,8 @@ for filename in os.listdir(readPath):
     inputReversed = False
     print("#####################\n#" + filename + "\n#####################")
     x += 1
-    if x > 3:
-        continue
+    #if x > 3:
+        #continue
     #print(filename)
     #continue
     
@@ -81,6 +82,8 @@ for filename in os.listdir(readPath):
     print("Reading data...")
     filePath = path.join(readPath, filename)
     waterLevels, dates = ReadData(filePath)
+    if len(waterLevels) < 2:
+        continue
     #Formatting. Refer to original LSTM program for details.
     print("Formatting data...")
     dataScaler = MinMaxScaler(feature_range=(0,1))
@@ -151,5 +154,5 @@ for filename in os.listdir(readPath):
             writer.writerow([outDates[i].strftime('%Y-%m-%d'), "{0:.2f}".format(outData[i][0])])
 
 
-
+print("Ran LSTM on " + str(x) + " files!")
 
