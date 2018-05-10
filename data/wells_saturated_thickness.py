@@ -45,6 +45,9 @@ if __name__ == '__main__':
             csv_writer.writerow(['id', 'latitude', 'longitude', 'aquifer', 'county', 'water_level', 'day', 'month', 'year', 'active'])
 
             for county, wells in county_well.items():
+                # ignore data from some county
+                if county in ['Runnels']:
+                    continue
                 accepted_county_well_count = 0
                 for id, series in wells.items():
                     # ignore the well if its timeseries is too short
@@ -70,7 +73,7 @@ if __name__ == '__main__':
 
                         csv_writer.writerow([id, lat, lon, aquifer, county, water_level, day, mon, year])
 
-                    if accepted_county_well_count > 5:
+                    if accepted_county_well_count > 19:
                         break
                 # id: wellId,
                 # water_level: row['daily_high_water_level'],

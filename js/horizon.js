@@ -11,7 +11,7 @@ Horizon.prototype = {
 
         let self = this;
 
-        let wells = self.wellManager.getWellsByCounty('Kerr');
+        let wells = self.wellManager.getWellsByCounty('Lubbock');
 
 
         let wellList = [

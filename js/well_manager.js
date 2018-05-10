@@ -68,10 +68,10 @@ WellManager.prototype = {
                };
 
 
-                self.counties[county].push(wellObject);
 
                 if (!self.well_timeseries.hasOwnProperty(wellId)) {
-                    self.well_timeseries[wellId] = []
+                    self.well_timeseries[wellId] = [];
+                    self.counties[county].push(wellObject);
                 }
 
                 let series = self.well_timeseries[wellId];
