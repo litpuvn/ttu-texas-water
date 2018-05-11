@@ -5,13 +5,11 @@ function StatsViewer() {
 StatsViewer.prototype = {
     constructor: StatsViewer,
 
-    showDailyWaterLevelForWell: function (wellId, data) {
-
-        let populate_well_timeseries = function (id, myData) {
-             Highcharts.chart(id, {
+    populate_water_level_timeseries: function (div_container_id, chart_width, chart_height, myData) {
+             Highcharts.chart(div_container_id, {
                     chart: {
-                        height: 250,
-                        width: 450,
+                        height: chart_height,
+                        width: chart_width,
                         zoomType: 'x'
                     },
                     title: {
@@ -61,19 +59,25 @@ StatsViewer.prototype = {
                         data: myData
                     }]
                 });
-        };
+        },
+
+    showDailyWaterLevelForWell: function (wellId, data) {
+        let self = this;
+        let chart_height = 250;
+        let chart_width = 450;
 
         if (!!data) {
              var myData = [];
 
-                    data.forEach(function (item) {
-                        var dateValue = Date.parse(item['datetime']);
-                        var waterLevel = parseFloat(item['water_level']);
-                        var element = [dateValue, waterLevel];
+            data.forEach(function (item) {
+                var dateValue = Date.parse(item['datetime']);
+                var waterLevel = parseFloat(item['water_level']);
+                var element = [dateValue, waterLevel];
 
-                        myData.push(element);
-                    });
-            populate_well_timeseries(wellId, myData);
+                myData.push(element);
+            });
+
+            self.populate_water_level_timeseries(wellId, chart_width, chart_height, myData);
 
         }
         else {
@@ -92,7 +96,7 @@ StatsViewer.prototype = {
                         myData.push(element);
                     });
 
-                   populate_well_timeseries(wellId, myData);
+                    self.populate_water_level_timeseries(wellId, chart_width, chart_height, myData);
                 }
             );
         }
@@ -100,68 +104,34 @@ StatsViewer.prototype = {
     },
     
     showDailyWaterLevelForCounty: function (countyName, container_id) {
-        $.getJSON(
-            'https://cdn.rawgit.com/highcharts/highcharts/v6.0.5/samples/data/usdeur.json',
-            function (data) {
+        let self = this;
+        let chart_height = 250;
+        let chart_width = 950;
 
-                Highcharts.chart(container_id, {
-                    chart: {
-                        height: 230,
-                        zoomType: 'x'
-                    },
-                    title: {
-                        text: 'USD to EUR exchange rate over time'
-                    },
-                    subtitle: {
-                        text: document.ontouchstart === undefined ?
-                                'Click and drag in the plot area to zoom in' : 'Pinch the chart to zoom in'
-                    },
-                    xAxis: {
-                        type: 'datetime'
-                    },
-                    yAxis: {
-                        title: {
-                            text: 'Exchange rate'
-                        }
-                    },
-                    legend: {
-                        enabled: false
-                    },
-                    plotOptions: {
-                        area: {
-                            fillColor: {
-                                linearGradient: {
-                                    x1: 0,
-                                    y1: 0,
-                                    x2: 0,
-                                    y2: 1
-                                },
-                                stops: [
-                                    [0, Highcharts.getOptions().colors[0]],
-                                    [1, Highcharts.Color(Highcharts.getOptions().colors[0]).setOpacity(0).get('rgba')]
-                                ]
-                            },
-                            marker: {
-                                radius: 2
-                            },
-                            lineWidth: 1,
-                            states: {
-                                hover: {
-                                    lineWidth: 1
-                                }
-                            },
-                            threshold: null
-                        }
-                    },
+        $.get(SERVER_PATH + "/data/counties-saturated/" + countyName + "-monthly.csv", function(data) {
+           var csvObj = $.csv.toObjects(data);
+            var myData = [];
 
-                    series: [{
-                        type: 'area',
-                        name: 'USD to EUR',
-                        data: data
-                    }]
-                });
-            }
-        );
+            csvObj.forEach(function (item) {
+                var dateValue = Date.parse(item['datetime']);
+                var waterLevel = parseFloat(item['saturated_thickness']);
+                var element = [dateValue, waterLevel];
+
+                myData.push(element);
+            });
+
+            self.populate_water_level_timeseries(container_id, chart_width, chart_height, myData);
+
+        });
+
+
+        // $.getJSON(
+        //     'https://cdn.rawgit.com/highcharts/highcharts/v6.0.5/samples/data/usdeur.json',
+        //     function (data) {
+        //
+        //
+        //     }
+        // );
     }
     
 
