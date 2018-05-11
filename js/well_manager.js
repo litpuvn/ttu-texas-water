@@ -21,7 +21,7 @@ function WellManager() {
 
     this.well_timeseries = {};
 
-
+    this.interpolator = new Interpolator();
 
 }
 
@@ -84,6 +84,11 @@ WellManager.prototype = {
 
            self.wellsLoaded = true;
            self.dispatchEvent( { type: 'wellLoaded', message: '' } );
+
+           // compute monthly average and partial interpolation
+           // partial interpolation means: only interpolate if we can do (having pre-value, post-value and interpolate middle value)
+           self.interpolator.interpolate_wells(self.counties, self.well_timeseries);
+
 
            if (!!callback) {
                callback();

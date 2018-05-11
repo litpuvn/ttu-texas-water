@@ -11,7 +11,7 @@ Horizon.prototype = {
 
         let self = this;
 
-        let wells = self.wellManager.getWellsByCounty('Lubbock');
+        let wells = self.wellManager.getWellsByCounty('Roberts');
 
 
         let wellList = [
@@ -33,10 +33,12 @@ Horizon.prototype = {
             let curWell = wells[i];
             curWell.color = c20(i);
 
-            let timeseries = self.wellManager.getLoadedWellTimeSeries(curWell.id);
-            curWell.series = timeseries.map(function (ts) {
-                return parseFloat(ts['water_level']);
-            });
+            // let timeseries = self.wellManager.getLoadedWellTimeSeries(curWell.id);
+            // curWell.series = timeseries.map(function (ts) {
+            //     return parseFloat(ts['water_level']);
+            // });
+
+            curWell.series = curWell.interpolated_series;
 
             wellList.push(curWell);
         }
