@@ -19,7 +19,9 @@ function WellManager() {
         // 'Nolan', 'Runnels', 'Scurry', 'Shackelford', 'Stephens', 'Stonewall', 'Taylor', 'Throckmorton'
     ];
 
+    this.well_timeseries = {};
 
+    this.interpolator = new Interpolator();
 
 }
 
@@ -31,7 +33,7 @@ WellManager.prototype = {
 
         var self = this;
 
-       $.get(SERVER_PATH + "/data/wells.csv", function(data) {
+       $.get(SERVER_PATH + "/data/reduced_well_data.csv", function(data) {
            var csvObj = $.csv.toObjects(data);
 
            csvObj.forEach(function (row) {
@@ -50,14 +52,14 @@ WellManager.prototype = {
                    self.counties[county] = [];
                }
 
-               var wellId = row['state_well_number'];
+               var wellId = row['id'];
                if (wellId.length < 7) {
                    wellId = '0' + wellId;
                }
 
                var wellObject = {
                    id: wellId,
-                   water_level: row['daily_high_water_level'],
+                   water_level: row['water_level'],
                    latitude: Number(row['latitude']),
                    longitude: Number(row['longitude']),
                    aquifer: row['aquifer'],
@@ -66,12 +68,27 @@ WellManager.prototype = {
                };
 
 
-                self.counties[county].push(wellObject)
+
+                if (!self.well_timeseries.hasOwnProperty(wellId)) {
+                    self.well_timeseries[wellId] = [];
+                    self.counties[county].push(wellObject);
+                }
+
+                let series = self.well_timeseries[wellId];
+                series.push({
+                    datetime: row['year'] + '-' + row['month'] + '-' + row['day'],
+                    water_level: wellObject.water_level
+                });
 
            });
 
            self.wellsLoaded = true;
            self.dispatchEvent( { type: 'wellLoaded', message: '' } );
+
+           // compute monthly average and partial interpolation
+           // partial interpolation means: only interpolate if we can do (having pre-value, post-value and interpolate middle value)
+           self.interpolator.interpolate_wells(self.counties, self.well_timeseries);
+
 
            if (!!callback) {
                callback();
@@ -89,6 +106,7 @@ WellManager.prototype = {
         return this.counties;
     },
 
+
     getWellTimeSeries: function (wellId, callback) {
          $.get(SERVER_PATH + "/data/detail/" + wellId + "-daily.csv", function(data) {
            var csvObj = $.csv.toObjects(data);
@@ -96,6 +114,10 @@ WellManager.prototype = {
 
            callback(csvObj);
        });
+    },
+
+    getLoadedWellTimeSeries: function (wellId) {
+        return this.well_timeseries[wellId];
     },
 
     isWellsLoaded: function () {

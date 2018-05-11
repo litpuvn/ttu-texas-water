@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="./resources/css/water.css"/>
     <link rel="stylesheet" type="text/css" href="./resources/css/font-awesome.css"/>
     <link rel="stylesheet" type="text/css" href="./resources/css/rating.css"/>
+    <link rel="stylesheet" type="text/css" href="./lib/horizon.css"/>
 
     <script src="lib/jquery-3.1.1.min.js"></script>
     <script src="lib/jquery.csv.min.js"></script>
@@ -29,6 +30,7 @@
 
     <!-- https://tmroyal.github.io/Chart.Streamgraph -->
     <script src="lib/Chart.Streamgraph.S.js"></script>
+    <script src="lib/horizonLib.js"></script>
 
     <!-- Include Vex - Popup manager -->
     <script type="text/javascript" src="lib/vex.js"></script>
@@ -36,10 +38,12 @@
     <link rel="stylesheet" type="text/css" href="resources/css/vex/vex.css" />
     <link rel="stylesheet" type="text/css" href="resources/css/vex/vex-theme-os.css" />
 
+    <script src="js/horizon.js"></script>
     <script src="js/menu_item_handler.js"></script>
     <script src="js/water_topic.js"></script>
     <script src="js/water_discovery.js"></script>
     <script src="js/water_forecasting.js"></script>
+    <script src="js/interpolator.js"></script>
     <script src="js/well_manager.js"></script>
     <script src="js/layer_manger.js"></script>
     <script src="js/map.js"></script>
@@ -105,8 +109,8 @@
 
         <!--<div id="greenIndex"><img src="resources/img/vdvi.jpg" /></div>-->
 
-        <div id="well-horizon"><img src="resources/img/well-horizon.jpg" /> </div>
-        <!--<div id="wordcloud">-->
+        <!--<div id="well-horizon"><img src="resources/img/well-horizon.jpg" /> </div>-->
+        <div id="horizonChart">
 
     </div>
 

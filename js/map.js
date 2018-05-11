@@ -32,8 +32,9 @@ GoogleMap.prototype = {
     initMap: function () {
         var self = this;
         this.map = new google.maps.Map(document.getElementById(this.containerId), {
-            center: {lat: 31.865833, lng: -95.496388},
-            zoom: 6
+            // center: {lat: 31.865833, lng: -95.496388},
+            center: {lat: 33.863612, lng: -101.4225},
+            zoom: 7
             });
 
         this._initInvoked = true;
@@ -154,6 +155,15 @@ GoogleMap.prototype = {
             }
 
             var wells = self.wellManager.getWellsByCounty(county);
+              var image = {
+                url: '/resources/img/spotlight-poi2.png',
+                // This marker is 20 pixels wide by 32 pixels high.
+                size: new google.maps.Size(14, 22),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 0)
+              };
             wells.forEach(function (well) {
 
                 var wellMarker =  new google.maps.Marker({
@@ -163,21 +173,28 @@ GoogleMap.prototype = {
                     },
                     map: self.map,
                     title: 'Well ' + well.id,
-                    id: well.id//,
-                    //icon: 'ICON URL HERE'
+                    id: well.id,
+                    icon: image
                 });
+
+                //https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png
 
                 self.wellMarker[well.id] = wellMarker;
 
                 wellMarker.addListener('click', function() {
-                    self.wellManager.getWellTimeSeries(well.id, function (data) {
-                        var content = self._generateIndividualWellInfocontent(well);
+                    // self.wellManager.getWellTimeSeries(well.id, function (data) {
+                    //     var content = self._generateIndividualWellInfocontent(well);
+                    //
+                    //     self._showInfoWindow(content, wellMarker.getPosition(), function (e) {
+                    //         statsViewer.showDailyWaterLevelForWell(well.id);
+                    //     });
+                    // });
+
+                     var content = self._generateIndividualWellInfocontent(well);
 
                         self._showInfoWindow(content, wellMarker.getPosition(), function (e) {
-                            statsViewer.showDailyWaterLevelForWell(well.id);
+                            statsViewer.showDailyWaterLevelForWell(well.id, self.wellManager.getLoadedWellTimeSeries(well.id));
                         });
-                    });
-
                 });
 
             });
