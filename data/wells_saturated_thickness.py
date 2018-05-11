@@ -35,46 +35,82 @@ if __name__ == '__main__':
             well_timeseries = wells_in_county[id]
             well_timeseries.append(r)
 
-        # remove wells with few data
+        # average
 
-            # if id not in well_ids:
-            #     well_ids[id] = r
+        for county, wells in county_well.items():
+            county_monthly_data = dict()
+            county_monthly_average = dict()
 
-        with open('reduced_well_data.csv', 'w', newline='') as write_csv_file_pointer:
-            csv_writer = csv.writer(write_csv_file_pointer, delimiter=',')
-            csv_writer.writerow(['id', 'latitude', 'longitude', 'aquifer', 'county', 'water_level', 'day', 'month', 'year', 'active'])
+            for id, well_series_data in wells.items():
+                for series_item in well_series_data:
+                    year = series_item['MeasurementYear']
+                    month = series_item['MeasurementMonth']
+                    day = series_item['MeasurementDay']
+                    if len(month) < 2:
+                        month = '0' + month
+                    if len(day) < 2:
+                        day = '0' + day
 
-            for county, wells in county_well.items():
-                # ignore data from some county
-                if county in ['Runnels']:
-                    continue
-                accepted_county_well_count = 0
-                for id, series in wells.items():
-                    # ignore the well if its timeseries is too short
-                    if len(series) < 10:
-                        continue
+                    water_level = series_item['SaturatedThickness']
 
-                    accepted_county_well_count = accepted_county_well_count + 1
-                    for w in series:
-                        water_level = w['SaturatedThickness']
-                        lat = w['y_lat']
-                        lon = w['x_long']
-                        aquifer = 'Ogallala'
-                        county = w['County']
-                        active = 'active'
-                        day = w['MeasurementDay']
-                        if len(day) < 2:
-                            day = '0' + day
-                        mon = w['MeasurementMonth']
-                        if len(mon) < 2:
-                            mon = '0' + mon
+                    date_time = year + '-' + month
+                    if date_time not in county_monthly_data:
+                        county_monthly_data[date_time] = []
 
-                        year = w['MeasurementYear']
+                    county_monthly_data[date_time].append(float(water_level))
 
-                        csv_writer.writerow([id, lat, lon, aquifer, county, water_level, day, mon, year])
+                    if date_time not in county_monthly_average:
+                        county_monthly_average[date_time] = 0
 
-                    if accepted_county_well_count > 19:
-                        break
+                    data_len = len(county_monthly_data[date_time])
+                    if data_len == 0:
+                        data_len = 1
+
+                    county_monthly_average[date_time] = sum(county_monthly_data[date_time]) / data_len
+
+            with open('counties-saturated/' + county.lower() + '-monthly.csv', 'w', newline='') as monthly_pointer:
+                csv_writer = csv.writer(monthly_pointer, delimiter=',')
+                csv_writer.writerow(['datetime', 'saturated_thickness'])
+
+                for dt in sorted(county_monthly_average.keys(), reverse=True):
+                    csv_writer.writerow([dt, county_monthly_average[dt]])
+
+
+        # with open('reduced_well_data.csv', 'w', newline='') as write_csv_file_pointer:
+        #     csv_writer = csv.writer(write_csv_file_pointer, delimiter=',')
+        #     csv_writer.writerow(['id', 'latitude', 'longitude', 'aquifer', 'county', 'water_level', 'day', 'month', 'year', 'active'])
+        #
+        #     for county, wells in county_well.items():
+        #         # ignore data from some county
+        #         if county in ['Runnels']:
+        #             continue
+        #         accepted_county_well_count = 0
+        #         for id, series in wells.items():
+        #             # ignore the well if its timeseries is too short
+        #             if len(series) < 10:
+        #                 continue
+        #
+        #             accepted_county_well_count = accepted_county_well_count + 1
+        #             for w in series:
+        #                 water_level = w['SaturatedThickness']
+        #                 lat = w['y_lat']
+        #                 lon = w['x_long']
+        #                 aquifer = 'Ogallala'
+        #                 county = w['County']
+        #                 active = 'active'
+        #                 day = w['MeasurementDay']
+        #                 if len(day) < 2:
+        #                     day = '0' + day
+        #                 mon = w['MeasurementMonth']
+        #                 if len(mon) < 2:
+        #                     mon = '0' + mon
+        #
+        #                 year = w['MeasurementYear']
+        #
+        #                 csv_writer.writerow([id, lat, lon, aquifer, county, water_level, day, mon, year])
+        #
+        #             if accepted_county_well_count > 19:
+        #                 break
                 # id: wellId,
                 # water_level: row['daily_high_water_level'],
                 # latitude: Number(row['latitude']),
