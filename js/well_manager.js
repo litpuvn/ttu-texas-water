@@ -21,6 +21,8 @@ function WellManager() {
 
     this.well_timeseries = {};
 
+    this.well_data = {};
+
     this.interpolator = new Interpolator();
 
 }
@@ -67,6 +69,9 @@ WellManager.prototype = {
                    active: 'Active' === row['active']
                };
 
+               if (!self.well_data.hasOwnProperty(wellId)) {
+                   self.well_data[wellId] = wellObject
+               }
 
 
                 if (!self.well_timeseries.hasOwnProperty(wellId)) {
@@ -122,6 +127,10 @@ WellManager.prototype = {
 
     isWellsLoaded: function () {
         return this.wellsLoaded;
+    },
+
+    getWellData: function (wellId) {
+        return this.well_data[wellId];
     }
 };
 

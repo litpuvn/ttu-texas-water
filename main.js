@@ -14,13 +14,17 @@ var stakeHolderViewer = new StakeHolderViewer();
 var menuItemHandler = new MenuItemHandler(stakeHolderViewer);
 var horizon = new Horizon(wellManager);
 
+var comparisonChart = new ComparisonChart(wellManager);
+
 wellManager.init(function () {
+    comparisonChart.init('#statistics');
 
     // statsViewer.showDailyWaterLevelForCounty("h", "statistics");
 
     // wordCloud.populateWordCloud();
-
     horizon.drawHorizon();
+
+    comparisonChart.generateChart('Roberts', '0501401')
 });
 
 
