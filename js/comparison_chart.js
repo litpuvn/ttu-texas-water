@@ -114,9 +114,6 @@ ComparisonChart.prototype = {
 
          svg.selectAll("*").remove();
 
-        let parseDate = d3.time.format("%Y-%m-%d").parse;
-        // let data = this.getData(averageKey, columnKey);
-
         let timeDomain = d3.extent(chart_data, function(d) {
             return d['year'];
         });
@@ -201,9 +198,10 @@ ComparisonChart.prototype = {
             // preparing tooltip for each dot
             // Define the div for the tooltip
             let div = d3.select("body").append("div")
-                .attr("class", "tooltip")
+                .attr("class", "tooltip tooltip-comparison")
                 .style("opacity", 0);
 
+             let format = d3.time.format("%Y-%m");
             // dot over existed data
             svg.selectAll("dot")
                 // .data(data.filter(function (d) {
@@ -222,7 +220,7 @@ ComparisonChart.prototype = {
                     div.transition()
                         .duration(200)
                         .style("opacity", .9);
-                    div	.html("Date: " + idv.util.formatDate(d.year) + "<br/>S. Thickness: " + idv.util.formatSaturatedThickness(d[columnKey]))
+                    div	.html("Date: " + format(d.year) + "<br/>Water Level: " + d[columnKey])
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
                 })
@@ -237,7 +235,7 @@ ComparisonChart.prototype = {
                 .style("stroke-width", 0.5)
                 .style("stroke", '#000')
                 .style("fill", myWell.color)
-                .attr("r", 2)
+                .attr("r", 3)
                 // .each(flickering)
             ;
         // }
@@ -269,7 +267,7 @@ ComparisonChart.prototype = {
             .attr("dy", ".51em")
             .style("text-anchor", "middle")
             // .style("text-anchor", "end")
-            .text("Saturated Thickness (ft)")
+            .text("Water Level (ft)")
         ;
     }
 
