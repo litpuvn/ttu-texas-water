@@ -55,21 +55,53 @@ ComparisonChart.prototype = {
             let chart_data = [];
 
             let county_series_data = $.csv.toObjects(data);
-            let well_data = self.wellManager.getLoadedWellTimeSeries(wellId);
+            let well_monthly_data = self.wellManager.getWellMonthlyData(wellId);
 
-            let max_data_length = Math.max(county_series_data.length, well_data.length);
+            // let min_data_length = Math.min(county_series_data.length, well_monthly_data.length);
 
             let parseDate = d3.time.format("%Y-%m").parse;
-            for(let i=0; i< max_data_length; i++) {
-                let county_item = county_series_data[i];
-                let tmp = {
-                    'year': parseDate(county_item['datetime']),
-                    'county': +county_item['saturated_thickness'],
-                    'well': Math.round(Math.random()*10  +  (+county_item['saturated_thickness']) - 5)
-                };
 
-                chart_data.push(tmp);
+
+            for(let month in well_monthly_data) {
+                if (!well_monthly_data.hasOwnProperty(month)) {
+                    continue;
+                }
+
+                let well_value = well_monthly_data[month];
+                for(let i=0; i < county_series_data.length; i++) {
+                    let county_item = county_series_data[i];
+                    if (month === county_item['datetime']) {
+                        let tmp = {
+                            'year': parseDate(month),
+                            'county': +county_item['saturated_thickness'],
+                            'well': well_value
+                        };
+
+                        chart_data.push(tmp);
+                    }
+                }
             }
+
+            // for(let i=0; i< min_data_length; i++) {
+            //     // let tmp = {
+            //     //     'year': parseDate(county_item['datetime']),
+            //     //     'county': +county_item['saturated_thickness'],
+            //     //     'well': Math.round(Math.random()*10  +  (+county_item['saturated_thickness']) - 5)
+            //     // };
+            //
+            //     let month = well_monthly_data
+            //     let tmp = {
+            //         'year': parseDate(county_item['datetime']),
+            //         'county': +county_item['saturated_thickness'],
+            //         'well': 100 + 100*Math.random()
+            //     };
+            //
+            //     if (!tmp['county'] || !tmp['well']) {
+            //         continue;
+            //     }
+            //
+            //     chart_data.push(tmp);
+            // }
 
             self.__populate_comparison_chart(county, wellId, chart_data)
 
@@ -118,12 +150,17 @@ ComparisonChart.prototype = {
             return d['year'];
         });
 
-        let yDomain =d3.extent(chart_data, function (d) {
+        let yDomainMax = d3.max(chart_data, function (d) {
            return Math.max(d['county'], d['well'] )
         });
 
+        let yDomainMin = d3.min(chart_data, function (d) {
+           return Math.min(d['county'], d['well'] )
+        });
+
+
         x.domain(timeDomain);
-        y.domain(yDomain);
+        y.domain([yDomainMin-10, yDomainMax + 10]);
 
         let myWell = this.wellManager.getWellData(wellId);
 
@@ -144,9 +181,6 @@ ComparisonChart.prototype = {
                 .attr("d", area.y0(0));
 
             //----------- Creating lines with clip path items created-------
-
-
-
 
             svg.selectAll('.areaAbove').remove();//.transition()
               //  .duration(2000).attr('opacity', 0);
@@ -216,11 +250,45 @@ ComparisonChart.prototype = {
                 })
                 .attr('opacity', 0)
                 .attr("r", 0)
+                // .on("mouseover", function(d) {
+                //     div.transition()
+                //         .duration(200)
+                //         .style("opacity", .9);
+                //     div	.html("Date: " + format(d.year) + "<br/>Water Level: " + d[columnKey])
+                //         .style("left", (d3.event.pageX) + "px")
+                //         .style("top", (d3.event.pageY - 28) + "px");
+                // })
+                // .on("mouseout", function(d) {
+                //     div.transition()
+                //         .duration(500)
+                //         .style("opacity", 0);
+                // })
+                .transition()
+                .duration(2500)
+                .attr('opacity', 1)
+                .style("stroke-width", 0.5)
+                .style("stroke", '#000')
+                .style("fill", myWell.color)
+                .attr("r", 3)
+                // .each(flickering)
+            ;
+
+            // dot over existed data
+            svg.selectAll("dot-avg")
+                .data(chart_data)
+                .enter().append("circle")
+                .attr("cx", function(d) {
+                    return x(d.year); })
+                .attr("cy", function(d) {
+                    return y(d[averageKey]);
+                })
+                .attr('opacity', 0)
+                .attr("r", 0)
                 .on("mouseover", function(d) {
                     div.transition()
                         .duration(200)
                         .style("opacity", .9);
-                    div	.html("Date: " + format(d.year) + "<br/>Water Level: " + d[columnKey])
+                    div	.html("Date: " + format(d.year) + "<br/>Water Level: " + d[averageKey])
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
                 })
@@ -234,12 +302,10 @@ ComparisonChart.prototype = {
                 .attr('opacity', 1)
                 .style("stroke-width", 0.5)
                 .style("stroke", '#000')
-                .style("fill", myWell.color)
+                .style("fill", '#000')
                 .attr("r", 3)
                 // .each(flickering)
             ;
-        // }
-
 
         // coordinate
         let xAxis = this.setting.xAxis;

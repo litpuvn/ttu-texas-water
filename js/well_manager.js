@@ -22,6 +22,7 @@ function WellManager() {
     this.well_timeseries = {};
 
     this.well_data = {};
+    this.well_monthly = {};
 
     this.interpolator = new Interpolator();
 
@@ -35,6 +36,7 @@ WellManager.prototype = {
 
         var self = this;
 
+        let month_series = {};
        $.get(SERVER_PATH + "/data/reduced_well_data.csv", function(data) {
            var csvObj = $.csv.toObjects(data);
 
@@ -85,7 +87,56 @@ WellManager.prototype = {
                     water_level: wellObject.water_level
                 });
 
+
+                // compute monthly average
+                if (!month_series.hasOwnProperty(wellId)) {
+                    month_series[wellId] = {};
+                }
+
+                let current_month_well = month_series[wellId];
+                let month = row['year'] + '-' + row['month'];
+                if(!current_month_well.hasOwnProperty(month)) {
+                    current_month_well[month] = [];
+                }
+
+                let current_month = current_month_well[month];
+                current_month.push(+wellObject.water_level);
            });
+
+           for(let welllId in month_series) {
+               if(!month_series.hasOwnProperty(welllId)) {
+                   continue;
+               }
+
+               let current_well_series = month_series[welllId];
+               for(let month in current_well_series) {
+                   if (!current_well_series.hasOwnProperty(month)) {
+                       continue;
+                   }
+
+                   let sr = current_well_series[month];
+                   let w_month = 0;
+                   let w_avg = 0;
+
+                   for(let i=0; i < sr.length; i++) {
+                       w_month += sr[i];
+                   }
+
+                   if (sr.length > 0) {
+                       w_avg = w_month / sr.length;
+                   }
+
+                   if(!self.well_monthly.hasOwnProperty(welllId)) {
+                       self.well_monthly[welllId] = {};
+                   }
+
+                   let current_well = self.well_monthly[welllId];
+                   if (!current_well.hasOwnProperty(month)) {
+                       current_well[month] = w_avg
+                   }
+               }
+           }
+
 
            self.wellsLoaded = true;
            self.dispatchEvent( { type: 'wellLoaded', message: '' } );
@@ -131,7 +182,13 @@ WellManager.prototype = {
 
     getWellData: function (wellId) {
         return this.well_data[wellId];
+    },
+
+    getWellMonthlyData: function (wellId) {
+        return this.well_monthly[wellId];
     }
+
+
 };
 
 Object.assign( WellManager.prototype, EventDispatcher.prototype );
