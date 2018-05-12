@@ -81,7 +81,7 @@ ComparisonChart.prototype = {
                     }
                 }
             }
-            
+
             self.__populate_comparison_chart(county, wellId, chart_data)
 
         });
@@ -229,19 +229,19 @@ ComparisonChart.prototype = {
                 })
                 .attr('opacity', 0)
                 .attr("r", 0)
-                // .on("mouseover", function(d) {
-                //     div.transition()
-                //         .duration(200)
-                //         .style("opacity", .9);
-                //     div	.html("Date: " + format(d.year) + "<br/>Water Level: " + d[columnKey])
-                //         .style("left", (d3.event.pageX) + "px")
-                //         .style("top", (d3.event.pageY - 28) + "px");
-                // })
-                // .on("mouseout", function(d) {
-                //     div.transition()
-                //         .duration(500)
-                //         .style("opacity", 0);
-                // })
+                .on("mouseover", function(d) {
+                    div.transition()
+                        .duration(200)
+                        .style("opacity", .9);
+                    div	.html("Date: " + format(d.year) + "<br/>Water Level: " + d[columnKey])
+                        .style("left", (d3.event.pageX) + "px")
+                        .style("top", (d3.event.pageY - 28) + "px");
+                })
+                .on("mouseout", function(d) {
+                    div.transition()
+                        .duration(500)
+                        .style("opacity", 0);
+                })
                 .transition()
                 .duration(2500)
                 .attr('opacity', 1)
