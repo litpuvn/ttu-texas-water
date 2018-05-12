@@ -81,28 +81,7 @@ ComparisonChart.prototype = {
                     }
                 }
             }
-
-            // for(let i=0; i< min_data_length; i++) {
-            //     // let tmp = {
-            //     //     'year': parseDate(county_item['datetime']),
-            //     //     'county': +county_item['saturated_thickness'],
-            //     //     'well': Math.round(Math.random()*10  +  (+county_item['saturated_thickness']) - 5)
-            //     // };
-            //
-            //     let month = well_monthly_data
-            //     let tmp = {
-            //         'year': parseDate(county_item['datetime']),
-            //         'county': +county_item['saturated_thickness'],
-            //         'well': 100 + 100*Math.random()
-            //     };
-            //
-            //     if (!tmp['county'] || !tmp['well']) {
-            //         continue;
-            //     }
-            //
-            //     chart_data.push(tmp);
-            // }
-
+            
             self.__populate_comparison_chart(county, wellId, chart_data)
 
         });
