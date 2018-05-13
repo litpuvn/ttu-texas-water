@@ -69,7 +69,8 @@ WellManager.prototype = {
                    longitude: Number(row['longitude']),
                    aquifer: row['aquifer'],
                    county: row['county'],
-                   active: 'Active' === row['active']
+                   // active: 'Active' === row['active']
+                   active: true
                };
 
                if (!self.well_data.hasOwnProperty(wellId)) {
