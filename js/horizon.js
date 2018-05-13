@@ -1,5 +1,6 @@
 function Horizon(wellManager) {
     this.wellManager = wellManager;
+    this.selectedCounty = null;
 }
 
 
@@ -7,12 +8,9 @@ Horizon.prototype = {
     constructor: Horizon,
     
     drawHorizon: function (county) {
-         // Clean of any previus horizons
-
         let self = this;
-
+        this.selectedCounty = county;
         let wells = self.wellManager.getWellsByCounty(county);
-
 
         let wellList = [
             // {id: 100, series: [120, 130, 120, 230], color: '#ff0000'},
@@ -20,6 +18,7 @@ Horizon.prototype = {
             // {id: 102, series: [99, 88, 77, 66], color: '#0000ff'},
         ];
 
+         // Clean of any previus horizons
         d3.select("#horizonChart").selectAll('.horizon').remove();
         d3.select("#horizonChart").selectAll('.horizonSVG').remove();
         let div = d3.select("body").append("div")
@@ -71,6 +70,8 @@ Horizon.prototype = {
                     div.html("County: " + d.county + ", Water level:" + d.water_level)
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
+
+                    comparisonChart.generateChart(self.selectedCounty, d.id);
                 })
                 .on("mouseout", function(d) {
                     div.transition()
