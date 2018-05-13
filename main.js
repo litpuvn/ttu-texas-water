@@ -1,6 +1,6 @@
 var statsViewer = new StatsViewer();
 // var wordCloud = new WordCloud();
-var SERVER_PATH = 'http://127.0.0.1:8080';
+var SERVER_PATH = window.location.href.substring(0, window.location.href.length-1);
 // var SERVER_PATH = 'https://litpuvn.github.io/ttu-texas-water';
 
 // init news
