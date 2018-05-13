@@ -13,7 +13,7 @@ StatsViewer.prototype = {
                         zoomType: 'x'
                     },
                     title: {
-                        text: 'Well water level timeseries'
+                        text: 'Well water level forecasting'
                     },
                     xAxis: {
                         type: 'datetime'

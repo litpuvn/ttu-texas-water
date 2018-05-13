@@ -51,12 +51,17 @@ WaterForecasting.prototype = {
             '<div class="water-forecasting-header">' +
                 '<div>Select a county</div>' +
                 '<select class="select-counties">' + countyOptions + '</select>' +
-                '<div class="select-lead-time">' +
-                    '<div>Select lead time</div>' +
-                    '<select>' +
-                    '   <option value="7">7 days</option>' +
-                    '</select>' +
-                '</div>' +
+                // '<div class="select-lead-time">' +
+                //     '<div>Select lead time</div>' +
+                //     '<select>' +
+                //     '   <option value="7">7 days</option>' +
+                //     '</select>' +
+                // '</div>' +   // '<div class="select-lead-time">' +
+                //     '<div>Select lead time</div>' +
+                //     '<select>' +
+                //     '   <option value="7">7 days</option>' +
+                //     '</select>' +
+                // '</div>' +
 
             '</div>' +
             '<div id="my_county"></div>';
