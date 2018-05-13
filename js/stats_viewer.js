@@ -5,7 +5,10 @@ function StatsViewer() {
 StatsViewer.prototype = {
     constructor: StatsViewer,
 
-    populate_water_level_timeseries: function (div_container_id, chart_width, chart_height, myData) {
+    populate_water_level_timeseries: function (div_container_id, chart_width, chart_height, title, myData) {
+        if (title == null || title.length < 1) {
+            title = 'Well water level timeseries';
+        }
              Highcharts.chart(div_container_id, {
                     chart: {
                         height: chart_height,
@@ -13,7 +16,7 @@ StatsViewer.prototype = {
                         zoomType: 'x'
                     },
                     title: {
-                        text: 'Well water level forecasting'
+                        text: title
                     },
                     xAxis: {
                         type: 'datetime'
@@ -77,7 +80,7 @@ StatsViewer.prototype = {
                 myData.push(element);
             });
 
-            self.populate_water_level_timeseries(wellId, chart_width, chart_height, myData);
+            self.populate_water_level_timeseries(wellId, chart_width, chart_height, null, myData);
 
         }
         else {
@@ -120,7 +123,8 @@ StatsViewer.prototype = {
                 myData.push(element);
             });
 
-            self.populate_water_level_timeseries(container_id, chart_width, chart_height, myData);
+            let title = 'Water level forecasting';
+            self.populate_water_level_timeseries(container_id, chart_width, chart_height, title, myData);
 
         });
 
