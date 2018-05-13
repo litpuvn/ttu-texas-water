@@ -95,9 +95,60 @@
     </div>
 
     <div id="panel-right">
-        <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">
-            <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;
-            <span></span> <b class="caret"></b>
+        <!--<div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc; width: 100%">-->
+            <!--<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;-->
+            <!--<span></span> <b class="caret"></b>-->
+        <!--</div>-->
+        <div>
+            <select class="county-select" onchange="menuItemHandler.onCountyChangeSelect(this.value)">
+                <option value="" disabled selected>-- Select a county --</option>
+                <option value="andrews">Andrews</option>
+                <option value="armstrong">Armstrong</option>
+                <option value="bailey">Bailey</option>
+                <option value="borden">Borden</option>
+                <option value="briscoe">Briscoe</option>
+                <option value="carson">Carson</option>
+                <option value="castro">Castro</option>
+                <option value="cochran">Cochran</option>
+                <option value="crosby">Crosby</option>
+                <option value="dallam">Dallam</option>
+                <option value="dawson">Dawson</option>
+                <option value="deaf smith">Deaf smith</option>
+                <option value="dickens">Dickens</option>
+                <option value="donley">Donley</option>
+                <option value="ector">Ector</option>
+                <option value="floyd">Floyd</option>
+                <option value="gaines">Gaines</option>
+                <option value="garza">Garza</option>
+                <option value="glasscock">Glasscock</option>
+                <option value="gray">Gray</option>
+                <option value="hale">Hale</option>
+                <option value="hansford">Hansford</option>
+                <option value="hartley">Hartley</option>
+                <option value="hemphill">Hemphill</option>
+                <option value="hockley">Hockley</option>
+                <option value="howard">Howard</option>
+                <option value="hutchinson">Hutchinson</option>
+                <option value="lamb">Lamb</option>
+                <option value="lipscomb">Lipscomb</option>
+                <option value="lubbock">Lubbock</option>
+                <option value="lynn">Lynn</option>
+                <option value="martin">Martin</option>
+                <option value="midland">Midland</option>
+                <option value="moore">Moore</option>
+                <option value="ochiltree">Ochiltree</option>
+                <option value="oldham">Oldham</option>
+                <option value="parmer">Parmer</option>
+                <option value="potter">Potter</option>
+                <option value="randall">Randall</option>
+                <option value="roberts">Roberts</option>
+                <option value="runnels">Runnels</option>
+                <option value="sherman">Sherman</option>
+                <option value="swisher">Swisher</option>
+                <option value="terry">Terry</option>
+                <option value="wheeler">Wheeler</option>
+                <option value="yoakum">Yoakum</option>
+            </select>
         </div>
 
         <div id="statistics">
@@ -120,7 +171,7 @@
 
     </div>
 
-    <script type="text/javascript" src="js/date_range_picker.js"></script>
+    <!--<script type="text/javascript" src="js/date_range_picker.js"></script>-->
     <script src="main.js" ></script>
 
     <script async defer

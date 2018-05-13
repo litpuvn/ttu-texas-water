@@ -41,8 +41,9 @@ WellManager.prototype = {
            var csvObj = $.csv.toObjects(data);
 
            csvObj.forEach(function (row) {
-               var county = row['county'];
-               var aquier = row['aquifer'];
+               let county = row['county'];
+               county = county.toLowerCase();
+               let aquier = row['aquifer'];
 
                // if (aquier != 'Ogallala') {
                //     return;
@@ -186,6 +187,18 @@ WellManager.prototype = {
 
     getWellMonthlyData: function (wellId) {
         return this.well_monthly[wellId];
+    },
+
+    getRandomWellInCounty: function (county) {
+        let county_wells = this.getWellsByCounty(county);
+
+        if (!county_wells || county_wells.length < 1) {
+            return null;
+        }
+
+        let well_index = Math.floor(Math.random() * county_wells.length);
+
+        return county_wells[well_index];
     }
 
 

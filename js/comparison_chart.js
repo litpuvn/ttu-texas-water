@@ -45,10 +45,12 @@ ComparisonChart.prototype = {
     /**
      * Comparison between county average and the specified well
      * @param county
-     * @param wellId
      */
-    generateChart: function (county, wellId) {
+    generateChart: function (county) {
         let self = this;
+
+        let well = self.wellManager.getRandomWellInCounty(county);
+        let wellId = well.id;
 
         $.get(SERVER_PATH + "/data/counties-saturated/" + county.toLowerCase() + "-monthly.csv", function(data) {
 

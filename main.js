@@ -22,9 +22,8 @@ wellManager.init(function () {
     // statsViewer.showDailyWaterLevelForCounty("h", "statistics");
 
     // wordCloud.populateWordCloud();
-    horizon.drawHorizon();
-
-    comparisonChart.generateChart('Roberts', '0501401')
+    horizon.drawHorizon('roberts');
+    comparisonChart.generateChart('roberts')
 });
 
 

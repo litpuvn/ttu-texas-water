@@ -448,3 +448,7 @@ html, body {
     background-color: #666666;
     color: white;
 }
+
+.county-select {
+    margin-left: 30px;
+}

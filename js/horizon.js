@@ -6,12 +6,12 @@ function Horizon(wellManager) {
 Horizon.prototype = {
     constructor: Horizon,
     
-    drawHorizon: function () {
+    drawHorizon: function (county) {
          // Clean of any previus horizons
 
         let self = this;
 
-        let wells = self.wellManager.getWellsByCounty('Roberts');
+        let wells = self.wellManager.getWellsByCounty(county);
 
 
         let wellList = [

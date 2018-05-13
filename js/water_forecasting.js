@@ -1,5 +1,16 @@
 function WaterForecasting() {
-    this.counties = ["cameron","dallam","baylor","lamb","brewster","la salle","hood","val verde","hansford","burnet","somervell","crosby","bee","tarrant","travis","washington","mason","jasper","donley","hutchinson","armstrong","erath","gray","atascosa","dawson","presidio","sutton","bastrop","karnes","kinney","reeves","reagan","gillespie","duval","terry","bell","bexar","pecos","kerr","rusk","zavala","haskell","williamson","tom green","deaf smith","walker","hale","mcculloch","martin","live oak","potter","roberts","comal","johnson","swisher","wilson","real","bandera","wheeler","victoria","hartley","kleberg","jeff davis","polk","schleicher","wharton","kendall","grayson","hill","brooks","coryell","crockett","smith","ellis","milam","anderson","jim hogg","glasscock","dallas","edwards","winkler","uvalde","san jacinto","el paso","bailey","hays","carson","gonzales","culberson","hidalgo","frio","hudspeth","mclennan","montgomery","ward","harris"];
+    // this.counties = ["cameron","dallam","baylor","lamb","brewster","la salle","hood","val verde","hansford","burnet","somervell","crosby","bee","tarrant","travis","washington","mason","jasper","donley","hutchinson","armstrong","erath","gray","atascosa","dawson","presidio","sutton","bastrop","karnes","kinney","reeves","reagan","gillespie","duval","terry","bell","bexar","pecos","kerr","rusk","zavala","haskell","williamson","tom green","deaf smith","walker","hale","mcculloch","martin","live oak","potter","roberts","comal","johnson","swisher","wilson","real","bandera","wheeler","victoria","hartley","kleberg","jeff davis","polk","schleicher","wharton","kendall","grayson","hill","brooks","coryell","crockett","smith","ellis","milam","anderson","jim hogg","glasscock","dallas","edwards","winkler","uvalde","san jacinto","el paso","bailey","hays","carson","gonzales","culberson","hidalgo","frio","hudspeth","mclennan","montgomery","ward","harris"];
+    this.counties = [
+        "lamb", "swisher", "crosby", "deaf smith", "hemphill",
+        "martin", "gaines", "hockley", "lubbock", "briscoe",
+        "wheeler", "moore", "midland", "potter", "castro", "gray",
+        "hutchinson", "lipscomb", "randall", "garza", "sherman",
+        "yoakum", "terry", "andrews", "lynn", "hartley", "dickens",
+        "parmer", "dawson", "bailey", "runnels", "dallam", "glasscock",
+        "borden", "hansford", "donley", "ochiltree", "oldham", "ector",
+        "roberts", "armstrong", "hale", "carson", "cochran", "howard", "floyd",
+    ];
+    this.counties = this.counties.sort();
 }
 
 

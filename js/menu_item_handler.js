@@ -23,6 +23,13 @@ MenuItemHandler.prototype = {
         this.discovery.showTopics();
     },
 
+    onCountyChangeSelect: function (selectedCounty) {
+        // alert('Selected county: ' + selectedCounty);
+
+        horizon.drawHorizon(selectedCounty);
+        comparisonChart.generateChart(selectedCounty)
+    },
+
     showStakeHolders: function () {
         document.getElementById("myDropdown").classList.toggle("show");
     },
