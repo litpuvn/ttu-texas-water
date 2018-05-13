@@ -156,7 +156,7 @@ GoogleMap.prototype = {
 
             var wells = self.wellManager.getWellsByCounty(county);
               var image = {
-                url: '/resources/img/spotlight-poi2.png',
+                url: SERVER_PATH + '/resources/img/spotlight-poi2.png',
                 // This marker is 20 pixels wide by 32 pixels high.
                 size: new google.maps.Size(14, 22),
                 // The origin for this image is (0, 0).
