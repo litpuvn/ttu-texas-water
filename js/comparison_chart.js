@@ -4,8 +4,8 @@ function ComparisonChart(wellManager) {
 
     this.setting = {
         margin: {top: 20, right: 0, bottom: 30, left: 70},
-        svgWidth: 800,
-        svgHeight: 360
+        svgWidth: 730,
+        svgHeight: 300
     };
 
     this.setting["width"] = this.setting.svgWidth - this.setting.margin.left - this.setting.margin.right;

@@ -99,7 +99,10 @@
             <!--<i class="glyphicon glyphicon-calendar fa fa-calendar"></i>&nbsp;-->
             <!--<span></span> <b class="caret"></b>-->
         <!--</div>-->
+
         <div>
+            <div class="county-select" >Select a county</div>
+
             <select class="county-select" onchange="menuItemHandler.onCountyChangeSelect(this.value)">
                 <option value="" disabled selected>-- Select a county --</option>
                 <option value="andrews">Andrews</option>
@@ -124,7 +127,7 @@
                 <option value="gray">Gray</option>
                 <option value="hale">Hale</option>
                 <option value="hansford">Hansford</option>
-                <option value="hartley">Hartley</option>
+                <option value="hartley" selected>Hartley</option>
                 <option value="hemphill">Hemphill</option>
                 <option value="hockley">Hockley</option>
                 <option value="howard">Howard</option>
@@ -141,7 +144,7 @@
                 <option value="parmer">Parmer</option>
                 <option value="potter">Potter</option>
                 <option value="randall">Randall</option>
-                <option value="roberts" selected>Roberts</option>
+                <option value="roberts">Roberts</option>
                 <option value="runnels">Runnels</option>
                 <option value="sherman">Sherman</option>
                 <option value="swisher">Swisher</option>
@@ -161,7 +164,7 @@
 
         <!--<div id="greenIndex"><img src="resources/img/vdvi.jpg" /></div>-->
 
-        <table width="100%" height="100%">
+        <table>
             <tr valign="top">
                 <td style="width: 50px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
                 <td><img src="resources/img/scale.png" style="height: 550px" /></td>
