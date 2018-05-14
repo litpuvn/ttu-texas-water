@@ -214,7 +214,7 @@ GoogleMap.prototype = {
                     '   <td>' + well.id + '</td>' +
                     '</tr>' +
                     '<tr>' +
-                    '   <td>Walter level</td>' +
+                    '   <td>Water level</td>' +
                     '   <td>:&nbsp;</td>' +
                     '   <td>' + well.water_level + '</td>' +
                     '</tr>' +

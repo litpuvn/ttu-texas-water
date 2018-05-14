@@ -64,7 +64,7 @@ WellManager.prototype = {
 
                var wellObject = {
                    id: wellId,
-                   water_level: row['water_level'],
+                   water_level: parseFloat(row['water_level']).toFixed(2),
                    latitude: Number(row['latitude']),
                    longitude: Number(row['longitude']),
                    aquifer: row['aquifer'],
