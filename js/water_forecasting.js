@@ -40,7 +40,7 @@ WaterForecasting.prototype = {
                 afterOpen: function (element) {
                     console.log(element);
 
-                    statsViewer.showDailyWaterLevelForCounty('lubbock', 'my_county');
+                    statsViewer.showDailyWaterLevelForCounty('hartley', 'my_county');
                 }
             }
         );
@@ -55,13 +55,18 @@ WaterForecasting.prototype = {
             c = self.counties[i];
             capC = c.charAt(0).toUpperCase() + c.slice(1);
 
-            countyOptions += '<option value="' + c + '">' + capC + '</option>\n';
+            if (c == 'hartley') {
+                countyOptions += '<option value="' + c + '" selected>' + capC + '</option>\n';
+
+            }else{
+                countyOptions += '<option value="' + c + '">' + capC + '</option>\n';
+            }
         }
 
         return '' +
             '<div class="water-forecasting-header">' +
                 '<div>Select a county</div>' +
-                '<select class="select-counties">' + countyOptions + '</select>' +
+                '<select class="select-counties" onchange="statsViewer.showDailyWaterLevelForCounty(this.value, \'my_county\');">' + countyOptions + '</select>' +
                 // '<div class="select-lead-time">' +
                 //     '<div>Select lead time</div>' +
                 //     '<select>' +
