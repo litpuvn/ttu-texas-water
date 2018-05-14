@@ -24,7 +24,7 @@ WaterForecasting.prototype = {
         vex.dialog.open(
             {
                 message: 'Water Level Forecasting',
-                className: 'discovery-window',
+                className: 'water-forecasting',
                 overlayClassName: 'news-overlay',
                 showCloseButton: false,
                 escapeButtonCloses: true,

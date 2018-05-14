@@ -452,3 +452,17 @@ html, body {
 .county-select {
     margin-left: 30px;
 }
+
+.water-forecasting {
+    width: 1000px;
+    height: 350px;
+    background-color: #FFFFFF;
+
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    border: solid 2px black;
+
+}
