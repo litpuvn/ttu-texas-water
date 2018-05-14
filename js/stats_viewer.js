@@ -111,7 +111,7 @@ StatsViewer.prototype = {
         let chart_height = 250;
         let chart_width = 950;
 
-        $.get(SERVER_PATH + "/data/counties-saturated/" + countyName + "-monthly.csv", function(data) {
+        $.get(SERVER_PATH + "/data/counties-saturated-predicted/" + countyName + "-monthly.csv", function(data) {
            var csvObj = $.csv.toObjects(data);
             var myData = [];
 
