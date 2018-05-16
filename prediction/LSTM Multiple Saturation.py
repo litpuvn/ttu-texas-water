@@ -69,16 +69,17 @@ writePath = path.join(myPath, '../data/counties-saturated-predicted')
 #Set some vars for the data.
 batchSize = 16
 verbose = 0
-epochs = 2000 #Was 2000
+epochs = 3000 #Was 2000
 #timeCount = 7 #A week ahead
 
 x = 0
 for filename in os.listdir(readPath):
+    if x >= 2:
+        break
+    x += 1
     inputReversed = False
     print("#####################\n#" + filename + "\n#####################")
-    x += 1
-    #if x > 1:
-    #    continue
+   
     
 
     
@@ -127,17 +128,24 @@ for filename in os.listdir(readPath):
     print("Building Keras model...")
     model = Sequential()
     inOutNeurons = 1
-    hiddenNeurons = 3
+    hiddenNeurons = 64
 
-    model.add(LSTM(hiddenNeurons, input_shape=(inOutNeurons, 1), return_sequences=False, activation='tanh', recurrent_activation='sigmoid'))
+    #Single LSTM Layer.
+    #model.add(LSTM(hiddenNeurons, return_sequences=False))
+
+    #Triple Stacked. Need to return sequences to work.
+    model.add(LSTM(hiddenNeurons, input_shape=(inOutNeurons, 1), return_sequences=True))
+    model.add(LSTM(hiddenNeurons, return_sequences=True))
+    model.add(LSTM(hiddenNeurons, return_sequences=False))
+
     #model.add(Activation('hard_sigmoid'))
     model.add(Activation('sigmoid'))
 
     #model.add(Dense(inOutNeurons))
     model.add(Dense(inOutNeurons, activation='sigmoid'))
 
-    model.compile(loss="mean_squared_error", optimizer="nadam")
-    #model.compile(loss="mean_squared_error", optimizer="adam", metrics=['accuracy'])
+    #model.compile(loss="mean_squared_error", optimizer="nadam")
+    model.compile(loss="mean_squared_error", optimizer="adam")
 
     print("\nBeginning matrix magic...\n")
     model.fit(trainTimes, trainSamples, epochs=epochs, batch_size=batchSize, verbose=verbose)
