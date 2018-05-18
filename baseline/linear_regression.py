@@ -24,27 +24,33 @@ with open('carson-training.csv', newline='') as csvfile:
 
 water_levels.reverse()
 
+size = int(len(water_levels) * 0.66)
 months_num = np.arange(0, len(months), 1)
-monts_num = np.reshape(months_num, (-1, 1))
+
+trainX, testX = months_num[0:size], months_num[size:len(months_num)]
+
+trainX = np.reshape(trainX, (-1, 1))
+testX = np.reshape(testX, (-1, 1))
 
 regr = linear_model.LinearRegression()
-regr.fit(monts_num, water_levels)
+regr.fit(trainX, water_levels[0:size])
 
 
-trainPredict = regr.predict(monts_num)
+test_true_values = water_levels[size:len(water_levels)]
+testPredict = regr.predict(testX)
 
-mae = mean_absolute_error(water_levels, trainPredict)
+mae = mean_absolute_error(test_true_values, testPredict)
 print("Mean Absolute Error: " + str(mae))
 
-mse = mean_squared_error(water_levels, trainPredict)
+mse = mean_squared_error(test_true_values, testPredict)
 print("Mean Squared Error: " + str(mse))
 
 print("Root Mean Squared Error: " + str(math.sqrt(mse)))
 
-r2 = r2_score(water_levels, trainPredict)
+r2 = r2_score(test_true_values, testPredict)
 print("R Squared Error: " + str(r2))
 
-plt.scatter(months_num, water_levels, color='red')
-plt.plot(months_num, water_levels, color='blue')
-plt.plot(months_num, trainPredict, color='pink')
+plt.scatter(testX, test_true_values, color='red')
+plt.plot(testX, test_true_values, color='blue')
+plt.plot(testX, testPredict, color='pink')
 plt.show()
