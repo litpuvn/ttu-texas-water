@@ -29,13 +29,14 @@ regr.fit(monts_num, water_levels)
 
 trainPredict = regr.predict(monts_num)
 
-error = mean_squared_error(water_levels, trainPredict)
-print("Mean Squared Error: " + str(error))
+mae = mean_absolute_error(water_levels, trainPredict)
+print("Mean Absolute Error: " + str(mae))
 
-print("Root Mean Squared Error: " + str(math.sqrt(error)))
+mse = mean_squared_error(water_levels, trainPredict)
+print("Mean Squared Error: " + str(mse))
 
-error = r2_score(water_levels, trainPredict)
-print("R Squared Error: " + str(error))
+print("Root Mean Squared Error: " + str(math.sqrt(mse)))
 
-error = mean_absolute_error(water_levels, trainPredict)
-print("Mean Absolute Error: " + str(error))
+r2 = r2_score(water_levels, trainPredict)
+print("R Squared Error: " + str(r2))
+
