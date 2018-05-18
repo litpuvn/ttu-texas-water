@@ -5,7 +5,7 @@ from statsmodels.tsa.arima_model import ARIMA
 from matplotlib import pyplot
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import math
-
+import numpy as np
 
 def parser(x):
     return datetime.strptime( x, '%Y-%m')
@@ -55,8 +55,8 @@ r2 = r2_score(test, predictions)
 print("R Squared Error: " + str(r2))
 
 # plot
-pyplot.plot(test)
-pyplot.plot(predictions, color='red')
+pyplot.scatter(np.arange(0, len(test), 1), test, color='red')
+pyplot.plot(test, color='blue')
+pyplot.plot(predictions, color='pink')
 pyplot.show()
-
 
