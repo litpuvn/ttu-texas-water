@@ -31,22 +31,22 @@ months_num = np.arange(0, len(months), 1)
 
 # X_train, X_test, y_train, y_test = cv.train_test_split(months_num, water_levels, test_size=0.25, random_state=0)
 
-trainX, testX = months_num[0:size], months_num[size:len(months_num)]
+trainX = testX = months_num
 
 trainX = np.reshape(trainX, (-1, 1))
 testX = np.reshape(testX, (-1, 1))
 
+#regr = linear_model.LassoCV(normalize=True, max_iter=1e5)
 regr = linear_model.LassoCV(normalize=True, max_iter=1e5)
-# regr = linear_model.LassoCV()
-regr.fit(trainX, water_levels[0:size])
+regr.fit(trainX, water_levels)
 
-regr_score = regr.score(trainX, water_levels[0:size])
+regr_score = regr.score(trainX, water_levels)
 regr_alpha = regr.alpha_
 print('score:', regr_score, "; alpha:", regr_alpha)
 print('CV', regr.coef_)
 
 
-test_true_values = water_levels[size:len(water_levels)]
+test_true_values = water_levels
 testPredict = regr.predict(testX)
 
 mae = mean_absolute_error(test_true_values, testPredict)
