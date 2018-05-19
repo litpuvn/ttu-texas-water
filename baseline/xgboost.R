@@ -4,8 +4,8 @@ library(stringr)
 library(caret)
 library(Metrics)
 
-devtools::install_github("ellisp/forecastxgb-r-package/pkg")
-library(forecastxgb)
+#devtools::install_github("ellisp/forecastxgb-r-package/pkg")
+#library(forecastxgb)
 
 
 set.seed(100)
@@ -26,7 +26,7 @@ x_test = array(size:nrow(df))
 y_test = df_test$saturated_thickness
 # Train the xgboost model using the "xgboost" function
 dtrain = xgb.DMatrix(data = data.matrix(x_train), label = df_train$saturated_thickness)
-xgModel = xgboost(data = dtrain, nround = 5, booster = "gblinear", objective = "reg:linear")
+xgModel = xgboost(data = dtrain, nround = 10000, booster = "gblinear", objective = "reg:linear")
 
 xgb_predict = predict(xgModel, data.matrix(x_test))
 
