@@ -74,6 +74,8 @@ epochs = 3000 #Was 2000
 
 x = 0
 for filename in os.listdir(readPath):
+    if not filename.startswith('carson'):
+        continue
     if x >= 2:
         break
     x += 1
@@ -145,7 +147,7 @@ for filename in os.listdir(readPath):
     model.add(Dense(inOutNeurons, activation='sigmoid'))
 
     #model.compile(loss="mean_squared_error", optimizer="nadam")
-    model.compile(loss="mean_squared_error", optimizer="adam")
+    model.compile(loss="mean_squared_error", optimizer="nadam")
 
     print("\nBeginning matrix magic...\n")
     model.fit(trainTimes, trainSamples, epochs=epochs, batch_size=batchSize, verbose=verbose)
