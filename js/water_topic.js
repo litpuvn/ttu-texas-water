@@ -132,7 +132,7 @@ WaterTopic.prototype = {
                         '</div>' +
                         '</div>' +
             '</td>' +
-            '<td>' +
+            '<td valign="top">' +
             '' +  '<table>' +
                     '<tr>' +
                         '<td>' + '<div id="topic-items" class="topic-items">' + selectedContentBody + '</div></td>' +
