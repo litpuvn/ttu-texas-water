@@ -112,7 +112,7 @@ WaterTopic.prototype = {
 
         });
 
-        var selectedCategory = categories[0]
+        var selectedCategory = categories[0];
         var selectedContentBody = this._createContentBlockForCategory(selectedCategory);
 
         var shareStoryBlock = '' +
@@ -124,13 +124,26 @@ WaterTopic.prototype = {
 
         var content = '' +
             '<div style="display: block; margin-top: 10px">' +
-                '<div class="topic-category">' +
-                    '<div class="topic-category-header"><span>Category</span></div>' +
-                    '<div class="topic-category-content">' + categoryBlock +
-                    '</div>' +
-                '</div>' +
-                '<div id="topic-items" class="topic-items">' + selectedContentBody +
-                '</div>' + shareStoryBlock +
+            '<table>' +
+            '<tr>' +
+            '<td valign="top">' + '<div class="topic-category">' +
+                        '<div class="topic-category-header"><span>Category</span></div>' +
+                        '<div class="topic-category-content">' + categoryBlock +
+                        '</div>' +
+                        '</div>' +
+            '</td>' +
+            '<td>' +
+            '' +  '<table>' +
+                    '<tr>' +
+                        '<td>' + '<div id="topic-items" class="topic-items">' + selectedContentBody + '</div></td>' +
+                    '</tr>' +
+                    '<tr>' +
+                        '<td>' + shareStoryBlock + '</td>' +
+                    '</tr>' +
+                '</table>' +
+            '</td>' +
+            '</tr>' +
+            '</table>' +
             '</div>';
 
         return content;

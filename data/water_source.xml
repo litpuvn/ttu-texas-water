@@ -14,6 +14,15 @@
                 <updated>2018-02-14T15:52:34-06:00</updated>
             </item>
             <item>
+                <link>http://www.ttuhub.net/water/2015/02/13/historic-water-sources-for-the-city-of-lubbock/</link>
+                <title>Historic Water Sources for the City of Lubbock</title>
+                <description>Throughout the years the city of Lubbock has had many different water sources.
+                    Aubrey Spears, the city of Lubbock director of water utilities, said that with the Ogallala aquifer
+                    being mined heavily for water, diversification of water resources was important.
+                </description>
+                <updated>2015-02-13T15:52:34-06:00</updated>
+            </item>
+            <item>
                 <link>https://environmenttexas.org/news/txe/new-water-policies-can-cut-pollution-flooding-austin</link>
                 <title>New Water Policies Can Cut Pollution and Flooding</title>
                 <description>AUSTIN — Local environmental groups today announced their support for changes to Austin’s land
@@ -33,11 +42,34 @@
                 </description>
                 <updated>2018-02-14T15:52:34-06:00</updated>
             </item>
+
         </items>
     </category>
     <category id="2">
         <topic>Reservoir</topic>
         <items>
+            <item>
+                <link>https://ark.gamepedia.com/Water_Reservoir</link>
+                <title>Water Reservoir</title>
+                <description>The Water Reservoir is a standing storage device for containing water. It will act as a
+                    temporary water source in case the irrigation network's normal water source is compromised in some way.
+                    The reservoir can hold up to 200 water. It can't be filled up by connecting it to irrigation pipes,
+                    but it automatically fills up during rain or snowfall. Because of this, it is extremely useful when
+                    making new extremely inland bases, or bases up on mountainsides, as long as it is not undercover
+                    from the rain.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+            <item>
+                <link>http://www.twdb.texas.gov/surfacewater/rivers/reservoirs/alan_henry/index.asp</link>
+                <title>Alan Henry Reservoir (Brazos River Basin)</title>
+                <description>Alan Henry Reservoir (also known as John T. Montford Dam and Lake Alan Henry) is located
+                    about ten miles east of Justiceburg and about sixty-five miles southeast of the City of Lubbock,
+                    on the border of Garza and Kent Counties, and is impounded on the South Fork of Double Mountain Fork
+                    of the Brazos River, a tributary of the Brazos River.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
             <item>
                 <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
                 <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
@@ -63,6 +95,37 @@
                 </description>
                 <updated>2018-02-14T15:52:34-06:00</updated>
             </item>
+            <item>
+                <link>http://www.fao.org/docrep/u5835e/u5835e03.htm#2.2%20rivers</link>
+                <title>Rivers</title>
+                <description>Rivers are used all over the world as sources of irrigation water. The most typical quality
+                    defining a river is that it flows, it is not a reservoir which contains a fixed amount of water.
+                    At each moment a new amount of water is passing any given location along the river. The flow of river
+                    fluctuates over time. The flows of some rivers fluctuate greatly over relatively short periods of time;
+                    these are mainly small local rivers which respond quickly to rainfall in their catchment area.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+            <item>
+                <link>https://www.awwa.org/resources-tools/public-affairs/public-affairs-events/drinking-water-week.aspx</link>
+                <title>Drinking water</title>
+                <description>For more than 40 years the American Water Works Association and its members have celebrated
+                    Drinking Water Week – a unique opportunity for both water professionals and the communities they
+                    serve to join together in recognizing the vital role water plays in our daily lives. Drinking Water
+                    Week is celebrated the first full week in May each year. Please join AWWA as we celebrate drinking water!
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+            <item>
+                <link>https://www.awwa.org/resources-tools/water-knowledge/source-water-protection.aspx</link>
+                <title>Communicating Source Water Protection Efforts in Consumer Confidence Reports</title>
+                <description>Outreach to and education of the general public are critical components of source water protection.
+                    This targeted literature review examined how utilities of all sizes are currently using their Consumer
+                    Confidence Reports (CCRs) to educate customers about source water protection needs and efforts.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+
         </items>
     </category>
 </source>
