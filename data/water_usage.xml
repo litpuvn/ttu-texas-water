@@ -38,6 +38,34 @@
     <category id="2">
         <topic>Industry</topic>
         <items>
+
+            <item>
+                <link>https://water.usgs.gov/edu/wuin.html</link>
+                <title>Industrial water use</title>
+                <description>
+                  The industries that produce metals, wood and paper products, chemicals, gasoline and oils, and those
+                    invaluable grabber utensils you use to get your ring out of the garbage disposal are major users of water.
+                    Probably every manufactured product uses water during some part of the production process.
+                    Industrial water use includes water used for such purposes as fabricating, processing, washing, diluting,
+                    cooling, or transporting a product; incorporating water into a product; or for sanitation needs within
+                    the manufacturing facility. Some industries that use large amounts of water produce such
+                    commodities as food, paper, chemicals, refined petroleum, or primary metals.
+                </description>
+                <updated>2011-01-14T15:52:34-06:00</updated>
+            </item>
+
+            <item>
+                <link>https://water.usgs.gov/edu/wateruse-total.html</link>
+                <title>Total Water Use in the United States, 2010</title>
+                <description>
+                    The water in the Nation's rivers, lakes, reservoirs, and underground aquifers are vitally important
+                    to our everyday life. These water bodies supply the water to serve the needs of every human and
+                    for the world's ecological systems, too. Here in the United States, every 5 years the U.S.
+                    Geological Survey (USGS) compiles county, state, and National water withdrawal and use data for
+                    a number of water-use categories.
+                </description>
+                <updated>2011-02-14T15:52:34-06:00</updated>
+            </item>
             <item>
                 <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
                 <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
@@ -53,6 +81,29 @@
      <category id="3">
         <topic>Domestic</topic>
         <items>
+            <item>
+                <link>https://water.usgs.gov/edu/wudo.html</link>
+                <title>Domestic water use</title>
+                <description>
+                    Of course some of the most important uses for water are at our homes. Domestic water use is water
+                    used for indoor and outdoor household purposes— all the things you do at home: drinking, preparing
+                    food, bathing, washing clothes and dishes, brushing your teeth, watering the yard and garden,
+                    and even washing the dog.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+
+            <item>
+                <link>https://www.epa.gov/watersense/how-we-use-water</link>
+                <title>How We Use Water</title>
+                <description>The Earth might seem like it has abundant water, but in fact less than 1 percent is available
+                    for human use. The rest is either salt water found in oceans, fresh water frozen in the polar ice caps,
+                    or too inaccessible for practical usage. While population and demand on freshwater resources are increasing,
+                    supply will always remain constant. And although it's true that the water cycle continuously returns
+                    water to Earth, it is not always returned to the same place, or in the same quantity and quality.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
             <item>
                 <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
                 <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
