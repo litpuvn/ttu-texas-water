@@ -4,32 +4,54 @@
         <topic>Wastewater</topic>
         <items>
             <item>
-                <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
-                <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
-                <description>Dry conditions slowed crop planting and crop emergence in Cape Girardeau County, according to a
-                    University of Missouri agronomy specialist. The wheat crop is shorter than that of one year ago, but is
-                    uniform. The crops were described as brown, stunted, and stressed, but the crops were still alive.
-                    Columbia Daily Tribune (Mo.), Feb. 12, 2018
+                <link>https://water.usgs.gov/edu/wuww.html</link>
+                <title>Wastewater Treatment Water Use</title>
+                <description>
+                    We consider wastewater treatment as a water use because it is so interconnected with the other uses of water.
+                    Much of the water used by homes, industries, and businesses must be treated before it is released back to
+                    the environment. If the term "wastewater treatment" is confusing to you, you might think of it as "sewage treatment."
+                    Nature has an amazing ability to cope with small amounts of water wastes and pollution, but it would be
+                    overwhelmed if we didn't treat the billions of gallons of wastewater and sewage produced every day before
+                    releasing it back to the environment. Treatment plants reduce pollutants in wastewater to a level
+                    nature can handle.
+                </description>
+                <updated>2016-02-14T15:52:34-06:00</updated>
+            </item>
+            <item>
+                <link>http://www.lubbockonline.com/article/20160608/NEWS/306089912</link>
+                <title>Where it goes when you flush: Another sewage plant in the works</title>
+                <description>Many of the city’s long-term water goals laid out in the Lubbock 2013 Strategic Water Supply
+                    Plan call for some type of wastewater reuse system. The city has rights to the treated wastewater
+                    it pumps into the Brazos River tributary of the Yellow House Canyon System that flows through the north and east
+                    sides of the city, so the idea is to catch and treat that water for use again in city taps.
+                </description>
+                <updated>2016-06-08T15:52:34-06:00</updated>
+            </item>
+            <item>
+                <link>https://www.conserve-energy-future.com/process-of-wastewater-treatment.php</link>
+                <title>What is Wastewater Treatment?</title>
+                <description>Wastewater treatment is the process of converting wastewater – water that is no longer
+                    needed or is no longer suitable for use – into bilge water that can be discharged back into the environment.
+                    It’s formed by a number of activities including bathing, washing, using the toilet, and rainwater runoff.
+                    Wastewater is full of contaminants including bacteria, chemicals and other toxins. Its treatment aims at
+                    reducing the contaminants to acceptable levels to make the water safe for discharge back into
+                    the environment.
                 </description>
                 <updated>2018-02-14T15:52:34-06:00</updated>
             </item>
             <item>
-                <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
-                <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
-                <description>Dry conditions slowed crop planting and crop emergence in Cape Girardeau County, according to a
-                    University of Missouri agronomy specialist. The wheat crop is shorter than that of one year ago, but is
-                    uniform. The crops were described as brown, stunted, and stressed, but the crops were still alive.
-                    Columbia Daily Tribune (Mo.), Feb. 12, 2018
-                </description>
-                <updated>2018-02-14T15:52:34-06:00</updated>
-            </item>
-            <item>
-                <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
-                <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
-                <description>Dry conditions slowed crop planting and crop emergence in Cape Girardeau County, according to a
-                    University of Missouri agronomy specialist. The wheat crop is shorter than that of one year ago, but is
-                    uniform. The crops were described as brown, stunted, and stressed, but the crops were still alive.
-                    Columbia Daily Tribune (Mo.), Feb. 12, 2018
+                <link>http://www.nyc.gov/html/dep/html/wastewater/wwsystem-process.shtml</link>
+                <title>New York City's Wastewater Treatment System</title>
+                <description>Every day, wastewater goes down toilets and drains in homes, schools, businesses and factories and then
+                    flows into New York City's sewer system. Runoff from rain and melting snow, street and sidewalk washing,
+                    and other outdoor activities flows into catchbasins in the streets and from there into the sewers. In some
+                    New York City neighborhoods, runoff from the streets is carried by separate storm sewers directly
+                    to local streams, rivers and bays. In most areas of the City, sanitary and industrial wastewater,
+                    rainwater and street runoff are collected in the same sewers and then conveyed together to the City's treatment plants.
+                    This is known as a combined sewer system. Sometimes, during heavy rains or snow, combined sewers
+                    fill to capacity and are unable to carry the combined sanitary and storm sewage to the plants.When this
+                    occurs the mix of excess storm water and untreated sewage flows directly into the City's waterways.
+                    This is called combined sewer overflow (CSO). Approximately 70 percent of the City sewers are combined.
                 </description>
                 <updated>2018-02-14T15:52:34-06:00</updated>
             </item>
@@ -39,27 +61,89 @@
         <topic>Industrial water</topic>
         <items>
             <item>
-                <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
-                <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
-                <description>Dry conditions slowed crop planting and crop emergence in Cape Girardeau County, according to a
-                    University of Missouri agronomy specialist. The wheat crop is shorter than that of one year ago, but is
-                    uniform. The crops were described as brown, stunted, and stressed, but the crops were still alive.
-                    Columbia Daily Tribune (Mo.), Feb. 12, 2018
+                <link>https://www.samcotech.com/what-is-an-industrial-water-treatment-system-process/</link>
+                <title>What Is an Industrial Water Treatment System and How Does It Work?</title>
+                <description>Industrial water treatment systems meet a variety of purification and separation needs.
+                    They can range from relatively compact and straightforward to complex, multiunit processes that serve a
+                    variety of applications. If you’re new to water treatment, you might be asking “What is an industrial water
+                    treatment system and how does it work?”
                 </description>
-                <updated>2018-02-14T15:52:34-06:00</updated>
+                <updated>2017-09-29T15:52:34-06:00</updated>
             </item>
+
+            <item>
+                <link>https://www.veoliawatertechnologies.com/en/our-expertise/industrial</link>
+                <title>Industrial water treatment</title>
+                <description>Veolia Water Technologies is one of the most innovative industrial water treatment companies.
+                    We create and implement tailored or standardized industrial water treatment solutions and industrial
+                    wastewater treatment systems. Our industrial engineers combine their expertise with years of operational experience
+                    in the water/wastewater, steam and power sectors, allowing clients to focus on their core businesses.
+                </description>
+                <updated>2017-09-29T15:52:34-06:00</updated>
+            </item>
+
+            <item>
+                <link>https://www.thomasnet.com/southern-texas/water-treatment-services-92970953-1.html</link>
+                <title>Water Treatment Services serving Southern Texas</title>
+                <description>Process water analysis lab treatment services. Polyphosphate and orthophosphate blends, bleaches,
+                    low freeze caustic chemicals, formulations and de-scaling analysis can be done. Used for analyzing in discoloration,
+                    excess metals and scale issue applications. Capability focuses include turnkey, high volume production,
+                    packaging and custom formulation. Additional services such as reverse engineering, warehousing, inspection and
+                    testing are offered. 7-10 working days lead time for water analysis
+                </description>
+                <updated>2017-09-29T15:52:34-06:00</updated>
+            </item>
+
         </items>
     </category>
      <category id="3">
         <topic>Domestic water</topic>
         <items>
             <item>
-                <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
-                <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
-                <description>Dry conditions slowed crop planting and crop emergence in Cape Girardeau County, according to a
-                    University of Missouri agronomy specialist. The wheat crop is shorter than that of one year ago, but is
-                    uniform. The crops were described as brown, stunted, and stressed, but the crops were still alive.
-                    Columbia Daily Tribune (Mo.), Feb. 12, 2018
+                <link>https://www.ecowaterlubbock.com/products/drinking-water-system</link>
+                <title>DRINKING WATER SYSTEMS</title>
+                <description>The quality of your home’s water may meet local standards, but it might not meet your own.
+                    Ordinary tap water can contain dissolved metals, including lead and iron. It might contain nitrates,
+                    chlorine and mineral salts. Your tap water could also contain other undesirable substances such as sulfates,
+                    mercury, asbestos and arsenic.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+            <item>
+                <link>https://agwt.org/content/domestic-water-treatment-homeowners</link>
+                <title>Domestic Water Treatment for Homeowners</title>
+                <description>The American Ground Water Trust has prepared this consumer information pamphlet to help people
+                    make good economic and environmental decisions about water treatment. There are many water supply
+                    specialists who provide water supply products and services; this pamphlet will assist you to
+                    obtain the professional help you need.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+
+            <item>
+                <link>http://hyperfilteration.in/filteration-method/domestic-water-treatment</link>
+                <title>Domestic Water Treatment</title>
+                <description>Domestic water or drinking water/ potable water should be completely safe and free from any
+                    harmful effect on users; It must be pleasant on tongue [ palatable ], be free of colour, odour,
+                    turbidity and should have permitted level of dissolved solids such as Calcium Magnesium, sodium,
+                    their bicarbonates, chlorides and sulphates. Water for laundry, lavatories, baths etc. - If water is hard,
+                    it will not form lather with soap and clothes shall not be washed clean and bright. When it comes to drinking water,
+                    water with certain level of hardness may be OK, but the same hard water will clog and scale the GI pipes,
+                    heaters, geysers for the reason that some of the dissolved solids like Calcium Carbonate and Magnecium Hydroxide
+                    have lower solubility in water and with rise of temperature, they will precipitate out.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+
+            <item>
+                <link>https://www.perfectwater.ie/domestic-water-purification-systems/</link>
+                <title>Domestic Water Purification Systems</title>
+                <description>Perfect Water Systems was established in 1995 and is based in Charleville, County Cork, Ireland.
+                    Through our attention to detail and quality home installations, we have gained a reputation for our
+                    high quality work and professional after-care service. We promise a complete and perfect water treatment service
+                    to both our home and commercial customers. We are distributors in Ireland for Kinetico domestic and home
+                    water purification systems and specialise in the sale, installation and servicing of both Kinetico
+                    and competitor water treatment systems.
                 </description>
                 <updated>2018-02-14T15:52:34-06:00</updated>
             </item>
