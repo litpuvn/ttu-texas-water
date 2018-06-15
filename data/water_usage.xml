@@ -3,23 +3,40 @@
     <category id="1">
         <topic>Agriculture</topic>
         <items>
+
             <item>
-                <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
-                <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
-                <description>Dry conditions slowed crop planting and crop emergence in Cape Girardeau County, according to a
-                    University of Missouri agronomy specialist. The wheat crop is shorter than that of one year ago, but is
-                    uniform. The crops were described as brown, stunted, and stressed, but the crops were still alive.
-                    Columbia Daily Tribune (Mo.), Feb. 12, 2018
+                <link>https://www.ers.usda.gov/topics/farm-practices-management/irrigation-water-use</link>
+                <title>Irrigation &amp; Water Use</title>
+                <description>Agriculture is a major user of ground and surface water in the United States, accounting for
+                    approximately 80 percent of the Nation's consumptive water use and over 90 percent in many Western States.
+                    Efficient irrigation systems and water management practices can help maintain farm profitability in an era of
+                    increasingly limited and more costly water supplies. Improved onfarm water management, combined with institutional
+                    measures improving watershed-scale water-management, including the use of conserved water rights, dry-year water banks,
+                    option water markets, and regulated irrigation withdrawals, may also reduce the impact of irrigated production
+                    on offsite water quality while conserving water for growing nonagricultural demands.
                 </description>
                 <updated>2018-02-14T15:52:34-06:00</updated>
             </item>
+
             <item>
-                <link>http://moderator.droughtreporter.unl.edu/RSSfeed/ImpactView/44185</link>
-                <title>Wheat crop stunted in Cape Girardeau, Missouri</title>
-                <description>Dry conditions slowed crop planting and crop emergence in Cape Girardeau County, according to a
-                    University of Missouri agronomy specialist. The wheat crop is shorter than that of one year ago, but is
-                    uniform. The crops were described as brown, stunted, and stressed, but the crops were still alive.
-                    Columbia Daily Tribune (Mo.), Feb. 12, 2018
+                <link>https://www.globalagriculture.org/report-topics/water.html</link>
+                <title>Green and blue water</title>
+                <description>When it comes to freshwater most people think of water in rivers and lakes, groundwater and glaciers,
+                    the so-called “blue water”. Only part of the rainfall feeds this freshwater supply. The majority of rainfall comes down on
+                    the Earth’s surface and either evaporates directly as “non-beneficial evaporation” or, after being used by plants,
+                    as “productive transpiration”. This second type of rainwater is termed “green water”. The green water proportion of the
+                    total available freshwater supply varies between 55% and 80%, depending on the region of the world, as well as local wood density.
+                </description>
+                <updated>2018-02-14T15:52:34-06:00</updated>
+            </item>
+
+            <item>
+                <link>https://www.globalagriculture.org/report-topics/water.html</link>
+                <title>Water</title>
+                <description>Water is getting scarce – but what does this actually mean? After all, the planet never loses a single drop of H2O.
+                    Although water is a finite resource, it will not be used up as long as we do not render it permanently unusable.
+                    However, it is important to integrate human water usage into the natural hydrological cycle and to use the locally
+                    available water in an adequate, effective, sustainable and fair way.
                 </description>
                 <updated>2018-02-14T15:52:34-06:00</updated>
             </item>
