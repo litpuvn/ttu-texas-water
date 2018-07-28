@@ -186,18 +186,21 @@ ComparisonChart.prototype = {
                     .attr("d", area)
                 ;
 
-            svg.append('path')
-                .attr("class", "wline")
-                .style("stroke", '#000')
-                .attr('opacity', 0)
-                .attr("d", lineBase);
 
-            svg.selectAll('.wline')
-                .attr("d", lineBase)
-                .attr('opacity', 1)
-
-            // .style("stroke", "#f00")
-            ;
+            // ********** FORGOT why we need these lines ***********
+            // svg.append('path')
+            //     .attr("class", "wline")
+            //     .style("stroke", '#000')
+            //     .attr('opacity', 0)
+            //     .attr("d", lineBase);
+            //
+            // svg.selectAll('.wline')
+            //     .attr("d", lineBase)
+            //     .attr('opacity', 1)
+            //
+            // // .style("stroke", "#f00")
+            // ;
+            // ********** END FORGOT why we need these lines ***********
 
             // painting average line
             svg.append('path')
