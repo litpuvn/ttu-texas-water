@@ -137,7 +137,7 @@ Horizon.prototype = {
                     div.transition()
                         .duration(200)
                         .style("opacity", .9);
-                    div.html("County: " + d.county + ", Water level:" + d.water_level +  "<br/>Date:" + d.datetime)
+                    div.html("County: " + d.county + ", Water level:" + d.water_level)
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
 

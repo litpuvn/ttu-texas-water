@@ -219,10 +219,10 @@ GoogleMap.prototype = {
                 else if (value > 200) {
                     return image4;
                 }
-                else if (value > 200) {
+                else if (value > 140) {
                     return image3;
                 }
-                else if (value > 140) {
+                else if (value > 80) {
                     return image2;
                 }
 
