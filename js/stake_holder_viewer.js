@@ -62,37 +62,46 @@ StakeHolderViewer.prototype = {
 
        // completely arbitrary data
       var sampleData = {
-        labels: ['January', 'Feburary', 'March', 'April', 'May', 'June',
-                 'July', 'August', 'September','October', 'November', 'December' ],
+         labels: ['06-2017', '07-2017', '08-2017', '09-2017', '10-2017', '11-2017',
+                 '12-2017', '01-2018', '02-2018','03-2018', '04-2018', '05-2018', '06-2018'],
         datasets: [
-          {
-            label: 'Corn',
-            data: [ 4, 4, 5.5, 4, 7, 12, 14, 9, 6, 5, 2, 1]
-          },
-          {
-            label: 'Wheat',
-            data: [ 8, 2, 1, 0, 0, 0, 1, 3, 8, 12, 11, 10]
-          },
-          {
-            label: 'Rice',
-            data: [0, 1, 2, 2, 3, 4, 3, 2, 2, 3, 0, 0]
-          },
-          {
-            label: 'Rye',
-            data: [0, 0, 0, 0, 0, 0, 2, 5, 9, 6, 5, 1]
-          },
-          {
-            label: 'Oats',
-            data: [0, 3, 2, 3, 6, 3, 4, 1, 2, 4, 8, 2]
-          }
+             {label:"harvest", data:  [6, 13, 11, 0, 13, 13, 0, 0, 0, 0, 0, 0, 0] },
+            {label:"sugarcane", data:  [0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0, 0] },
+            {label:"beef", data:  [7, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+            {label:"help", data:  [0, 9, 0, 21, 8, 0, 0, 0, 0, 0, 9, 9, 0] },
+            {label:"drought", data:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 14, 0] },
+            {label:"produce", data:  [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+            {label:"affected", data:  [0, 0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+            {label:"crop", data:  [0, 9, 9, 0, 0, 0, 0, 0, 0, 10, 0, 0, 0] },
+            {label:"plant", data:  [0, 0, 0, 0, 0, 0, 0, 0, 10, 14, 0, 0, 0] },
+            {label:"livestock", data:  [0, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0] },
+            {label:"shares", data:  [0, 0, 0, 0, 0, 0, 9, 0, 0, 8, 0, 0, 0] },
+            {label:"rice", data:  [0, 0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+            {label:"wotus", data:  [5, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] },
+            {label:"rural", data:  [5, 0, 0, 0, 0, 0, 0, 8, 0, 0, 0, 0, 0] },
+            {label:"grow", data:  [0, 0, 0, 0, 0, 8, 8, 0, 10, 8, 0, 10, 0] },
+            {label:"farmbill", data:  [0, 8, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 18] },
+            {label:"president", data:  [0, 0, 0, 0, 0, 0, 0, 9, 0, 0, 0, 0, 0] },
+            {label:"corn", data:  [0, 10, 0, 9, 0, 9, 0, 0, 0, 0, 0, 0, 0] },
+            {label:"wheat", data:  [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 11, 0, 10] },
+            {label:"cotton", data:  [0, 12, 20, 17, 16, 11, 16, 9, 0, 0, 0, 22, 10] },
+            {label:"cattletales", data:  [0, 10, 0, 12, 0, 9, 8, 0, 8, 9, 0, 0, 0] },
+
         ]
       };
 
     var maxHeightChart = new Chart(this._getCtx('agChatPlacementMaxHeightChart'))
         .Streamgraph(sampleData, {
           responsive: true,
-          labelPlacementMethod: 'maxHeight'
-        });
+            colorAssignmentMethod: 'verticalPosition',
+          labelPlacementMethod: 'maxHeight',
+            colors: [
+                '#1f77b4', '#aec7e8', '#ff7f0e', '#ffbb78', '#2ca02c', '#98df8a', '#d62728', '#ff9896', '#9467bd', '#c5b0d5', '#8c564b', '#c49c94',
+                '#e377c2', '#f7b6d2', '#7f7f7f', '#c7c7c7', '#bcbd22', '#dbdb8d', '#17becf'
+            ],
+            labelFontColor: 'black',
+            labelMinimumSize: 9,
+            stroke: false        });
 
     },
 
@@ -100,7 +109,7 @@ StakeHolderViewer.prototype = {
         var self = this;
          vex.dialog.alert(
             {
-                message: 'Agriculture Chat',
+                message: 'Farmer Bureau',
                 className: 'ag-chat-board',
                 overlayClassName: 'water-admin-board-overlay',
                 showCloseButton: false,

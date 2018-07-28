@@ -6,20 +6,19 @@ last_date = None
 terms_by_months = dict()
 
 month_orders = {
-    '2017-01': 0,
-    '2017-02': 1,
-    '2017-03': 2,
-    '2017-04': 3,
-    '2017-05': 4,
-    '2017-06': 5,
-    '2017-07': 6,
-    '2017-08': 7,
-    '2017-09': 8,
-    '2017-10': 9,
-    '2017-11': 10,
-    '2017-12': 11,
-    '2018-01': 12,
-    '2018-02': 13,
+    '2017-06': 0,
+    '2017-07': 1,
+    '2017-08': 2,
+    '2017-09': 3,
+    '2017-10': 4,
+    '2017-11': 5,
+    '2017-12': 6,
+    '2018-01': 7,
+    '2018-02': 8,
+    '2018-03': 9,
+    '2018-04': 10,
+    '2018-05': 11,
+    '2018-06': 12,
 }
 all_months = []
 
@@ -154,13 +153,49 @@ remove = [
     'protection',
     'flood',
     'approved',
-    'plan'
+    'plan',
+    'farmfact',
+    'one',
+    'farms',
+    'agchat',
+    'ranchlife',
+    'ranchers',
+    'like',
+    'spring',
+    'summer',
+    'fall',
+    'christmas',
+    'thanksgiving',
+    'holiday',
+    'farmlife',
+    'good',
+    'meet',
+    'still',
+    'different',
+    'take',
+    'make',
+    'panhandle',
+    'time',
+    'farming',
+    'choices',
+    'county',
+    'food',
+    'best',
+    'eminentdomain',
+    'family',
+    'students'
 
 
 ]
 
-with open('twdb_monthly_terms.txt') as lines:
+filename = 'twdb_monthly_terms.txt'
+filename = 'texasfarmbureau_terms.txt'
+
+with open(filename) as lines:
     for l in lines:
+        if len(l.strip()) < 1:
+            continue
+
         if l[0].isnumeric():
             l = l.strip('\n')
             last_date = l

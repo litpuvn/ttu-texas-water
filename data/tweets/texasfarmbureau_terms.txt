@@ -1,0 +1,36 @@
+2017-06
+[('different', 5), ('ranchers', 5), ('produce', 5), ('wotus', 5), ('rural', 5), ('make', 5), ('harvest', 6), ('students', 6), ('good', 7), ('beef', 7), ('one', 7), ('summer', 9), ('ranchlife', 9), ('food', 9)]
+2017-07
+[('farmbill', 8), ('ranchers', 8), ('help', 9), ('crop', 9), ('time', 9), ('corn', 10), ('cattletales', 10), ('food', 10), ('ranchlife', 10), ('year', 11), ('summer', 12), ('new', 12), ('farmlife', 12), ('good', 12), ('cotton', 12), ('harvest', 13)]
+2017-08
+[('summer', 8), ('ranchlife', 8), ('rice', 8), ('crop', 9), ('ranchers', 9), ('good', 9), ('harvest', 11), ('year', 12), ('like', 15), ('farmlife', 16), ('harvey', 18), ('cotton', 20)]
+
+2017-09
+[('family', 8), ('affected', 8), ('day', 8), ('county', 8), ('still', 8), ('corn', 9), ('ranchlife', 10), ('cattletales', 12), ('ranchers', 12), ('cotton', 17), ('help', 21), ('harvey', 23)]
+
+2017-10
+[('help', 8), ('farming', 8), ('time', 8), ('ranchers', 8), ('day', 9), ('farmlife', 10), ('fall', 10), ('ranchlife', 11), ('food', 13), ('harvest', 13), ('like', 13), ('cotton', 16)]
+
+2017-11
+[('agchat', 8), ('farmfact', 8), ('grow', 8), ('corn', 9), ('cattletales', 9), ('meet', 10), ('cotton', 11), ('day', 11), ('thanksgiving', 12), ('harvest', 13), ('ranchers', 14), ('ranchlife', 15), ('farmlife', 20)]
+
+2017-12
+[('holiday', 8), ('cattletales', 8), ('grow', 8), ('shares', 9), ('ranchlife', 9), ('make', 10), ('county', 10), ('new', 11), ('year', 14), ('cotton', 16), ('good', 17), ('christmas', 19), ('ranchers', 20), ('farmlife', 20)]
+
+2018-01
+[('still', 8), ('livestock', 8), ('rural', 8), ('president', 9), ('year', 9), ('make', 9), ('cotton', 9), ('good', 10), ('ranchlife', 12), ('new', 14), ('farmlife', 17), ('ranchers', 20)]
+
+2018-02
+[('year', 8), ('choices', 8), ('cattletales', 8), ('new', 8), ('check', 9), ('make', 9), ('good', 9), ('plant', 10), ('sugarcane', 10), ('grow', 10), ('family', 10), ('like', 11), ('farmlife', 12), ('food', 18), ('ranchers', 18)]
+2018-03
+[('ranchlife', 8), ('check', 8), ('shares', 8), ('take', 8), ('grow', 8), ('good', 9), ('make', 9), ('cattletales', 9), ('spring', 10), ('crop', 10), ('like', 11), ('year', 11), ('day', 11), ('plant', 14), ('ranchers', 14), ('farmlife', 18)]
+
+2018-04
+[('may', 8), ('help', 9), ('panhandle', 9), ('family', 9), ('wheat', 11), ('year', 11), ('learn', 14), ('food', 15), ('ranchers', 18)]
+
+2018-05
+[('june', 8), ('best', 8), ('food', 8), ('make', 8), ('day', 8), ('ranchers', 9), ('help', 9), ('time', 9), ('grow', 10), ('good', 10), ('farms', 10), ('may', 12), ('drought', 14), ('cotton', 22)]
+
+2018-06
+[('good', 9), ('wheat', 10), ('eminentdomain', 10), ('cotton', 10), ('need', 10), ('ranchers', 11), ('make', 12), ('farmbill', 18), ('food', 19), ('summer', 20)]
+

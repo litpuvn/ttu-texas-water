@@ -155,8 +155,8 @@ GoogleMap.prototype = {
             }
 
             var wells = self.wellManager.getWellsByCounty(county);
-              var image = {
-                url: SERVER_PATH + '/resources/img/spotlight-poi2.png',
+              var image1 = {
+                url: SERVER_PATH + '/resources/img/image1.png',
                 // This marker is 20 pixels wide by 32 pixels high.
                 size: new google.maps.Size(14, 22),
                 // The origin for this image is (0, 0).
@@ -164,7 +164,73 @@ GoogleMap.prototype = {
                 // The anchor for this image is the base of the flagpole at (0, 32).
                 anchor: new google.maps.Point(0, 0)
               };
+            var image2 = {
+                url: SERVER_PATH + '/resources/img/image2.png',
+                // This marker is 20 pixels wide by 32 pixels high.
+                size: new google.maps.Size(14, 22),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 0)
+            };
+            var image3 = {
+                url: SERVER_PATH + '/resources/img/image3.png',
+                // This marker is 20 pixels wide by 32 pixels high.
+                size: new google.maps.Size(14, 22),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 0)
+            };
+            var image4 = {
+                url: SERVER_PATH + '/resources/img/image4.png',
+                // This marker is 20 pixels wide by 32 pixels high.
+                size: new google.maps.Size(14, 22),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 0)
+            };
+            var image5 = {
+                url: SERVER_PATH + '/resources/img/image5.png',
+                // This marker is 20 pixels wide by 32 pixels high.
+                size: new google.maps.Size(14, 22),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 0)
+            };
+            var image6 = {
+                url: SERVER_PATH + '/resources/img/image6.png',
+                // This marker is 20 pixels wide by 32 pixels high.
+                size: new google.maps.Size(14, 22),
+                // The origin for this image is (0, 0).
+                origin: new google.maps.Point(0, 0),
+                // The anchor for this image is the base of the flagpole at (0, 32).
+                anchor: new google.maps.Point(0, 0)
+            };
+
+            var get_image = function (value) {
+                if (value > 320) {
+                    return image6;
+                }else if (value > 260) {
+                    return image5;
+                }
+                else if (value > 200) {
+                    return image4;
+                }
+                else if (value > 200) {
+                    return image3;
+                }
+                else if (value > 140) {
+                    return image2;
+                }
+
+                return image1;
+            };
+
             wells.forEach(function (well) {
+
 
                 var wellMarker =  new google.maps.Marker({
                     position: {
@@ -174,7 +240,7 @@ GoogleMap.prototype = {
                     map: self.map,
                     title: 'Well ' + well.id,
                     id: well.id,
-                    icon: image
+                    icon: get_image(Number(well.water_level))
                 });
 
                 //https://maps.gstatic.com/mapfiles/api-3/images/spotlight-poi2.png
