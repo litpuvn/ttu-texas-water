@@ -12,11 +12,23 @@ Horizon.prototype = {
         this.selectedCounty = county;
         let wells = self.wellManager.getWellsByCounty(county);
 
+
         let wellList = [
             // {id: 100, series: [120, 130, 120, 230], color: '#ff0000'},
             // {id: 101, series: [100, 89, 89, 300], color: '#00ff00'},
             // {id: 102, series: [99, 88, 77, 66], color: '#0000ff'},
         ];
+
+        wells.sort(function (w1, w2) {
+            let val = 0;
+            if (+w1['water_level'] > +w2['water_level']) {
+                val = -1;
+            }
+            else if (+w1['water_level'] < +w2['water_level']) {
+                val = 1;
+            }
+            return val;
+        });
 
          // Clean of any previus horizons
         d3.select("#horizonChart").selectAll('.horizon').remove();
@@ -38,9 +50,57 @@ Horizon.prototype = {
             // });
 
             curWell.series = curWell.interpolated_series;
+            // curWell.series = curWell.interpolated_series.map(function (val) {
+            //     return val - 20;
+            // });
 
             wellList.push(curWell);
         }
+
+        var select_colors = function (val) {
+            let colors;
+            if (val < 80) { // 1 band
+                colors = ['#313695', '#ffcdb1'];
+            }
+            else if (val < 140) { // 2 bands
+                colors = ['#313695', '#313695', '#ffcdb1', '#e2a38d'];
+            }
+            else if (val < 200) { // 3 bands
+                colors = ['#313695', '#313695', '#313695', '#ffcdb1', '#e2a38d', '#b9976f'];
+            }
+            else if (val < 260) { // 4 bands
+                colors = ['#313695', '#313695', '#313695', '#313695', '#ffcdb1', '#e2a38d', '#b9976f', '#61906e'];
+
+            }
+            else if (val < 320) { // 5 bands
+                colors = [  '#313695', '#313695', '#313695', '#313695', '#313695',
+                            '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597'];
+            }
+            else if (val < 380) { // 6 bands
+                colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+                            '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c'];
+            }
+            else if (val < 440) { // 7 bands
+                colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+                            '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781'];
+            }
+            else if (val < 500) { // 8 bands
+                colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+                            '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976'];
+            }
+            else if (val < 560) { // 9 bands
+                colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+                            '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976', '#003b69'];
+            }
+            else { // 10 bands
+                  colors = ['#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+                            '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976', '#003b69', '#002d5a'];
+            }
+
+
+            return colors;
+
+        };
 
         d3.select("#horizonChart").selectAll('.horizon')
             .data(wellList)
@@ -48,13 +108,23 @@ Horizon.prototype = {
             .append('div')
             .attr('class', 'horizon')
             .each(function(d) {
+                var max_val = d.series.reduce(function(a, b) {
+                    if (a === undefined) {
+                        a = 0;
+                    }
+                     if (b === undefined) {
+                        b = 0;
+                    }
+
+                    return Math.max(+a, +b);
+                });
+                let my_colors = select_colors(max_val);
                 d3.horizonChart()
                     .title("well "+d.id)
                     //.colors(idv.colorManager.getAllWaterColorsAsArray())  // colorsWater is defined in color.manager.js
                    // .colors([ '#4575b4', '#abd9e9', '#fee090', '#f46d43'])
                    // .colors(['rgb(255,0,255)','rgb(255,0,0)','rgba(250,200,160)', 'rgba(200,150,130)', 'rgb(160,160,80)', 'rgb(0,120,160)', 'rgb(0,60,120)', 'rgb(0,0,60)'])
-                    .colors(['#313695', '#313695', '#4575b4', '#74add1', '#abd9e9',
-                             'rgb(250,200,160)', 'rgba(200,150,130,255)','rgb(160,160,80)', 'rgb(0,120,160)', 'rgb(0,60,120)']) // can not add 'rgb(0,0,60)' because the max saturated thickness is 548.9
+                    .colors(my_colors) // can not add 'rgb(0,0,60)' because the max saturated thickness is 548.9
                     .height(27)
                     .call(this, d.series)
                 ;
@@ -67,7 +137,7 @@ Horizon.prototype = {
                     div.transition()
                         .duration(200)
                         .style("opacity", .9);
-                    div.html("County: " + d.county + ", Water level:" + d.water_level)
+                    div.html("County: " + d.county + ", Water level:" + d.water_level +  "<br/>Date:" + d.datetime)
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
 

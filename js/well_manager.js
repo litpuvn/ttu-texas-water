@@ -38,8 +38,10 @@ WellManager.prototype = {
 
         let month_series = {};
        $.get(SERVER_PATH + "/data/reduced_well_data.csv", function(data) {
+       // $.get(SERVER_PATH + "/data/reduced-2.csv", function(data) {
            var csvObj = $.csv.toObjects(data);
 
+           let max_water_level = 0;
            csvObj.forEach(function (row) {
                let county = row['county'];
                county = county.toLowerCase();
@@ -62,16 +64,32 @@ WellManager.prototype = {
                    wellId = '0' + wellId;
                }
 
+               let wl = parseFloat(row['water_level']);
+               if (wl < 0) {
+                   wl = 0;
+               }
+
+
+               if (wl > max_water_level) {
+                   max_water_level = wl;
+               }
                var wellObject = {
                    id: wellId,
-                   water_level: parseFloat(row['water_level']).toFixed(2),
+                   water_level: wl.toFixed(2),
                    latitude: Number(row['latitude']),
                    longitude: Number(row['longitude']),
                    aquifer: row['aquifer'],
                    county: row['county'],
+                   datetime: row['year'] + '-' + row['month'] + '-' + row['day'],
+
                    // active: 'Active' === row['active']
                    active: true
                };
+
+               if (wl > 680) {
+                   console.log(wl);
+                   return;
+               }
 
                if (!self.well_data.hasOwnProperty(wellId)) {
                    self.well_data[wellId] = wellObject
@@ -104,6 +122,8 @@ WellManager.prototype = {
                 let current_month = current_month_well[month];
                 current_month.push(+wellObject.water_level);
            });
+
+           console.log('Max water level:', max_water_level);
 
            for(let welllId in month_series) {
                if(!month_series.hasOwnProperty(welllId)) {
@@ -139,14 +159,12 @@ WellManager.prototype = {
                }
            }
 
-
-           self.wellsLoaded = true;
-           self.dispatchEvent( { type: 'wellLoaded', message: '' } );
-
            // compute monthly average and partial interpolation
            // partial interpolation means: only interpolate if we can do (having pre-value, post-value and interpolate middle value)
            self.interpolator.interpolate_wells(self.counties, self.well_timeseries);
 
+           self.wellsLoaded = true;
+           self.dispatchEvent( { type: 'wellLoaded', message: '' } );
 
            if (!!callback) {
                callback();

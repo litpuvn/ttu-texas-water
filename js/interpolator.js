@@ -59,6 +59,10 @@ Interpolator.prototype = {
                 obj.key = id;
                 obj.values = [];
 
+                if (id == '0233914') {
+                    console.log('data')
+                }
+
                 timeseries.forEach(function (dt) {
                     let d = new Date(dt['datetime']);
                     let m = (d.getYear()-startYear)*12 + d.getMonth();
@@ -92,6 +96,17 @@ Interpolator.prototype = {
                 }
 
                 w.interpolated_series = obj2.values;
+                i = obj2.values.length-1;
+                for(; i >=0; i-- ) {
+                    let tmp = obj2.values[i];
+                    if (!tmp) {
+                        continue;
+                    }
+
+                    break;
+                }
+
+                w['water_level'] = obj2.values[i];
 
             });
 
