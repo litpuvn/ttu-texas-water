@@ -17,6 +17,7 @@
     <script type="text/javascript" src="lib/d3.min.js"></script>
     <!--<script type="text/javascript" src="lib/d3.dispatch.js"></script>-->
     <script type="text/javascript" src="lib/d3.layout.cloud.js"></script>
+    <!--<script src="https://d3js.org/d3.v4.js"></script>-->
 
     <!-- Include Required Prerequisites -->
     <script type="text/javascript" src="lib/moment.min.js"></script>
@@ -30,7 +31,9 @@
 
     <!-- https://tmroyal.github.io/Chart.Streamgraph -->
     <script src="lib/Chart.Streamgraph.S.js"></script>
-    <script src="lib/horizonLib.js"></script>
+    <!--<script src="lib/horizonLib.js"></script>-->
+    <script src="lib/d3-horizon-chart.js"></script>
+    <!--<script src="lib/horizon-chart.js"></script>-->
 
     <!-- Include Vex - Popup manager -->
     <script type="text/javascript" src="lib/vex.js"></script>
@@ -54,6 +57,48 @@
     <script src="js/stake_holder_viewer.js"></script>
 
 
+<!--<style>-->
+    <!--body {-->
+        <!--margin: 0;-->
+        <!--padding: 0;-->
+    <!--}-->
+
+    <!--.horizon {-->
+        <!--border-top: solid 1px #000;-->
+        <!--border-bottom: solid 1px #000;-->
+        <!--overflow: hidden;-->
+        <!--position: relative;-->
+    <!--}-->
+
+    <!--.horizon + .horizon {-->
+        <!--border-top: none;-->
+    <!--}-->
+
+    <!--.horizon canvas {-->
+        <!--display: block;-->
+        <!--image-rendering: pixelated;-->
+    <!--}-->
+
+  <!--.horizon .title,-->
+  <!--.horizon .value {-->
+      <!--bottom: 0;-->
+      <!--line-height: 30px;-->
+      <!--margin: 0 6px;-->
+      <!--position: absolute;-->
+      <!--font-family: sans-serif;-->
+      <!--text-shadow: 0 1px 0 rgba(255,255,255,.5);-->
+      <!--white-space: nowrap;-->
+  <!--}-->
+
+  <!--.horizon .title {-->
+      <!--left: 0;-->
+  <!--}-->
+
+  <!--.horizon .value {-->
+      <!--right: 0;-->
+  <!--}-->
+
+<!--</style>-->
 
 
 
@@ -73,7 +118,7 @@
                 <div id="myDropdown" class="dropdown-content">
                     <div onclick="menuItemHandler.onAdminBoardClick()">Water Development Board</div>
                     <!--<div >Water Suppliers</div>-->
-                    <div onclick="menuItemHandler.onAgChatClick()">Farmers</div>
+                    <div onclick="menuItemHandler.onAgChatClick()">Farmer Bureau</div>
                     <!--<div>Stakeholders' Cooperation</div>-->
                 </div>
             </div>

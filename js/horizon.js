@@ -59,36 +59,39 @@ Horizon.prototype = {
 
         var select_colors = function (val) {
             let colors;
-            if (val < 80) { // 1 band
+
+            let band_count = Math.ceil((val - 20) / 60);
+            if (band_count < 2) { // 1 band
                 colors = ['#313695', '#ffcdb1'];
             }
-            else if (val < 140) { // 2 bands
+            else if (band_count < 3) { // 2 bands
                 colors = ['#313695', '#313695', '#ffcdb1', '#e2a38d'];
             }
-            else if (val < 200) { // 3 bands
+            else if (band_count < 4) { // 3 bands
                 colors = ['#313695', '#313695', '#313695', '#ffcdb1', '#e2a38d', '#b9976f'];
             }
-            else if (val < 260) { // 4 bands
-                colors = ['#313695', '#313695', '#313695', '#313695', '#ffcdb1', '#e2a38d', '#b9976f', '#61906e'];
+            else if (band_count < 5) { // 4 bands
+                colors = [  '#313695', '#313695', '#313695', '#313695',
+                            '#ffcdb1', '#e2a38d', '#b9976f', '#61906e'];
 
             }
-            else if (val < 320) { // 5 bands
+            else if (band_count < 6) { // 5 bands
                 colors = [  '#313695', '#313695', '#313695', '#313695', '#313695',
                             '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597'];
             }
-            else if (val < 380) { // 6 bands
+            else if (band_count < 7) { // 6 bands
                 colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
                             '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c'];
             }
-            else if (val < 440) { // 7 bands
+            else if (band_count < 8) { // 7 bands
                 colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
                             '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781'];
             }
-            else if (val < 500) { // 8 bands
+            else if (band_count < 9) { // 8 bands
                 colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
                             '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976'];
             }
-            else if (val < 560) { // 9 bands
+            else if (band_count < 10) { // 9 bands
                 colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
                             '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976', '#003b69'];
             }
@@ -96,6 +99,46 @@ Horizon.prototype = {
                   colors = ['#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
                             '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976', '#003b69', '#002d5a'];
             }
+
+
+            // if (val < 80) { // 1 band
+            //     colors = ['#313695', '#ffcdb1'];
+            // }
+            // else if (val < 140) { // 2 bands
+            //     colors = ['#313695', '#313695', '#ffcdb1', '#e2a38d'];
+            // }
+            // else if (val < 200) { // 3 bands
+            //     colors = ['#313695', '#313695', '#313695', '#ffcdb1', '#e2a38d', '#b9976f'];
+            // }
+            // else if (val < 260) { // 4 bands
+            //     colors = [  '#313695', '#313695', '#313695', '#313695',
+            //                 '#ffcdb1', '#e2a38d', '#b9976f', '#61906e'];
+            //
+            // }
+            // else if (val < 320) { // 5 bands
+            //     colors = [  '#313695', '#313695', '#313695', '#313695', '#313695',
+            //                 '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597'];
+            // }
+            // else if (val < 380) { // 6 bands
+            //     colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+            //                 '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c'];
+            // }
+            // else if (val < 440) { // 7 bands
+            //     colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+            //                 '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781'];
+            // }
+            // else if (val < 500) { // 8 bands
+            //     colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+            //                 '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976'];
+            // }
+            // else if (val < 560) { // 9 bands
+            //     colors = [  '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+            //                 '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976', '#003b69'];
+            // }
+            // else { // 10 bands
+            //       colors = ['#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695', '#313695',
+            //                 '#ffcdb1', '#e2a38d', '#b9976f', '#61906e', '#007597', '#00658c', '#005781', '#004976', '#003b69', '#002d5a'];
+            // }
 
 
             return colors;
@@ -108,7 +151,17 @@ Horizon.prototype = {
             .append('div')
             .attr('class', 'horizon')
             .each(function(d) {
-                var max_val = d.series.reduce(function(a, b) {
+
+                let count_above_200 = 0;
+                let tmp_series = d.series.map(function (v) {
+                    if (v > 200) {
+                        // v = 0;
+                        count_above_200 = count_above_200 + 1;
+                    }
+                    return v;
+                });
+
+                var max_val = tmp_series.reduce(function(a, b) {
                     if (a === undefined) {
                         a = 0;
                     }
@@ -118,26 +171,29 @@ Horizon.prototype = {
 
                     return Math.max(+a, +b);
                 });
+
+                // max_val = max_val+20;
+
                 let my_colors = select_colors(max_val);
+
+
+                console.log("max val: " + max_val);
+
                 d3.horizonChart()
                     .title("well "+d.id)
-                    //.colors(idv.colorManager.getAllWaterColorsAsArray())  // colorsWater is defined in color.manager.js
-                   // .colors([ '#4575b4', '#abd9e9', '#fee090', '#f46d43'])
-                   // .colors(['rgb(255,0,255)','rgb(255,0,0)','rgba(250,200,160)', 'rgba(200,150,130)', 'rgb(160,160,80)', 'rgb(0,120,160)', 'rgb(0,60,120)', 'rgb(0,0,60)'])
                     .colors(my_colors) // can not add 'rgb(0,0,60)' because the max saturated thickness is 548.9
                     .height(27)
-                    .call(this, d.series)
+                    .extent([0, 20 + Math.ceil(max_val / 60)*60])
+                    .call(this, tmp_series)
                 ;
             });
-
-
 
             d3.selectAll('.horizon')
                 .on("mouseover", function(d) {
                     div.transition()
                         .duration(200)
                         .style("opacity", .9);
-                    div.html("County: " + d.county + ", Water level:" + d.water_level)
+                    div.html("id:" + d['id'] +  "<br/>County: " + d.county + ", Water level:" + d.water_level)
                         .style("left", (d3.event.pageX) + "px")
                         .style("top", (d3.event.pageY - 28) + "px");
 
